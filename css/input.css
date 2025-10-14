@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  /* Base Colors */
+  --primary: #162466;
+  --primary-dark: #181b31;
+  --secondary: #ff3b33;
+  --gray: #d6d6e3;
+  --white: #ffffff;
+
+  /* Gradient Colors */
+  --gradient-start: #e9f7ff;
+  --gradient-middle: #ffdbd4;
+  --gradient-end: #fff3ca;
+
+  /* Fonts */
+  --font-nunito: "Nunito", sans-serif;
+  --font-noto-sans: "Noto Sans", sans-serif;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-gray: var(--gray);
+  --color-white: var(--white);
+  --color-gradient-start: var(--gradient-start);
+  --color-gradient-middle: var(--gradient-middle);
+  --color-gradient-end: var(--gradient-end);
+}
+
+/* Base Styles */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  body {
+    font-family: var(--font-nunito);
+  }
+  section,
+  footer {
+    padding-block: 80px;
+  }
+  .container {
+    margin: 0 auto;
+    padding-inline: 20px;
+  }
+}
+
+/* Components */
+@layer components {
+  .btn {
+    @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-[10px] py-[5px] text-base font-semibold transition-colors duration-300 lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white;
+  }
+  .btn-primary:hover {
+    @apply bg-primary-dark;
+  }
+
+  .btn-secondary {
+    @apply text-primary grid place-items-center;
+  }
+  .btn-secondary:hover {
+    @apply bg-gray;
+  }
+}
+
+/* Utilities */
+#navSlider {
+  @apply translate-x-full;
+}
+
+#navSlider.active {
+  @apply translate-x-0;
+}

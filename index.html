@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons-->
+    <script
+      src="https://kit.fontawesome.com/d1d7a2b346.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/output.css" />
+
+    <title>GrowThan | Home</title>
+  </head>
+  <body>
+    <header>
+      <!-- Navigation bar -->
+      <nav>
+        <div class="container">
+          <!-- Nav Wrapper -->
+          <div class="flex items-center justify-between py-2">
+            <!-- Navigation Logo -->
+            <div class="max-w-[200px] md:max-w-[250px] lg:max-w-[352px]">
+              <img src="assets/images/logo.png" alt="GrowThan Logo" />
+            </div>
+            <!-- Navigation Options | Desktop Navigation -->
+            <div class="hidden items-center gap-8 lg:flex">
+              <a href="/" class="text-secondary text-lg font-medium capitalize"
+                >Home</a
+              >
+              <a
+                href="/about.html"
+                class="text-primary text-lg font-medium capitalize"
+                >About Us</a
+              >
+              <a
+                href="/services.html"
+                class="text-primary text-lg font-medium capitalize"
+                >Services</a
+              >
+              <a
+                href="/contact.html"
+                class="text-primary text-lg font-medium capitalize"
+                >Contact</a
+              >
+              <!-- Nav CTA -->
+              <button class="btn btn-primary">Register</button>
+            </div>
+            <!-- Mobile Navigation -->
+            <div class="flex items-center gap-4 lg:hidden">
+              <!-- Nav CTA -->
+              <button class="btn btn-primary hidden sm:block">Register</button>
+              <!-- Mobile Menu Button -->
+              <button
+                title="Menu"
+                id="menuBtn"
+                class="btn btn-secondary text-2xl"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+            <!-- Mobile Menu -Slider -->
+            <div
+              id="navSlider"
+              class="bg-gray fixed top-0 right-0 h-screen w-full max-w-[300px] transform p-3 transition-transform duration-300 ease-in-out lg:hidden"
+            >
+              <div class="flex h-full flex-col items-end gap-4">
+                <!-- Close Button -->
+                <button
+                  title="Close Menu"
+                  id="menuBtn"
+                  class="btn btn-secondary mb-10 p-0.5 text-2xl"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+                <a
+                  href="/"
+                  class="text-secondary text-xl font-medium capitalize"
+                  >Home</a
+                >
+                <a
+                  href="/about.html"
+                  class="text-primary text-xl font-medium capitalize"
+                  >About Us</a
+                >
+                <a
+                  href="/services.html"
+                  class="text-primary text-xl font-medium capitalize"
+                  >Services</a
+                >
+                <a
+                  href="/contact.html"
+                  class="text-primary text-xl font-medium capitalize"
+                  >Contact</a
+                >
+                <!-- Nav CTA -->
+                <button class="btn btn-primary mt-auto block w-full sm:hidden">
+                  Register
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main></main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+      <div class="container">
+        <!-- Footer Wrapper -->
+        <div class="grid-cols-6"></div>
+      </div>
+    </footer>
+  </body>
+
+  <!-- Scripts -->
+  <script src="js/scripts.js"></script>
+</html>
