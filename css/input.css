@@ -18,7 +18,8 @@
   --font-noto-sans: "Noto Sans", sans-serif;
 }
 
-@theme inline {
+/* Theme */
+@theme {
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
   --color-secondary: var(--secondary);
@@ -27,30 +28,33 @@
   --color-gradient-start: var(--gradient-start);
   --color-gradient-middle: var(--gradient-middle);
   --color-gradient-end: var(--gradient-end);
+  --font-nunito: var(--font-nunito);
+  --font-noto-sans: var(--font-noto-sans);
+
+  /* breakpoints */
+  --breakpoint-xs: 30rem;
 }
 
 /* Base Styles */
 @layer base {
   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    @apply m-0 box-border p-0;
   }
   img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    @apply h-full w-full object-cover;
   }
   body {
-    font-family: var(--font-nunito);
+    @apply font-nunito overflow-x-hidden;
   }
   section,
   footer {
-    padding-block: 80px;
+    @apply py-20;
+  }
+  a {
+    @apply w-fit;
   }
   .container {
-    margin: 0 auto;
-    padding-inline: 20px;
+    @apply mx-auto px-2 lg:px-5 xl:px-10;
   }
 }
 

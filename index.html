@@ -24,7 +24,7 @@
     <title>GrowThan | Home</title>
   </head>
   <body>
-    <header>
+    <header class="fixed top-0 z-1 w-full">
       <!-- Navigation bar -->
       <nav>
         <div class="container">
@@ -73,7 +73,7 @@
             <!-- Mobile Menu -Slider -->
             <div
               id="navSlider"
-              class="bg-gray fixed top-0 right-0 h-screen w-full max-w-[300px] transform p-3 transition-transform duration-300 ease-in-out lg:hidden"
+              class="bg-gray fixed top-0 right-0 h-screen w-full max-w-[300px] transform px-8 py-5 transition-transform duration-300 ease-in-out lg:hidden"
             >
               <div class="flex h-full flex-col items-end gap-4">
                 <!-- Close Button -->
@@ -116,13 +116,98 @@
     </header>
 
     <!-- Main Content -->
-    <main></main>
+    <main class="h-full">
+      <!-- Hero Section -->
+      <section
+        class="from-gradient-start to-gradient-middle h-full w-full overflow-hidden bg-linear-to-r pt-40"
+      >
+        <div class="relative container">
+          <!-- decorations -->
+          <div
+            class="absolute top-[-398px] left-[850px] z-0 h-[1208px] w-[1208px] rounded-full bg-white"
+          ></div>
+          <!-- Hero Wrapper -->
+          <div class="relative flex items-center">
+            <div class="flex basis-1/2 flex-col gap-8">
+              <h1 class="text-6xl font-extrabold">
+                Driving the Digital Growth by
+                <span class="text-secondary">Affiliate Marketing</span>
+              </h1>
+              <button class="btn btn-primary w-fit">Register</button>
+            </div>
+            <!-- Hero image Wrapper -->
+            <div class="basis-1/2">
+              <img src="assets/images/hero-img.png" alt="Hero Image" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-primary text-white">
       <div class="container">
         <!-- Footer Wrapper -->
-        <div class="grid-cols-6"></div>
+        <div class="flex flex-col">
+          <!-- Footer sections -->
+          <div
+            class="xs:grid-cols-2 grid gap-8 text-base lg:grid-cols-4 lg:text-lg"
+          >
+            <div>
+              <h3 class="mb-3 text-xl font-semibold lg:mb-7 lg:text-2xl">
+                Pages
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-2">
+                <a href="/">Home</a>
+                <a href="/about.html">About Us</a>
+                <a href="/services.html">Services</a>
+                <a href="/contact.html">Contact</a>
+              </div>
+            </div>
+            <div>
+              <h3 class="mb-3 text-xl font-semibold lg:mb-7 lg:text-2xl">
+                Social Logins
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-2">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">Skype</a>
+              </div>
+            </div>
+            <div class="max-w-xs">
+              <h3 class="mb-3 text-xl font-semibold lg:mb-7 lg:text-2xl">
+                Location
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-3">
+                <a href="#" class="text-sm underline"
+                  >UNIT NO. 147, FIRST FLOOR, JMD MEGAPOLIS, Badshahpur Sohna Rd
+                  Hwy, Sector 48, Gurugram, Haryana 122018 .</a
+                >
+                <a href="#" class="underline">Location Map</a>
+              </div>
+            </div>
+            <div>
+              <h3 class="mb-3 text-xl font-semibold lg:mb-7 lg:text-2xl">
+                Get in touch with
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-4">
+                <a
+                  href="tel:+918617514085"
+                  class="bg-primary-dark xl:text-md w-fit rounded-lg px-7 py-2 text-base font-bold text-nowrap 2xl:text-2xl"
+                  >+91 8617514085</a
+                >
+                <a href="mailto:business@growthan.com" class="underline"
+                  >business@growthan.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Copyright -->
+          <div class="mt-15 border-t-1 border-t-white/40 pt-2 text-center">
+            Copyright &copy; 2023 | GrowThan | All rights reserved.
+          </div>
+        </div>
       </div>
     </footer>
   </body>
