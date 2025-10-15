@@ -64,7 +64,7 @@
           @apply m-0 box-border p-0;
         }
         img {
-          @apply h-full w-full object-cover;
+          @apply block h-full w-full object-cover;
         }
         body {
           @apply font-nunito overflow-x-hidden;
@@ -271,18 +271,23 @@
           <!-- Section Wrapper -->
           <div>
             <!-- Section Header -->
-            <div class="mb-10 flex gap-10 lg:mb-[90px]">
-              <div>
-                <img src="assets/svg/icon-settings.svg" alt="Setting Icon" />
+            <div class="mb-10 flex gap-5 md:gap-10 lg:mb-[90px]">
+              <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
+                <img
+                  src="assets/svg/icon-settings.svg"
+                  alt="Setting Icon"
+                  class="object-contain"
+                />
               </div>
-              <!-- Section Title -->
               <div class="flex flex-col">
                 <p
                   class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
                 >
                   Services
                 </p>
-                <h2 class="text-[40px] font-semibold text-pretty">
+                <h2
+                  class="text-primary text-xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                >
                   Services We Provide
                 </h2>
               </div>
@@ -290,17 +295,17 @@
 
             <!-- Section Body | Cards Wrapper -->
             <div
-              class="grid grid-cols-1 gap-x-18 gap-y-17 lg:grid-cols-2 xl:grid-cols-3"
+              class="grid grid-cols-1 gap-10 md:gap-18 lg:grid-cols-2 xl:grid-cols-3"
             >
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-[153px] place-items-center rounded-full bg-white"
+                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
                 >
-                  <div>
+                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
                     <img
                       src="assets/images/performance-marketing.png"
                       alt="Performance Marketing"
@@ -314,20 +319,20 @@
                   Performance Marketing
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark text-lg">
+                <p class="text-primary-dark font-noto-sans text-lg">
                   Get the best results for your marketing campaigns by
                   leveraging data-driven insights and analytics.
                 </p>
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-[153px] place-items-center rounded-full bg-white"
+                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
                 >
-                  <div>
+                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
                     <img
                       src="assets/images/mobile-marketing.png"
                       alt="Mobile Marketing"
@@ -341,7 +346,7 @@
                   Mobile Marketing
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark text-lg">
+                <p class="text-primary-dark font-noto-sans text-lg">
                   Reach your target audience wherever they are with
                   mobile-optimized campaigns that drive engagement and
                   conversions.
@@ -349,13 +354,13 @@
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-[153px] place-items-center rounded-full bg-white"
+                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
                 >
-                  <div>
+                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
                     <img
                       src="assets/images/email-marketing.png"
                       alt="Email Marketing"
@@ -369,20 +374,20 @@
                   Email Marketing
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark text-lg">
+                <p class="text-primary-dark font-noto-sans text-lg">
                   Build stronger relationships with your customers by delivering
                   personalized content straight to their inbox.
                 </p>
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-[153px] place-items-center rounded-full bg-white"
+                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
                 >
-                  <div>
+                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
                     <img
                       src="assets/images/media-buying-planning.png"
                       alt="Media Buying & Planning"
@@ -396,20 +401,20 @@
                   Media Buying & Planning
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark text-lg">
+                <p class="text-primary-dark font-noto-sans text-lg">
                   Maximize your ROI by identifying the right media channels and
                   placements to reach your target audience.
                 </p>
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-[153px] place-items-center rounded-full bg-white"
+                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
                 >
-                  <div>
+                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
                     <img
                       src="assets/images/influencer-marketing.png"
                       alt="Influencer Marketing"
@@ -423,20 +428,20 @@
                   Influencer Marketing
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark text-lg">
+                <p class="text-primary-dark font-noto-sans text-lg">
                   Amplify your brand's reach and credibility by partnering with
                   influencers who align with your brand values.
                 </p>
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-[153px] place-items-center rounded-full bg-white"
+                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
                 >
-                  <div>
+                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
                     <img
                       src="assets/images/content-marketing.png"
                       alt="Content Marketing"
@@ -450,7 +455,7 @@
                   Content Marketing
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark text-lg">
+                <p class="text-primary-dark font-noto-sans text-lg">
                   Engage your audience with high-quality and relevant content
                   that educates, entertains, and inspires action.
                 </p>
@@ -477,30 +482,31 @@
             <!-- Section Block Content -->
             <div>
               <!-- Section Header -->
-              <div class="mb-[30px] flex gap-10">
-                <div>
+              <div class="mb-5 flex gap-5 md:gap-10 lg:mb-[30px]">
+                <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
                   <img
-                    src="assets/svg/icon-settings.svg"
-                    alt="Setting Icon"
+                    src="assets/svg/icon-mention.svg"
+                    alt="Mention Icon"
                     class="object-contain"
                   />
                 </div>
-                <!-- Section Title -->
                 <div class="flex flex-col">
                   <p
                     class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
                   >
-                    Services
+                    get the best
                   </p>
-                  <h2 class="text-[40px] font-semibold text-pretty">
-                    Services We Provide
+                  <h2
+                    class="text-primary text-xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                  >
+                    Why Growthan?
                   </h2>
                 </div>
               </div>
               <!-- Section Content -->
               <div class="border-t-gray border-t-2 pt-[30px]">
                 <p
-                  class="text-primary-dark font-noto-sans mb-8 text-justify text-lg leading-[157%]"
+                  class="text-primary-dark font-noto-sans mb-8 text-base leading-[157%] lg:text-lg"
                 >
                   We at Growthan provide a robust platform for wide range of
                   Performance Marketing Services. We expertise in various models
@@ -522,11 +528,70 @@
 
       <!-- Process Section -->
       <section>
-        <div class="container">
+        <div
+          class="from-gradient-start via-gradient-middle to-gradient-end container bg-gradient-to-tl p-10 md:p-20"
+        >
           <!-- Section Wrapper -->
           <div>
             <!-- Section Header -->
-            <div></div>
+            <div
+              class="mb-10 flex flex-col items-center gap-5 md:gap-10 lg:mb-[90px]"
+            >
+              <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
+                <img
+                  src="assets/svg/icon-ladder.svg"
+                  alt="Ladder Icon"
+                  class="object-contain"
+                />
+              </div>
+              <div class="flex flex-col items-center">
+                <p
+                  class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
+                >
+                  Process
+                </p>
+                <h2
+                  class="text-primary text-xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                >
+                  How we work
+                </h2>
+              </div>
+            </div>
+            <!-- Section Body | Timeline -->
+            <div class="relative flex flex-col items-center gap-10 lg:gap-20">
+              <!-- Center line -->
+              <div
+                class="absolute top-0 left-1/2 hidden h-full w-0.5 -translate-x-1/2 bg-[#FFD1C8] lg:block"
+              ></div>
+
+              <!-- Time Point -->
+              <div
+                class="relative grid grid-cols-[1fr_auto_1fr] items-center gap-4 lg:gap-10"
+              >
+                <!-- Image Wrapper  -->
+                <div class="ml-auto hidden w-fit lg:block">
+                  <img src="assets/images/process-1.png" alt="Process 1" />
+                </div>
+
+                <!-- Number Circle -->
+                <div
+                  class="relative mx-auto grid aspect-square w-[86px] shrink-0 place-items-center rounded-full border-[9px] border-[#FFD1C8] bg-white text-3xl font-semibold"
+                >
+                  1
+                </div>
+
+                <!-- Process Content -->
+                <div class="text-center lg:text-left">
+                  <h3 class="mb-3 text-[25px] font-semibold">
+                    Market Research
+                  </h3>
+                  <p class="text-primary-dark font-noto-sans text-lg">
+                    We conduct thorough research to identify key opportunities
+                    and trends.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -542,7 +607,9 @@
             class="xs:grid-cols-2 grid gap-8 text-base lg:grid-cols-4 lg:text-lg"
           >
             <div>
-              <h3 class="mb-3 text-xl font-semibold lg:mb-7 lg:text-2xl">
+              <h3
+                class="mb-3 text-lg font-semibold md:text-xl lg:mb-7 lg:text-2xl"
+              >
                 Pages
               </h3>
               <div class="font-noto-sans flex flex-col gap-2">
@@ -568,7 +635,7 @@
                 Location
               </h3>
               <div class="font-noto-sans flex flex-col gap-3">
-                <a href="#" class="text-sm underline"
+                <a href="#" class="underline"
                   >UNIT NO. 147, FIRST FLOOR, JMD MEGAPOLIS, Badshahpur Sohna Rd
                   Hwy, Sector 48, Gurugram, Haryana 122018 .</a
                 >
@@ -582,7 +649,7 @@
               <div class="font-noto-sans flex flex-col gap-4">
                 <a
                   href="tel:+918617514085"
-                  class="bg-primary-dark xl:text-md w-fit rounded-lg px-7 py-2 text-base font-bold text-nowrap 2xl:text-2xl"
+                  class="bg-primary-dark xl:text-md text-gray w-fit rounded-lg px-7 py-2 text-base font-bold text-nowrap 2xl:text-2xl"
                   >+91 8617514085</a
                 >
                 <a href="mailto:business@growthan.com" class="underline"
