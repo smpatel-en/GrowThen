@@ -77,20 +77,20 @@
         }
         section,
         footer {
-          @apply py-20;
+          @apply py-12 sm:py-16 md:py-18 lg:py-20;
         }
         a {
           @apply w-fit;
         }
         .container {
-          @apply mx-auto px-2 lg:px-5 xl:px-10;
+          @apply mx-auto px-4 sm:px-5 md:px-6 lg:px-5 xl:px-10;
         }
       }
 
       /* Components */
       @layer components {
         .btn {
-          @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-[10px] py-[5px] text-base font-semibold transition-colors duration-300 lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
+          @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold transition-colors duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
         }
 
         .btn-primary {
@@ -158,7 +158,9 @@
           <!-- Nav Wrapper -->
           <div class="flex items-center justify-between py-4">
             <!-- Navigation Logo -->
-            <div class="max-w-[200px] md:max-w-[250px] lg:max-w-[300px]">
+            <div
+              class="max-w-[150px] sm:max-w-[180px] md:max-w-[250px] lg:max-w-[300px]"
+            >
               <img src="assets/images/logo.png" alt="GrowThan Logo" />
             </div>
             <!-- Navigation Options | Desktop Navigation -->
@@ -245,7 +247,9 @@
     <!-- Main Content -->
     <main class="h-full">
       <!-- Hero Section -->
-      <section class="relative overflow-hidden pt-40">
+      <section
+        class="relative overflow-hidden pt-28 sm:pt-32 md:pt-36 lg:pt-40"
+      >
         <img
           src="assets/svg/hero-background.svg"
           alt="Hero Background"
@@ -258,13 +262,13 @@
           ></div>
           <!-- Section Wrapper -->
           <div
-            class="relative z-1 flex flex-col items-center gap-20 lg:flex-row"
+            class="relative z-1 flex flex-col items-center gap-10 sm:gap-16 md:gap-18 lg:flex-row lg:gap-20"
           >
             <div
-              class="flex basis-1/2 flex-col items-center gap-4 lg:items-start lg:gap-8"
+              class="flex basis-1/2 flex-col items-center gap-3 sm:gap-4 md:gap-6 lg:items-start lg:gap-8"
             >
               <h1
-                class="text-center text-3xl font-extrabold text-balance sm:text-4xl md:text-5xl lg:text-left xl:text-6xl"
+                class="text-center text-2xl font-extrabold text-balance sm:text-3xl md:text-4xl lg:text-left lg:text-5xl xl:text-6xl"
               >
                 Driving the Digital Growth by
                 <span class="text-secondary">Affiliate Marketing</span>
@@ -272,7 +276,9 @@
               <button class="btn btn-primary w-fit">Register</button>
             </div>
             <!-- Hero image Wrapper -->
-            <div class="relative max-w-130 basis-1/2 lg:max-w-none">
+            <div
+              class="relative max-w-100 basis-1/2 sm:max-w-110 md:max-w-120 lg:max-w-130 xl:max-w-none"
+            >
               <!-- Decoration Image Wrapper -->
               <div
                 class="absolute inset-0 -top-50 -right-80 -z-1 hidden max-w-[1200px] lg:block"
@@ -292,13 +298,17 @@
       </section>
 
       <!-- Services Section -->
-      <section>
+      <section class="py-12 sm:py-16 md:py-18 lg:py-20">
         <div class="container">
           <!-- Section Wrapper -->
           <div>
             <!-- Section Header -->
-            <div class="mb-10 flex gap-5 md:gap-10 lg:mb-[90px]">
-              <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
+            <div
+              class="mb-8 flex gap-3 sm:gap-4 md:gap-8 lg:mb-[90px] lg:gap-10"
+            >
+              <div
+                class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+              >
                 <img
                   src="assets/svg/icon-settings.svg"
                   alt="Setting Icon"
@@ -307,12 +317,12 @@
               </div>
               <div class="flex flex-col">
                 <p
-                  class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
+                  class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
                 >
                   Services
                 </p>
                 <h2
-                  class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                  class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
                 >
                   Services We Provide
                 </h2>
@@ -321,17 +331,19 @@
 
             <!-- Section Body | Cards Wrapper -->
             <div
-              class="grid grid-cols-1 gap-10 md:gap-18 lg:grid-cols-2 xl:grid-cols-3"
+              class="grid grid-cols-1 gap-6 sm:gap-8 md:gap-12 lg:grid-cols-2 lg:gap-18 xl:grid-cols-3"
             >
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
                 >
-                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
                     <img
                       src="assets/images/performance-marketing.png"
                       alt="Performance Marketing"
@@ -341,24 +353,30 @@
                 <!-- Card Image Wrapper -->
 
                 <!-- Card title -->
-                <h3 class="text-primary mb-3 text-[25px] font-semibold">
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
                   Performance Marketing
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark font-noto-sans text-lg">
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
                   Get the best results for your marketing campaigns by
                   leveraging data-driven insights and analytics.
                 </p>
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
                 >
-                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
                     <img
                       src="assets/images/mobile-marketing.png"
                       alt="Mobile Marketing"
@@ -368,11 +386,15 @@
                 <!-- Card Image Wrapper -->
 
                 <!-- Card title -->
-                <h3 class="text-primary mb-3 text-[25px] font-semibold">
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
                   Mobile Marketing
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark font-noto-sans text-lg">
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
                   Reach your target audience wherever they are with
                   mobile-optimized campaigns that drive engagement and
                   conversions.
@@ -380,13 +402,15 @@
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
                 >
-                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
                     <img
                       src="assets/images/email-marketing.png"
                       alt="Email Marketing"
@@ -396,24 +420,30 @@
                 <!-- Card Image Wrapper -->
 
                 <!-- Card title -->
-                <h3 class="text-primary mb-3 text-[25px] font-semibold">
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
                   Email Marketing
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark font-noto-sans text-lg">
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
                   Build stronger relationships with your customers by delivering
                   personalized content straight to their inbox.
                 </p>
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
                 >
-                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
                     <img
                       src="assets/images/media-buying-planning.png"
                       alt="Media Buying & Planning"
@@ -423,24 +453,30 @@
                 <!-- Card Image Wrapper -->
 
                 <!-- Card title -->
-                <h3 class="text-primary mb-3 text-[25px] font-semibold">
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
                   Media Buying & Planning
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark font-noto-sans text-lg">
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
                   Maximize your ROI by identifying the right media channels and
                   placements to reach your target audience.
                 </p>
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
                 >
-                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
                     <img
                       src="assets/images/influencer-marketing.png"
                       alt="Influencer Marketing"
@@ -450,24 +486,30 @@
                 <!-- Card Image Wrapper -->
 
                 <!-- Card title -->
-                <h3 class="text-primary mb-3 text-[25px] font-semibold">
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
                   Influencer Marketing
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark font-noto-sans text-lg">
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
                   Amplify your brand's reach and credibility by partnering with
                   influencers who align with your brand values.
                 </p>
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-[30px] bg-linear-to-tl p-5 md:p-[45px]"
+                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
-                  class="mb-6 grid aspect-square w-22 place-items-center rounded-full bg-white sm:w-26 lg:w-[153px]"
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
                 >
-                  <div class="max-w-10 sm:max-w-14 lg:max-w-none">
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
                     <img
                       src="assets/images/content-marketing.png"
                       alt="Content Marketing"
@@ -477,11 +519,15 @@
                 <!-- Card Image Wrapper -->
 
                 <!-- Card title -->
-                <h3 class="text-primary mb-3 text-[25px] font-semibold">
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
                   Content Marketing
                 </h3>
                 <!-- Card Description -->
-                <p class="text-primary-dark font-noto-sans text-lg">
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
                   Engage your audience with high-quality and relevant content
                   that educates, entertains, and inspires action.
                 </p>
@@ -492,15 +538,15 @@
       </section>
 
       <!-- Info Section | Utils -->
-      <section>
+      <section class="py-12 sm:py-16 md:py-18 lg:py-20">
         <div class="container">
           <!-- Section Wrapper -->
           <div
-            class="flex flex-col items-center gap-8 lg:flex-row lg:items-start"
+            class="flex flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:flex-row lg:items-start"
           >
             <!-- Section Image -->
             <div
-              class="order-2 h-fit max-w-130 shrink-0 lg:order-none lg:max-w-none"
+              class="order-2 h-fit max-w-90 shrink-0 sm:max-w-110 md:max-w-120 lg:order-none lg:max-w-none"
             >
               <img
                 src="assets/images/mobile-interaction.png"
@@ -511,8 +557,12 @@
             <!-- Section Block Content -->
             <div>
               <!-- Section Header -->
-              <div class="mb-5 flex gap-5 md:gap-10 lg:mb-[30px]">
-                <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
+              <div
+                class="mb-4 flex gap-3 sm:mb-5 sm:gap-4 md:gap-8 lg:mb-[30px] lg:gap-10"
+              >
+                <div
+                  class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+                >
                   <img
                     src="assets/svg/icon-mention.svg"
                     alt="Mention Icon"
@@ -521,21 +571,21 @@
                 </div>
                 <div class="flex flex-col">
                   <p
-                    class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
+                    class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
                   >
                     get the best
                   </p>
                   <h2
-                    class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                    class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
                   >
                     Why Growthan?
                   </h2>
                 </div>
               </div>
               <!-- Section Content -->
-              <div class="border-t-gray border-t-2 pt-[30px]">
+              <div class="border-t-gray border-t-2 pt-5 sm:pt-6 md:pt-[30px]">
                 <p
-                  class="text-primary-dark font-noto-sans mb-8 text-base leading-[157%] lg:text-lg"
+                  class="text-primary-dark font-noto-sans mb-5 text-sm leading-[157%] sm:mb-6 sm:text-base md:mb-8 lg:text-lg"
                 >
                   We at Growthan provide a robust platform for wide range of
                   Performance Marketing Services. We expertise in various models
@@ -556,17 +606,19 @@
       </section>
 
       <!-- Process Section -->
-      <section>
+      <section class="py-12 sm:py-16 md:py-18 lg:py-20">
         <div
-          class="from-gradient-start via-gradient-middle to-gradient-end container bg-gradient-to-tl p-10 md:p-20"
+          class="from-gradient-start via-gradient-middle to-gradient-end container bg-gradient-to-tl p-6 sm:p-8 md:p-12 lg:p-20"
         >
           <!-- Section Wrapper -->
           <div>
             <!-- Section Header -->
             <div
-              class="mb-10 flex flex-col items-center gap-5 md:gap-10 lg:mb-[90px]"
+              class="mb-8 flex flex-col items-center gap-3 sm:mb-10 sm:gap-4 md:gap-8 lg:mb-[90px] lg:gap-10"
             >
-              <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
+              <div
+                class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+              >
                 <img
                   src="assets/svg/icon-ladder.svg"
                   alt="Ladder Icon"
@@ -575,12 +627,12 @@
               </div>
               <div class="flex flex-col items-center">
                 <p
-                  class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
+                  class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
                 >
                   Process
                 </p>
                 <h2
-                  class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                  class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
                 >
                   How we work
                 </h2>
@@ -590,7 +642,7 @@
             <div class="flex flex-col items-center gap-1">
               <!-- Time Point 1 -->
               <div
-                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-4 py-2.5 lg:gap-10 lg:py-5"
+                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
               >
                 <!-- Line -->
                 <div
@@ -598,24 +650,28 @@
                 ></div>
 
                 <!-- Image Wrapper  -->
-                <div class="w-fit justify-self-end">
+                <div
+                  class="w-fit max-w-20 justify-self-end sm:max-w-24 md:max-w-28 lg:max-w-none"
+                >
                   <img src="assets/images/process-1.png" alt="Process 1" />
                 </div>
 
                 <!-- Number Circle -->
                 <div
-                  class="z-0 grid aspect-square w-[86px] shrink-0 place-items-center rounded-full border-[9px] border-[#FFD1C8] bg-white text-3xl font-semibold"
+                  class="z-0 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
                 >
                   1
                 </div>
 
                 <!-- Process Content -->
                 <div>
-                  <h3 class="text-primary mb-3 text-[25px] font-semibold">
+                  <h3
+                    class="text-primary mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg md:mb-3 md:text-xl lg:text-[25px]"
+                  >
                     Market Research
                   </h3>
                   <p
-                    class="text-primary-dark font-noto-sans text-lg leading-[157%] text-pretty"
+                    class="text-primary-dark font-noto-sans text-sm leading-[157%] text-pretty sm:text-base md:text-lg"
                   >
                     We conduct thorough research to identify key opportunities
                     and trends.
@@ -625,7 +681,7 @@
 
               <!-- Time Point 2 -->
               <div
-                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-4 py-2.5 lg:gap-10 lg:py-5"
+                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
               >
                 <!-- Line -->
                 <div
@@ -634,11 +690,13 @@
 
                 <!-- Process Content -->
                 <div class="text-right">
-                  <h3 class="text-primary mb-3 text-[25px] font-semibold">
+                  <h3
+                    class="text-primary mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg md:mb-3 md:text-xl lg:text-[25px]"
+                  >
                     Analysis
                   </h3>
                   <p
-                    class="text-primary-dark font-noto-sans text-lg leading-[157%] text-pretty"
+                    class="text-primary-dark font-noto-sans text-sm leading-[157%] text-pretty sm:text-base md:text-lg"
                   >
                     We analyze your performance metrics, consumer behavior and
                     trends.
@@ -647,44 +705,50 @@
 
                 <!-- Number Circle -->
                 <div
-                  class="z-0 grid aspect-square w-[86px] shrink-0 place-items-center rounded-full border-[9px] border-[#FFD1C8] bg-white text-3xl font-semibold"
+                  class="z-0 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
                 >
                   2
                 </div>
 
                 <!-- Image Wrapper  -->
-                <div class="w-fit justify-self-start">
+                <div
+                  class="w-fit max-w-20 justify-self-start sm:max-w-24 md:max-w-28 lg:max-w-none"
+                >
                   <img src="assets/images/process-2.png" alt="Process 2" />
                 </div>
               </div>
 
               <!-- Time Point 3 -->
               <div
-                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-4 py-2.5 lg:gap-10 lg:py-5"
+                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
               >
                 <!-- Line -->
                 <div
                   class="border-primary-dark absolute top-0 left-1/2 h-full -translate-x-1/2 border-l-2 border-dashed"
                 ></div>
                 <!-- Image Wrapper  -->
-                <div class="w-fit justify-self-end">
+                <div
+                  class="w-fit max-w-20 justify-self-end sm:max-w-24 md:max-w-28 lg:max-w-none"
+                >
                   <img src="assets/images/process-3.png" alt="Process 3" />
                 </div>
 
                 <!-- Number Circle -->
                 <div
-                  class="z-0 grid aspect-square w-[86px] shrink-0 place-items-center rounded-full border-[9px] border-[#FFD1C8] bg-white text-3xl font-semibold"
+                  class="z-0 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
                 >
                   3
                 </div>
 
                 <!-- Process Content -->
                 <div>
-                  <h3 class="text-primary mb-3 text-[25px] font-semibold">
+                  <h3
+                    class="text-primary mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg md:mb-3 md:text-xl lg:text-[25px]"
+                  >
                     Targeting
                   </h3>
                   <p
-                    class="text-primary-dark font-noto-sans text-lg leading-[157%] text-pretty"
+                    class="text-primary-dark font-noto-sans text-sm leading-[157%] text-pretty sm:text-base md:text-lg"
                   >
                     We develop customized strategies that reach your target
                     audience.
@@ -694,7 +758,7 @@
 
               <!-- Time Point 4 -->
               <div
-                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-4 py-2.5 lg:gap-10 lg:py-5"
+                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
               >
                 <!-- Line -->
                 <div
@@ -702,11 +766,13 @@
                 ></div>
                 <!-- Process Content -->
                 <div class="text-right">
-                  <h3 class="text-primary mb-3 text-[25px] font-semibold">
+                  <h3
+                    class="text-primary mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg md:mb-3 md:text-xl lg:text-[25px]"
+                  >
                     Update Result
                   </h3>
                   <p
-                    class="text-primary-dark font-noto-sans text-lg leading-[157%] text-pretty"
+                    class="text-primary-dark font-noto-sans text-sm leading-[157%] text-pretty sm:text-base md:text-lg"
                   >
                     We provide regular updates and reports to keep you informed.
                   </p>
@@ -714,13 +780,15 @@
 
                 <!-- Number Circle -->
                 <div
-                  class="z-0 grid aspect-square w-[86px] shrink-0 place-items-center rounded-full border-[9px] border-[#FFD1C8] bg-white text-3xl font-semibold"
+                  class="z-0 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
                 >
                   4
                 </div>
 
                 <!-- Image Wrapper  -->
-                <div class="w-fit justify-self-start">
+                <div
+                  class="w-fit max-w-20 justify-self-start sm:max-w-24 md:max-w-28 lg:max-w-none"
+                >
                   <img src="assets/images/process-4.png" alt="Process 4" />
                 </div>
               </div>
@@ -730,15 +798,19 @@
       </section>
 
       <!-- Testimonials Section -->
-      <section>
+      <section class="py-12 sm:py-16 md:py-18 lg:py-20">
         <div class="container">
           <!-- Section Wrapper -->
           <div>
             <!-- Section top wrapper -->
-            <div class="mb-10 flex items-center justify-between lg:mb-[90px]">
+            <div
+              class="mb-8 flex items-start justify-between sm:mb-10 sm:items-center lg:mb-[90px]"
+            >
               <!-- Section Header -->
-              <div class="flex gap-5 md:gap-10">
-                <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
+              <div class="flex gap-3 sm:gap-4 md:gap-8 lg:gap-10">
+                <div
+                  class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+                >
                   <img
                     src="assets/svg/icon-chat.svg"
                     alt="Chat Icon"
@@ -747,12 +819,12 @@
                 </div>
                 <div class="flex flex-col">
                   <p
-                    class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
+                    class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
                   >
                     Testimonials
                   </p>
                   <h2
-                    class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                    class="text-primary text-lg font-semibold text-pretty sm:text-xl md:text-2xl lg:text-3xl xl:text-[40px]"
                   >
                     We work with customers across all industries
                   </h2>
@@ -760,16 +832,16 @@
               </div>
 
               <!-- Navigation Buttons -->
-              <div class="flex gap-3">
+              <div class="flex gap-2 lg:gap-3">
                 <button
                   title="Previous"
-                  class="testimonial-prev btn btn-primary grid h-10 w-10 place-items-center rounded-full p-0 text-lg lg:h-15 lg:w-15 lg:text-2xl"
+                  class="testimonial-prev btn btn-primary grid h-8 w-8 place-items-center rounded-full p-0 text-sm sm:h-10 sm:w-10 sm:text-base md:text-lg lg:h-15 lg:w-15 lg:text-2xl"
                 >
                   <i class="fa-solid fa-chevron-left"></i>
                 </button>
                 <button
                   title="Next"
-                  class="testimonial-next btn btn-primary grid h-10 w-10 place-items-center rounded-full p-0 text-lg lg:h-15 lg:w-15 lg:text-2xl"
+                  class="testimonial-next btn btn-primary grid h-8 w-8 place-items-center rounded-full p-0 text-sm sm:h-10 sm:w-10 sm:text-base md:text-lg lg:h-15 lg:w-15 lg:text-2xl"
                 >
                   <i class="fa-solid fa-chevron-right"></i>
                 </button>
@@ -780,47 +852,51 @@
               <div class="swiper-wrapper">
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
-                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                    class="mb-3 w-full rounded-lg bg-white p-4 shadow-[0px_2px_4px_0px_#92929240] sm:mb-4 sm:p-5 md:mb-5 lg:p-10"
                   >
                     <!-- Sub Card Header -->
-                    <div class="mb-5 flex items-center justify-between gap-3">
-                      <div class="flex gap-2">
+                    <div
+                      class="mb-3 flex flex-col items-start justify-between gap-2 sm:mb-4 sm:flex-row sm:items-center sm:gap-3 md:mb-5"
+                    >
+                      <div class="flex gap-1.5 sm:gap-2">
                         <!-- Image Wrapper -->
-                        <div class="h-fit shrink-0">
+                        <div class="h-fit w-6 shrink-0 sm:w-7 md:w-8">
                           <img
                             src="assets/svg/test-logo-1.svg"
                             alt="Testimonial Logo 1"
                           />
                         </div>
-                        <h3 class="text-primary text-[25px] font-bold">
+                        <h3
+                          class="text-primary text-lg font-bold sm:text-xl md:text-2xl lg:text-[25px]"
+                        >
                           Company Name
                         </h3>
                       </div>
                       <!-- Star rating -->
-                      <div>
+                      <div class="flex gap-0.5">
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                       </div>
                     </div>
                     <p
-                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                      class="border-t-gray font-noto-sans border-t-2 pt-3 text-sm sm:pt-4 sm:text-base md:pt-5 md:text-lg"
                     >
                       Working with growthan.com has been a game-changer for our
                       business. Their strategies have led to significant growth
@@ -828,19 +904,25 @@
                     </p>
                   </div>
                   <!-- Author -->
-                  <div class="flex gap-8 py-3">
+                  <div
+                    class="flex gap-3 py-2 sm:gap-4 sm:py-2.5 md:gap-6 md:py-3 lg:gap-8"
+                  >
                     <!-- Author avatar wrapper -->
                     <div
-                      class="aspect-square w-15 overflow-hidden rounded-full"
+                      class="aspect-square w-10 overflow-hidden rounded-full sm:w-12 md:w-14 lg:w-15"
                     >
                       <img src="assets/images/avatar-1.png" alt="Avatar 1" />
                     </div>
                     <!-- Author Info -->
                     <div class="flex flex-col justify-between">
-                      <h4 class="text-primary text-xl font-bold capitalize">
+                      <h4
+                        class="text-primary text-base font-bold capitalize sm:text-lg md:text-xl"
+                      >
                         John Carter
                       </h4>
-                      <p class="font-noto-sans text-lg text-[#555]">
+                      <p
+                        class="font-noto-sans text-sm text-[#555] sm:text-base md:text-lg"
+                      >
                         Marketing Lead at Google
                       </p>
                     </div>
@@ -849,47 +931,51 @@
 
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
-                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                    class="mb-3 w-full rounded-lg bg-white p-4 shadow-[0px_2px_4px_0px_#92929240] sm:mb-4 sm:p-5 md:mb-5 lg:p-10"
                   >
                     <!-- Sub Card Header -->
-                    <div class="mb-5 flex items-center justify-between gap-3">
-                      <div class="flex gap-2">
+                    <div
+                      class="mb-3 flex flex-col items-start justify-between gap-2 sm:mb-4 sm:flex-row sm:items-center sm:gap-3 md:mb-5"
+                    >
+                      <div class="flex gap-1.5 sm:gap-2">
                         <!-- Image Wrapper -->
-                        <div class="h-fit shrink-0">
+                        <div class="h-fit w-6 shrink-0 sm:w-7 md:w-8">
                           <img
                             src="assets/svg/test-logo-2.svg"
                             alt="Testimonial Logo 2"
                           />
                         </div>
-                        <h3 class="text-primary text-[25px] font-bold">
+                        <h3
+                          class="text-primary text-lg font-bold sm:text-xl md:text-2xl lg:text-[25px]"
+                        >
                           Company Name
                         </h3>
                       </div>
                       <!-- Star rating -->
-                      <div>
+                      <div class="flex gap-0.5">
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                       </div>
                     </div>
                     <p
-                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                      class="border-t-gray font-noto-sans border-t-2 pt-3 text-sm sm:pt-4 sm:text-base md:pt-5 md:text-lg"
                     >
                       I'm extremely impressed with the level of expertise and
                       dedication that the team at Growthan brings to every
@@ -897,65 +983,78 @@
                     </p>
                   </div>
                   <!-- Author -->
-                  <div class="flex gap-8 py-3">
+                  <div
+                    class="flex gap-3 py-2 sm:gap-4 sm:py-2.5 md:gap-6 md:py-3 lg:gap-8"
+                  >
                     <!-- Author avatar wrapper -->
                     <div
-                      class="aspect-square w-15 overflow-hidden rounded-full"
+                      class="aspect-square w-10 overflow-hidden rounded-full sm:w-12 md:w-14 lg:w-15"
                     >
                       <img src="assets/images/avatar-2.png" alt="Avatar 2" />
                     </div>
                     <!-- Author Info -->
                     <div class="flex flex-col justify-between">
-                      <h4 class="text-primary text-xl font-bold capitalize">
+                      <h4
+                        class="text-primary text-base font-bold capitalize sm:text-lg md:text-xl"
+                      >
                         Peeter pawl
                       </h4>
-                      <p class="font-noto-sans text-lg text-[#555]">Designer</p>
+                      <p
+                        class="font-noto-sans text-sm text-[#555] sm:text-base md:text-lg"
+                      >
+                        Designer
+                      </p>
                     </div>
                   </div>
                 </div>
+
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
-                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                    class="mb-3 w-full rounded-lg bg-white p-4 shadow-[0px_2px_4px_0px_#92929240] sm:mb-4 sm:p-5 md:mb-5 lg:p-10"
                   >
                     <!-- Sub Card Header -->
-                    <div class="mb-5 flex items-center justify-between gap-3">
-                      <div class="flex gap-2">
+                    <div
+                      class="mb-3 flex flex-col items-start justify-between gap-2 sm:mb-4 sm:flex-row sm:items-center sm:gap-3 md:mb-5"
+                    >
+                      <div class="flex gap-1.5 sm:gap-2">
                         <!-- Image Wrapper -->
-                        <div class="h-fit shrink-0">
+                        <div class="h-fit w-6 shrink-0 sm:w-7 md:w-8">
                           <img
                             src="assets/svg/test-logo-1.svg"
                             alt="Testimonial Logo 1"
                           />
                         </div>
-                        <h3 class="text-primary text-[25px] font-bold">
+                        <h3
+                          class="text-primary text-lg font-bold sm:text-xl md:text-2xl lg:text-[25px]"
+                        >
                           Company Name
                         </h3>
                       </div>
                       <!-- Star rating -->
-                      <div>
+                      <div class="flex gap-0.5">
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                       </div>
                     </div>
                     <p
-                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                      class="border-t-gray font-noto-sans border-t-2 pt-3 text-sm sm:pt-4 sm:text-base md:pt-5 md:text-lg"
                     >
                       Working with growthan.com has been a game-changer for our
                       business. Their strategies have led to significant growth
@@ -963,19 +1062,25 @@
                     </p>
                   </div>
                   <!-- Author -->
-                  <div class="flex gap-8 py-3">
+                  <div
+                    class="flex gap-3 py-2 sm:gap-4 sm:py-2.5 md:gap-6 md:py-3 lg:gap-8"
+                  >
                     <!-- Author avatar wrapper -->
                     <div
-                      class="aspect-square w-15 overflow-hidden rounded-full"
+                      class="aspect-square w-10 overflow-hidden rounded-full sm:w-12 md:w-14 lg:w-15"
                     >
                       <img src="assets/images/avatar-1.png" alt="Avatar 1" />
                     </div>
                     <!-- Author Info -->
                     <div class="flex flex-col justify-between">
-                      <h4 class="text-primary text-xl font-bold capitalize">
+                      <h4
+                        class="text-primary text-base font-bold capitalize sm:text-lg md:text-xl"
+                      >
                         John Carter
                       </h4>
-                      <p class="font-noto-sans text-lg text-[#555]">
+                      <p
+                        class="font-noto-sans text-sm text-[#555] sm:text-base md:text-lg"
+                      >
                         Marketing Lead at Google
                       </p>
                     </div>
@@ -984,47 +1089,51 @@
 
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
-                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                    class="mb-3 w-full rounded-lg bg-white p-4 shadow-[0px_2px_4px_0px_#92929240] sm:mb-4 sm:p-5 md:mb-5 lg:p-10"
                   >
                     <!-- Sub Card Header -->
-                    <div class="mb-5 flex items-center justify-between gap-3">
-                      <div class="flex gap-2">
+                    <div
+                      class="mb-3 flex flex-col items-start justify-between gap-2 sm:mb-4 sm:flex-row sm:items-center sm:gap-3 md:mb-5"
+                    >
+                      <div class="flex gap-1.5 sm:gap-2">
                         <!-- Image Wrapper -->
-                        <div class="h-fit shrink-0">
+                        <div class="h-fit w-6 shrink-0 sm:w-7 md:w-8">
                           <img
                             src="assets/svg/test-logo-2.svg"
                             alt="Testimonial Logo 2"
                           />
                         </div>
-                        <h3 class="text-primary text-[25px] font-bold">
+                        <h3
+                          class="text-primary text-lg font-bold sm:text-xl md:text-2xl lg:text-[25px]"
+                        >
                           Company Name
                         </h3>
                       </div>
                       <!-- Star rating -->
-                      <div>
+                      <div class="flex gap-0.5">
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                       </div>
                     </div>
                     <p
-                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                      class="border-t-gray font-noto-sans border-t-2 pt-3 text-sm sm:pt-4 sm:text-base md:pt-5 md:text-lg"
                     >
                       I'm extremely impressed with the level of expertise and
                       dedication that the team at Growthan brings to every
@@ -1032,65 +1141,78 @@
                     </p>
                   </div>
                   <!-- Author -->
-                  <div class="flex gap-8 py-3">
+                  <div
+                    class="flex gap-3 py-2 sm:gap-4 sm:py-2.5 md:gap-6 md:py-3 lg:gap-8"
+                  >
                     <!-- Author avatar wrapper -->
                     <div
-                      class="aspect-square w-15 overflow-hidden rounded-full"
+                      class="aspect-square w-10 overflow-hidden rounded-full sm:w-12 md:w-14 lg:w-15"
                     >
                       <img src="assets/images/avatar-2.png" alt="Avatar 2" />
                     </div>
                     <!-- Author Info -->
                     <div class="flex flex-col justify-between">
-                      <h4 class="text-primary text-xl font-bold capitalize">
+                      <h4
+                        class="text-primary text-base font-bold capitalize sm:text-lg md:text-xl"
+                      >
                         Peeter pawl
                       </h4>
-                      <p class="font-noto-sans text-lg text-[#555]">Designer</p>
+                      <p
+                        class="font-noto-sans text-sm text-[#555] sm:text-base md:text-lg"
+                      >
+                        Designer
+                      </p>
                     </div>
                   </div>
                 </div>
+
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
-                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                    class="mb-3 w-full rounded-lg bg-white p-4 shadow-[0px_2px_4px_0px_#92929240] sm:mb-4 sm:p-5 md:mb-5 lg:p-10"
                   >
                     <!-- Sub Card Header -->
-                    <div class="mb-5 flex items-center justify-between gap-3">
-                      <div class="flex gap-2">
+                    <div
+                      class="mb-3 flex flex-col items-start justify-between gap-2 sm:mb-4 sm:flex-row sm:items-center sm:gap-3 md:mb-5"
+                    >
+                      <div class="flex gap-1.5 sm:gap-2">
                         <!-- Image Wrapper -->
-                        <div class="h-fit shrink-0">
+                        <div class="h-fit w-6 shrink-0 sm:w-7 md:w-8">
                           <img
                             src="assets/svg/test-logo-1.svg"
                             alt="Testimonial Logo 1"
                           />
                         </div>
-                        <h3 class="text-primary text-[25px] font-bold">
+                        <h3
+                          class="text-primary text-lg font-bold sm:text-xl md:text-2xl lg:text-[25px]"
+                        >
                           Company Name
                         </h3>
                       </div>
                       <!-- Star rating -->
-                      <div>
+                      <div class="flex gap-0.5">
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                       </div>
                     </div>
                     <p
-                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                      class="border-t-gray font-noto-sans border-t-2 pt-3 text-sm sm:pt-4 sm:text-base md:pt-5 md:text-lg"
                     >
                       Working with growthan.com has been a game-changer for our
                       business. Their strategies have led to significant growth
@@ -1098,19 +1220,25 @@
                     </p>
                   </div>
                   <!-- Author -->
-                  <div class="flex gap-8 py-3">
+                  <div
+                    class="flex gap-3 py-2 sm:gap-4 sm:py-2.5 md:gap-6 md:py-3 lg:gap-8"
+                  >
                     <!-- Author avatar wrapper -->
                     <div
-                      class="aspect-square w-15 overflow-hidden rounded-full"
+                      class="aspect-square w-10 overflow-hidden rounded-full sm:w-12 md:w-14 lg:w-15"
                     >
                       <img src="assets/images/avatar-1.png" alt="Avatar 1" />
                     </div>
                     <!-- Author Info -->
                     <div class="flex flex-col justify-between">
-                      <h4 class="text-primary text-xl font-bold capitalize">
+                      <h4
+                        class="text-primary text-base font-bold capitalize sm:text-lg md:text-xl"
+                      >
                         John Carter
                       </h4>
-                      <p class="font-noto-sans text-lg text-[#555]">
+                      <p
+                        class="font-noto-sans text-sm text-[#555] sm:text-base md:text-lg"
+                      >
                         Marketing Lead at Google
                       </p>
                     </div>
@@ -1119,47 +1247,51 @@
 
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
-                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                    class="mb-3 w-full rounded-lg bg-white p-4 shadow-[0px_2px_4px_0px_#92929240] sm:mb-4 sm:p-5 md:mb-5 lg:p-10"
                   >
                     <!-- Sub Card Header -->
-                    <div class="mb-5 flex items-center justify-between gap-3">
-                      <div class="flex gap-2">
+                    <div
+                      class="mb-3 flex flex-col items-start justify-between gap-2 sm:mb-4 sm:flex-row sm:items-center sm:gap-3 md:mb-5"
+                    >
+                      <div class="flex gap-1.5 sm:gap-2">
                         <!-- Image Wrapper -->
-                        <div class="h-fit shrink-0">
+                        <div class="h-fit w-6 shrink-0 sm:w-7 md:w-8">
                           <img
                             src="assets/svg/test-logo-2.svg"
                             alt="Testimonial Logo 2"
                           />
                         </div>
-                        <h3 class="text-primary text-[25px] font-bold">
+                        <h3
+                          class="text-primary text-lg font-bold sm:text-xl md:text-2xl lg:text-[25px]"
+                        >
                           Company Name
                         </h3>
                       </div>
                       <!-- Star rating -->
-                      <div>
+                      <div class="flex gap-0.5">
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                         <i
-                          class="fa-solid fa-star text-2xl text-yellow-300"
+                          class="fa-solid fa-star text-base text-yellow-300 sm:text-lg md:text-xl lg:text-2xl"
                         ></i>
                       </div>
                     </div>
                     <p
-                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                      class="border-t-gray font-noto-sans border-t-2 pt-3 text-sm sm:pt-4 sm:text-base md:pt-5 md:text-lg"
                     >
                       I'm extremely impressed with the level of expertise and
                       dedication that the team at Growthan brings to every
@@ -1167,19 +1299,27 @@
                     </p>
                   </div>
                   <!-- Author -->
-                  <div class="flex gap-8 py-3">
+                  <div
+                    class="flex gap-3 py-2 sm:gap-4 sm:py-2.5 md:gap-6 md:py-3 lg:gap-8"
+                  >
                     <!-- Author avatar wrapper -->
                     <div
-                      class="aspect-square w-15 overflow-hidden rounded-full"
+                      class="aspect-square w-10 overflow-hidden rounded-full sm:w-12 md:w-14 lg:w-15"
                     >
                       <img src="assets/images/avatar-2.png" alt="Avatar 2" />
                     </div>
                     <!-- Author Info -->
                     <div class="flex flex-col justify-between">
-                      <h4 class="text-primary text-xl font-bold capitalize">
+                      <h4
+                        class="text-primary text-base font-bold capitalize sm:text-lg md:text-xl"
+                      >
                         Peeter pawl
                       </h4>
-                      <p class="font-noto-sans text-lg text-[#555]">Designer</p>
+                      <p
+                        class="font-noto-sans text-sm text-[#555] sm:text-base md:text-lg"
+                      >
+                        Designer
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1190,7 +1330,7 @@
       </section>
 
       <!-- Stats Section -->
-      <section class="relative py-35">
+      <section class="relative py-16 sm:py-20 md:py-28 lg:py-35">
         <img
           src="assets/images/stats-background.png"
           alt="Stats Background"
@@ -1199,48 +1339,56 @@
         <div class="container">
           <!-- Section Wrapper | Grid of stats -->
           <div
-            class="grid-col-1 mx-auto grid w-fit gap-4 text-white lg:grid-cols-2 lg:gap-8"
+            class="mx-auto grid w-fit grid-cols-1 gap-3 text-white sm:grid-cols-2 sm:gap-4 md:gap-6 lg:gap-8"
           >
-            <p class="flex items-center justify-center gap-2">
+            <p
+              class="flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2"
+            >
               <span
-                class="text-2xl font-semibold after:text-[#5956E8] after:content-['+'] sm:text-4xl lg:text-[50px]"
+                class="text-3xl font-semibold after:text-[#5956E8] after:content-['+'] sm:text-4xl md:text-5xl lg:text-[50px]"
                 >100</span
               >
               <span
-                class="lg:font-lg font-noto-sans text-gray text-base font-medium uppercase"
+                class="font-noto-sans text-gray text-xs font-medium uppercase sm:text-sm md:text-base lg:text-lg"
               >
                 Happy clients
               </span>
             </p>
-            <p class="flex items-center justify-center gap-2">
+            <p
+              class="flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2"
+            >
               <span
-                class="text-2xl font-semibold after:text-[#FF1850] after:content-['+'] sm:text-4xl lg:text-[50px]"
+                class="text-3xl font-semibold after:text-[#FF1850] after:content-['+'] sm:text-4xl md:text-5xl lg:text-[50px]"
                 >500</span
               >
               <span
-                class="lg:font-lg font-noto-sans text-gray text-base font-medium uppercase"
+                class="font-noto-sans text-gray text-xs font-medium uppercase sm:text-sm md:text-base lg:text-lg"
               >
                 Publishers
               </span>
             </p>
-            <p class="flex items-center justify-center gap-2">
+            <p
+              class="flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2"
+            >
               <span
-                class="text-2xl font-semibold after:text-[#FFDC60] after:content-['+'] sm:text-4xl lg:text-[50px]"
+                class="text-3xl font-semibold after:text-[#FFDC60] after:content-['+'] sm:text-4xl md:text-5xl lg:text-[50px]"
                 >25,000</span
               >
               <span
-                class="lg:font-lg font-noto-sans text-gray text-base font-medium uppercase"
+                class="font-noto-sans text-gray text-xs font-medium uppercase sm:text-sm md:text-base lg:text-lg"
               >
                 Daily conversions
               </span>
             </p>
-            <p class="flex items-center justify-center gap-2">
+            <p
+              class="flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2"
+            >
               <span
-                class="text-2xl font-semibold after:text-[#38E55E] after:content-['+'] sm:text-4xl lg:text-[50px]"
+                class="text-3xl font-semibold after:text-[#38E55E] after:content-['+'] sm:text-4xl md:text-5xl lg:text-[50px]"
                 >150</span
               >
               <span
-                class="lg:font-lg font-noto-sans text-gray text-base font-medium uppercase"
+                class="font-noto-sans text-gray text-xs font-medium uppercase sm:text-sm md:text-base lg:text-lg"
               >
                 Campaigns delivered
               </span>
@@ -1250,14 +1398,16 @@
       </section>
 
       <!-- Info Section | Utils -->
-      <section>
+      <section class="py-12 sm:py-16 md:py-18 lg:py-20">
         <div class="container">
           <!-- Section Wrapper -->
           <div
-            class="flex flex-col items-center gap-8 lg:flex-row lg:items-start"
+            class="flex flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:flex-row lg:items-start"
           >
             <!-- Section Image -->
-            <div class="order-2 h-fit max-w-120 shrink-0 lg:order-none">
+            <div
+              class="order-2 h-fit max-w-90 shrink-0 sm:max-w-100 md:max-w-110 lg:order-none lg:max-w-120"
+            >
               <img
                 src="assets/images/desktop-interaction.png"
                 alt="Get the Best"
@@ -1267,8 +1417,12 @@
             <!-- Section Block Content -->
             <div>
               <!-- Section Header -->
-              <div class="mb-5 flex gap-5 md:gap-10 lg:mb-[30px]">
-                <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
+              <div
+                class="mb-4 flex gap-3 sm:mb-5 sm:gap-4 md:gap-8 lg:mb-[30px] lg:gap-10"
+              >
+                <div
+                  class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+                >
                   <img
                     src="assets/svg/icon-star.svg"
                     alt="Star Icon"
@@ -1277,21 +1431,21 @@
                 </div>
                 <div class="flex flex-col">
                   <p
-                    class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
+                    class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
                   >
                     get the best
                   </p>
                   <h2
-                    class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                    class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
                   >
                     We Offer Reliable Solution To Increase Brand Visibility
                   </h2>
                 </div>
               </div>
               <!-- Section Content -->
-              <div class="border-t-gray border-t-2 pt-[30px]">
+              <div class="border-t-gray border-t-2 pt-5 sm:pt-6 md:pt-[30px]">
                 <p
-                  class="text-primary-dark font-noto-sans mb-8 text-base leading-[157%] lg:text-lg"
+                  class="text-primary-dark font-noto-sans mb-5 text-sm leading-[157%] sm:mb-6 sm:text-base md:mb-8 lg:text-lg"
                 >
                   We help brands to advertise on Web & Mobile medium. We help
                   brands to select best medium with optimum module in order to
@@ -1312,15 +1466,17 @@
     </main>
 
     <!-- FAQ Section -->
-    <section>
+    <section class="py-12 sm:py-16 md:py-18 lg:py-20">
       <div class="container">
         <!-- Section Wrapper -->
         <div>
           <!-- Section Header -->
           <div
-            class="mb-10 flex flex-col items-center gap-5 md:gap-10 lg:mb-[90px]"
+            class="mb-8 flex flex-col items-center gap-3 sm:mb-10 sm:gap-4 md:gap-8 lg:mb-[90px] lg:gap-10"
           >
-            <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
+            <div
+              class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+            >
               <img
                 src="assets/svg/icon-chat.svg"
                 alt="Chat Icon"
@@ -1329,12 +1485,12 @@
             </div>
             <div class="flex flex-col items-center">
               <p
-                class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
+                class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
               >
                 FAQ
               </p>
               <h2
-                class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
               >
                 Frequently Asked Questions
               </h2>
@@ -1342,19 +1498,19 @@
           </div>
 
           <!-- Section Body | FAQ Wrapper -->
-          <div class="mx-auto flex max-w-5xl flex-col gap-5">
+          <div class="mx-auto flex max-w-5xl flex-col gap-3 sm:gap-4 md:gap-5">
             <!-- FAQ Item -->
-            <div class="faq overflow-hidden rounded-2xl">
+            <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
               <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
               >
                 <h3>What is Affiliate Marketing?</h3>
-                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
               </div>
               <div
-                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-base leading-[157%] lg:text-lg"
+                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
               >
-                <p class="p-4">
+                <p class="p-3 sm:p-4">
                   Affiliate marketing is a performance-based marketing strategy
                   where businesses reward affiliates for driving traffic or
                   sales through their promotional efforts.
@@ -1362,17 +1518,17 @@
               </div>
             </div>
             <!-- FAQ Item -->
-            <div class="faq overflow-hidden rounded-2xl">
+            <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
               <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
               >
                 <h3>What is Affiliate Marketing?</h3>
-                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
               </div>
               <div
-                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-base leading-[157%] lg:text-lg"
+                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
               >
-                <p class="p-4">
+                <p class="p-3 sm:p-4">
                   Affiliate marketing is a performance-based marketing strategy
                   where businesses reward affiliates for driving traffic or
                   sales through their promotional efforts.
@@ -1380,17 +1536,17 @@
               </div>
             </div>
             <!-- FAQ Item -->
-            <div class="faq overflow-hidden rounded-2xl">
+            <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
               <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
               >
                 <h3>What is Affiliate Marketing?</h3>
-                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
               </div>
               <div
-                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-base leading-[157%] lg:text-lg"
+                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
               >
-                <p class="p-4">
+                <p class="p-3 sm:p-4">
                   Affiliate marketing is a performance-based marketing strategy
                   where businesses reward affiliates for driving traffic or
                   sales through their promotional efforts.
@@ -1398,17 +1554,17 @@
               </div>
             </div>
             <!-- FAQ Item -->
-            <div class="faq overflow-hidden rounded-2xl">
+            <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
               <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
               >
                 <h3>What is Affiliate Marketing?</h3>
-                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
               </div>
               <div
-                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-base leading-[157%] lg:text-lg"
+                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
               >
-                <p class="p-4">
+                <p class="p-3 sm:p-4">
                   Affiliate marketing is a performance-based marketing strategy
                   where businesses reward affiliates for driving traffic or
                   sales through their promotional efforts.
@@ -1416,17 +1572,17 @@
               </div>
             </div>
             <!-- FAQ Item -->
-            <div class="faq overflow-hidden rounded-2xl">
+            <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
               <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
               >
                 <h3>What is Affiliate Marketing?</h3>
-                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
               </div>
               <div
-                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-base leading-[157%] lg:text-lg"
+                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
               >
-                <p class="p-4">
+                <p class="p-3 sm:p-4">
                   Affiliate marketing is a performance-based marketing strategy
                   where businesses reward affiliates for driving traffic or
                   sales through their promotional efforts.
@@ -1439,17 +1595,21 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary text-white">
+    <footer class="bg-primary py-12 text-white sm:py-16 md:py-18 lg:py-20">
       <div class="container">
         <!-- Footer Wrapper -->
         <div class="flex flex-col">
           <!-- Footer sections -->
           <div
-            class="xs:grid-cols-2 grid gap-8 text-base lg:grid-cols-4 lg:text-lg"
+            class="xs:grid-cols-2 grid grid-cols-1 gap-6 text-sm sm:gap-8 sm:text-base md:text-lg lg:grid-cols-4"
           >
             <div>
-              <h3 class="mb-3 text-2xl font-semibold lg:mb-7">Pages</h3>
-              <div class="font-noto-sans flex flex-col gap-2">
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Pages
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-1.5 sm:gap-2">
                 <a href="/">Home</a>
                 <a href="/about.html">About Us</a>
                 <a href="/services.html">Services</a>
@@ -1457,8 +1617,12 @@
               </div>
             </div>
             <div>
-              <h3 class="mb-3 text-2xl font-semibold lg:mb-7">Social Logins</h3>
-              <div class="font-noto-sans flex flex-col gap-2">
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Social Logins
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-1.5 sm:gap-2">
                 <a href="#">Facebook</a>
                 <a href="#">Twitter</a>
                 <a href="#">Instagram</a>
@@ -1466,8 +1630,12 @@
               </div>
             </div>
             <div class="max-w-xs">
-              <h3 class="mb-3 text-2xl font-semibold lg:mb-7">Location</h3>
-              <div class="font-noto-sans flex flex-col gap-3">
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Location
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-2 sm:gap-3">
                 <a href="#" class="underline"
                   >UNIT NO. 147, FIRST FLOOR, JMD MEGAPOLIS, Badshahpur Sohna Rd
                   Hwy, Sector 48, Gurugram, Haryana 122018 .</a
@@ -1476,13 +1644,15 @@
               </div>
             </div>
             <div>
-              <h3 class="mb-3 text-2xl font-semibold lg:mb-7">
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
                 Get in touch with
               </h3>
-              <div class="font-noto-sans flex flex-col gap-4">
+              <div class="font-noto-sans flex flex-col gap-2 sm:gap-3 md:gap-4">
                 <a
                   href="tel:+918617514085"
-                  class="bg-primary-dark xl:text-md text-gray w-fit rounded-lg px-7 py-2 text-base font-bold text-nowrap 2xl:text-2xl"
+                  class="bg-primary-dark text-gray w-fit rounded-md px-4 py-1.5 text-sm font-bold text-nowrap sm:rounded-lg sm:px-5 sm:py-2 sm:text-base md:px-6 lg:px-7 xl:text-lg 2xl:text-2xl"
                   >+91 8617514085</a
                 >
                 <a href="mailto:business@growthan.com" class="underline"
@@ -1492,7 +1662,9 @@
             </div>
           </div>
           <!-- Copyright -->
-          <div class="mt-15 border-t-1 border-t-white/40 pt-2 text-center">
+          <div
+            class="mt-8 border-t-1 border-t-white/40 pt-2 text-center text-xs sm:mt-10 sm:text-sm md:mt-12 md:text-base lg:mt-15"
+          >
             Copyright &copy; 2023 | GrowThan | All rights reserved.
           </div>
         </div>
