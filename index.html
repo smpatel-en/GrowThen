@@ -100,11 +100,12 @@
           @apply bg-primary-dark;
         }
 
-        .btn-secondary {
-          @apply text-primary grid place-items-center;
+        .btn-secondary,
+        .btn-primary.disabled {
+          @apply text-primary border-primary bg-transparent;
         }
         .btn-secondary:hover {
-          @apply bg-gray;
+          @apply bg-primary text-white;
         }
       }
 
@@ -136,6 +137,11 @@
       }
       .faq.active .faq-answer {
         @apply max-h-45 sm:max-h-35 md:max-h-30 lg:max-h-25;
+      }
+
+      .testimonial-prev.disabled,
+      .testimonial-next.disabled {
+        @apply pointer-events-none opacity-50;
       }
     </style>
 
@@ -186,7 +192,7 @@
               <button
                 title="Menu"
                 id="menuBtn"
-                class="btn btn-secondary text-2xl"
+                class="btn btn-secondary grid place-items-center p-2 text-2xl"
               >
                 <i class="fa-solid fa-bars"></i>
               </button>
@@ -201,7 +207,7 @@
                 <button
                   title="Close Menu"
                   id="menuBtn"
-                  class="btn btn-secondary mb-10 p-0.5 text-2xl"
+                  class="btn btn-secondary mb-10 grid place-items-center p-2 text-2xl"
                 >
                   <i class="fa-solid fa-xmark"></i>
                 </button>
@@ -724,6 +730,464 @@
       </section>
 
       <!-- Testimonials Section -->
+      <section>
+        <div class="container">
+          <!-- Section Wrapper -->
+          <div>
+            <!-- Section top wrapper -->
+            <div class="mb-10 flex items-center justify-between lg:mb-[90px]">
+              <!-- Section Header -->
+              <div class="flex gap-5 md:gap-10">
+                <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
+                  <img
+                    src="assets/svg/icon-chat.svg"
+                    alt="Chat Icon"
+                    class="object-contain"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <p
+                    class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
+                  >
+                    Testimonials
+                  </p>
+                  <h2
+                    class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                  >
+                    We work with customers across all industries
+                  </h2>
+                </div>
+              </div>
+
+              <!-- Navigation Buttons -->
+              <div class="flex gap-3">
+                <button
+                  title="Previous"
+                  class="testimonial-prev btn btn-primary grid h-8 w-8 place-items-center rounded-full p-0 text-2xl lg:h-15 lg:w-15"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button
+                  title="Next"
+                  class="testimonial-next btn btn-primary grid h-8 w-8 place-items-center rounded-full p-0 text-2xl lg:h-15 lg:w-15"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+            <!-- Section Body | Testimonials Slider -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- testimonial Item -->
+                <div
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                >
+                  <!-- Sub Card -->
+                  <div
+                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                  >
+                    <!-- Sub Card Header -->
+                    <div class="mb-5 flex items-center justify-between gap-3">
+                      <div class="flex gap-2">
+                        <!-- Image Wrapper -->
+                        <div class="h-fit shrink-0">
+                          <img
+                            src="assets/svg/test-logo-1.svg"
+                            alt="Testimonial Logo 1"
+                          />
+                        </div>
+                        <h3 class="text-primary text-[25px] font-bold">
+                          Company Name
+                        </h3>
+                      </div>
+                      <!-- Star rating -->
+                      <div>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                    >
+                      Working with growthan.com has been a game-changer for our
+                      business. Their strategies have led to significant growth
+                      and a boost in revenue.
+                    </p>
+                  </div>
+                  <!-- Author -->
+                  <div class="flex gap-8 py-3">
+                    <!-- Author avatar wrapper -->
+                    <div
+                      class="aspect-square w-15 overflow-hidden rounded-full"
+                    >
+                      <img src="assets/images/avatar-1.png" alt="Avatar 1" />
+                    </div>
+                    <!-- Author Info -->
+                    <div class="flex flex-col justify-between">
+                      <h4 class="text-primary text-xl font-bold capitalize">
+                        John Carter
+                      </h4>
+                      <p class="font-noto-sans text-lg text-[#555]">
+                        Marketing Lead at Google
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- testimonial Item -->
+                <div
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                >
+                  <!-- Sub Card -->
+                  <div
+                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                  >
+                    <!-- Sub Card Header -->
+                    <div class="mb-5 flex items-center justify-between gap-3">
+                      <div class="flex gap-2">
+                        <!-- Image Wrapper -->
+                        <div class="h-fit shrink-0">
+                          <img
+                            src="assets/svg/test-logo-2.svg"
+                            alt="Testimonial Logo 2"
+                          />
+                        </div>
+                        <h3 class="text-primary text-[25px] font-bold">
+                          Company Name
+                        </h3>
+                      </div>
+                      <!-- Star rating -->
+                      <div>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                    >
+                      I'm extremely impressed with the level of expertise and
+                      dedication that the team at Growthan brings to every
+                      project. They consistently deliver great results.
+                    </p>
+                  </div>
+                  <!-- Author -->
+                  <div class="flex gap-8 py-3">
+                    <!-- Author avatar wrapper -->
+                    <div
+                      class="aspect-square w-15 overflow-hidden rounded-full"
+                    >
+                      <img src="assets/images/avatar-2.png" alt="Avatar 2" />
+                    </div>
+                    <!-- Author Info -->
+                    <div class="flex flex-col justify-between">
+                      <h4 class="text-primary text-xl font-bold capitalize">
+                        Peeter pawl
+                      </h4>
+                      <p class="font-noto-sans text-lg text-[#555]">Designer</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- testimonial Item -->
+                <div
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                >
+                  <!-- Sub Card -->
+                  <div
+                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                  >
+                    <!-- Sub Card Header -->
+                    <div class="mb-5 flex items-center justify-between gap-3">
+                      <div class="flex gap-2">
+                        <!-- Image Wrapper -->
+                        <div class="h-fit shrink-0">
+                          <img
+                            src="assets/svg/test-logo-1.svg"
+                            alt="Testimonial Logo 1"
+                          />
+                        </div>
+                        <h3 class="text-primary text-[25px] font-bold">
+                          Company Name
+                        </h3>
+                      </div>
+                      <!-- Star rating -->
+                      <div>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                    >
+                      Working with growthan.com has been a game-changer for our
+                      business. Their strategies have led to significant growth
+                      and a boost in revenue.
+                    </p>
+                  </div>
+                  <!-- Author -->
+                  <div class="flex gap-8 py-3">
+                    <!-- Author avatar wrapper -->
+                    <div
+                      class="aspect-square w-15 overflow-hidden rounded-full"
+                    >
+                      <img src="assets/images/avatar-1.png" alt="Avatar 1" />
+                    </div>
+                    <!-- Author Info -->
+                    <div class="flex flex-col justify-between">
+                      <h4 class="text-primary text-xl font-bold capitalize">
+                        John Carter
+                      </h4>
+                      <p class="font-noto-sans text-lg text-[#555]">
+                        Marketing Lead at Google
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- testimonial Item -->
+                <div
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                >
+                  <!-- Sub Card -->
+                  <div
+                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                  >
+                    <!-- Sub Card Header -->
+                    <div class="mb-5 flex items-center justify-between gap-3">
+                      <div class="flex gap-2">
+                        <!-- Image Wrapper -->
+                        <div class="h-fit shrink-0">
+                          <img
+                            src="assets/svg/test-logo-2.svg"
+                            alt="Testimonial Logo 2"
+                          />
+                        </div>
+                        <h3 class="text-primary text-[25px] font-bold">
+                          Company Name
+                        </h3>
+                      </div>
+                      <!-- Star rating -->
+                      <div>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                    >
+                      I'm extremely impressed with the level of expertise and
+                      dedication that the team at Growthan brings to every
+                      project. They consistently deliver great results.
+                    </p>
+                  </div>
+                  <!-- Author -->
+                  <div class="flex gap-8 py-3">
+                    <!-- Author avatar wrapper -->
+                    <div
+                      class="aspect-square w-15 overflow-hidden rounded-full"
+                    >
+                      <img src="assets/images/avatar-2.png" alt="Avatar 2" />
+                    </div>
+                    <!-- Author Info -->
+                    <div class="flex flex-col justify-between">
+                      <h4 class="text-primary text-xl font-bold capitalize">
+                        Peeter pawl
+                      </h4>
+                      <p class="font-noto-sans text-lg text-[#555]">Designer</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- testimonial Item -->
+                <div
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                >
+                  <!-- Sub Card -->
+                  <div
+                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                  >
+                    <!-- Sub Card Header -->
+                    <div class="mb-5 flex items-center justify-between gap-3">
+                      <div class="flex gap-2">
+                        <!-- Image Wrapper -->
+                        <div class="h-fit shrink-0">
+                          <img
+                            src="assets/svg/test-logo-1.svg"
+                            alt="Testimonial Logo 1"
+                          />
+                        </div>
+                        <h3 class="text-primary text-[25px] font-bold">
+                          Company Name
+                        </h3>
+                      </div>
+                      <!-- Star rating -->
+                      <div>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                    >
+                      Working with growthan.com has been a game-changer for our
+                      business. Their strategies have led to significant growth
+                      and a boost in revenue.
+                    </p>
+                  </div>
+                  <!-- Author -->
+                  <div class="flex gap-8 py-3">
+                    <!-- Author avatar wrapper -->
+                    <div
+                      class="aspect-square w-15 overflow-hidden rounded-full"
+                    >
+                      <img src="assets/images/avatar-1.png" alt="Avatar 1" />
+                    </div>
+                    <!-- Author Info -->
+                    <div class="flex flex-col justify-between">
+                      <h4 class="text-primary text-xl font-bold capitalize">
+                        John Carter
+                      </h4>
+                      <p class="font-noto-sans text-lg text-[#555]">
+                        Marketing Lead at Google
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- testimonial Item -->
+                <div
+                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-5"
+                >
+                  <!-- Sub Card -->
+                  <div
+                    class="mb-5 w-full rounded-lg bg-white p-5 shadow-[0px_2px_4px_0px_#92929240] lg:p-10"
+                  >
+                    <!-- Sub Card Header -->
+                    <div class="mb-5 flex items-center justify-between gap-3">
+                      <div class="flex gap-2">
+                        <!-- Image Wrapper -->
+                        <div class="h-fit shrink-0">
+                          <img
+                            src="assets/svg/test-logo-2.svg"
+                            alt="Testimonial Logo 2"
+                          />
+                        </div>
+                        <h3 class="text-primary text-[25px] font-bold">
+                          Company Name
+                        </h3>
+                      </div>
+                      <!-- Star rating -->
+                      <div>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-2xl text-yellow-300"
+                        ></i>
+                      </div>
+                    </div>
+                    <p
+                      class="border-t-gray font-noto-sans border-t-2 pt-5 text-lg"
+                    >
+                      I'm extremely impressed with the level of expertise and
+                      dedication that the team at Growthan brings to every
+                      project. They consistently deliver great results.
+                    </p>
+                  </div>
+                  <!-- Author -->
+                  <div class="flex gap-8 py-3">
+                    <!-- Author avatar wrapper -->
+                    <div
+                      class="aspect-square w-15 overflow-hidden rounded-full"
+                    >
+                      <img src="assets/images/avatar-2.png" alt="Avatar 2" />
+                    </div>
+                    <!-- Author Info -->
+                    <div class="flex flex-col justify-between">
+                      <h4 class="text-primary text-xl font-bold capitalize">
+                        Peeter pawl
+                      </h4>
+                      <p class="font-noto-sans text-lg text-[#555]">Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Stats Section -->
       <section class="relative py-35">
@@ -806,8 +1270,8 @@
               <div class="mb-5 flex gap-5 md:gap-10 lg:mb-[30px]">
                 <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
                   <img
-                    src="assets/svg/Icon-star.svg"
-                    alt="Mention Icon"
+                    src="assets/svg/icon-star.svg"
+                    alt="Star Icon"
                     class="object-contain"
                   />
                 </div>
@@ -853,15 +1317,17 @@
         <!-- Section Wrapper -->
         <div>
           <!-- Section Header -->
-          <div class="mb-10 flex gap-5 md:gap-10 lg:mb-[90px]">
+          <div
+            class="mb-10 flex flex-col items-center gap-5 md:gap-10 lg:mb-[90px]"
+          >
             <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
               <img
-                src="assets/svg/icon-settings.svg"
-                alt="Setting Icon"
+                src="assets/svg/icon-chat.svg"
+                alt="Chat Icon"
                 class="object-contain"
               />
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col items-center">
               <p
                 class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
               >
@@ -876,11 +1342,11 @@
           </div>
 
           <!-- Section Body | FAQ Wrapper -->
-          <div class="flex flex-col gap-4">
+          <div class="mx-auto flex max-w-5xl flex-col gap-5">
             <!-- FAQ Item -->
             <div class="faq overflow-hidden rounded-2xl">
               <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
               >
                 <h3>What is Affiliate Marketing?</h3>
                 <i class="fa-solid fa-plus"></i>
@@ -898,7 +1364,7 @@
             <!-- FAQ Item -->
             <div class="faq overflow-hidden rounded-2xl">
               <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
               >
                 <h3>What is Affiliate Marketing?</h3>
                 <i class="fa-solid fa-plus"></i>
@@ -916,7 +1382,7 @@
             <!-- FAQ Item -->
             <div class="faq overflow-hidden rounded-2xl">
               <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
               >
                 <h3>What is Affiliate Marketing?</h3>
                 <i class="fa-solid fa-plus"></i>
@@ -934,7 +1400,7 @@
             <!-- FAQ Item -->
             <div class="faq overflow-hidden rounded-2xl">
               <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
               >
                 <h3>What is Affiliate Marketing?</h3>
                 <i class="fa-solid fa-plus"></i>
@@ -952,7 +1418,7 @@
             <!-- FAQ Item -->
             <div class="faq overflow-hidden rounded-2xl">
               <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
               >
                 <h3>What is Affiliate Marketing?</h3>
                 <i class="fa-solid fa-plus"></i>
@@ -1033,6 +1499,9 @@
       </div>
     </footer>
   </body>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- Scripts -->
   <script src="js/scripts.js"></script>

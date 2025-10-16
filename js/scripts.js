@@ -42,4 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
       item.classList.toggle("active");
     });
   });
+
+  // Initialize Swiper
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".testimonial-next",
+      prevEl: ".testimonial-prev",
+      disabledClass: "disabled",
+    },
+  });
 });
