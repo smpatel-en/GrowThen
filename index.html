@@ -18,6 +18,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- Tailwind CSS cdn temperary for development -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
@@ -116,6 +122,20 @@
       }
       #navbar.scrolled {
         @apply border-gray bg-white backdrop-blur-sm;
+      }
+
+      .faq i {
+        @apply transition-transform duration-300;
+      }
+      .faq.active .faq-question i {
+        @apply rotate-45;
+      }
+
+      .faq-answer {
+        @apply transition-all duration-300;
+      }
+      .faq.active .faq-answer {
+        @apply max-h-45 sm:max-h-35 md:max-h-30 lg:max-h-25;
       }
     </style>
 
@@ -286,7 +306,7 @@
                   Services
                 </p>
                 <h2
-                  class="text-primary text-xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                  class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
                 >
                   Services We Provide
                 </h2>
@@ -500,7 +520,7 @@
                     get the best
                   </p>
                   <h2
-                    class="text-primary text-xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                    class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
                   >
                     Why Growthan?
                   </h2>
@@ -554,7 +574,7 @@
                   Process
                 </p>
                 <h2
-                  class="text-primary text-xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                  class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
                 >
                   How we work
                 </h2>
@@ -589,7 +609,7 @@
                     Market Research
                   </h3>
                   <p
-                    class="text-primary-dark font-noto-sans text-lg leading-[157%]"
+                    class="text-primary-dark font-noto-sans text-lg leading-[157%] text-pretty"
                   >
                     We conduct thorough research to identify key opportunities
                     and trends.
@@ -612,7 +632,7 @@
                     Analysis
                   </h3>
                   <p
-                    class="text-primary-dark font-noto-sans text-lg leading-[157%]"
+                    class="text-primary-dark font-noto-sans text-lg leading-[157%] text-pretty"
                   >
                     We analyze your performance metrics, consumer behavior and
                     trends.
@@ -658,7 +678,7 @@
                     Targeting
                   </h3>
                   <p
-                    class="text-primary-dark font-noto-sans text-lg leading-[157%]"
+                    class="text-primary-dark font-noto-sans text-lg leading-[157%] text-pretty"
                   >
                     We develop customized strategies that reach your target
                     audience.
@@ -680,7 +700,7 @@
                     Update Result
                   </h3>
                   <p
-                    class="text-primary-dark font-noto-sans text-lg leading-[157%]"
+                    class="text-primary-dark font-noto-sans text-lg leading-[157%] text-pretty"
                   >
                     We provide regular updates and reports to keep you informed.
                   </p>
@@ -786,7 +806,7 @@
               <div class="mb-5 flex gap-5 md:gap-10 lg:mb-[30px]">
                 <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
                   <img
-                    src="assets/svg/icon-mention.svg"
+                    src="assets/svg/Icon-star.svg"
                     alt="Mention Icon"
                     class="object-contain"
                   />
@@ -798,7 +818,7 @@
                     get the best
                   </p>
                   <h2
-                    class="text-primary text-xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+                    class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
                   >
                     We Offer Reliable Solution To Increase Brand Visibility
                   </h2>
@@ -827,6 +847,131 @@
       </section>
     </main>
 
+    <!-- FAQ Section -->
+    <section>
+      <div class="container">
+        <!-- Section Wrapper -->
+        <div>
+          <!-- Section Header -->
+          <div class="mb-10 flex gap-5 md:gap-10 lg:mb-[90px]">
+            <div class="h-fit max-w-[60px] shrink-0 md:max-w-none">
+              <img
+                src="assets/svg/icon-settings.svg"
+                alt="Setting Icon"
+                class="object-contain"
+              />
+            </div>
+            <div class="flex flex-col">
+              <p
+                class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-[15px] font-medium tracking-widest uppercase before:content-['//']"
+              >
+                FAQ
+              </p>
+              <h2
+                class="text-primary text-2xl font-semibold text-pretty md:text-3xl lg:text-[40px]"
+              >
+                Frequently Asked Questions
+              </h2>
+            </div>
+          </div>
+
+          <!-- Section Body | FAQ Wrapper -->
+          <div class="flex flex-col gap-4">
+            <!-- FAQ Item -->
+            <div class="faq overflow-hidden rounded-2xl">
+              <div
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+              >
+                <h3>What is Affiliate Marketing?</h3>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <div
+                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-base leading-[157%] lg:text-lg"
+              >
+                <p class="p-4">
+                  Affiliate marketing is a performance-based marketing strategy
+                  where businesses reward affiliates for driving traffic or
+                  sales through their promotional efforts.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item -->
+            <div class="faq overflow-hidden rounded-2xl">
+              <div
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+              >
+                <h3>What is Affiliate Marketing?</h3>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <div
+                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-base leading-[157%] lg:text-lg"
+              >
+                <p class="p-4">
+                  Affiliate marketing is a performance-based marketing strategy
+                  where businesses reward affiliates for driving traffic or
+                  sales through their promotional efforts.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item -->
+            <div class="faq overflow-hidden rounded-2xl">
+              <div
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+              >
+                <h3>What is Affiliate Marketing?</h3>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <div
+                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-base leading-[157%] lg:text-lg"
+              >
+                <p class="p-4">
+                  Affiliate marketing is a performance-based marketing strategy
+                  where businesses reward affiliates for driving traffic or
+                  sales through their promotional efforts.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item -->
+            <div class="faq overflow-hidden rounded-2xl">
+              <div
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+              >
+                <h3>What is Affiliate Marketing?</h3>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <div
+                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-base leading-[157%] lg:text-lg"
+              >
+                <p class="p-4">
+                  Affiliate marketing is a performance-based marketing strategy
+                  where businesses reward affiliates for driving traffic or
+                  sales through their promotional efforts.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item -->
+            <div class="faq overflow-hidden rounded-2xl">
+              <div
+                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full items-center justify-between bg-gradient-to-tl p-4 text-left text-lg font-medium lg:text-xl"
+              >
+                <h3>What is Affiliate Marketing?</h3>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <div
+                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-base leading-[157%] lg:text-lg"
+              >
+                <p class="p-4">
+                  Affiliate marketing is a performance-based marketing strategy
+                  where businesses reward affiliates for driving traffic or
+                  sales through their promotional efforts.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-primary text-white">
       <div class="container">
@@ -837,11 +982,7 @@
             class="xs:grid-cols-2 grid gap-8 text-base lg:grid-cols-4 lg:text-lg"
           >
             <div>
-              <h3
-                class="mb-3 text-lg font-semibold md:text-xl lg:mb-7 lg:text-2xl"
-              >
-                Pages
-              </h3>
+              <h3 class="mb-3 text-2xl font-semibold lg:mb-7">Pages</h3>
               <div class="font-noto-sans flex flex-col gap-2">
                 <a href="/">Home</a>
                 <a href="/about.html">About Us</a>
@@ -850,9 +991,7 @@
               </div>
             </div>
             <div>
-              <h3 class="mb-3 text-xl font-semibold lg:mb-7 lg:text-2xl">
-                Social Logins
-              </h3>
+              <h3 class="mb-3 text-2xl font-semibold lg:mb-7">Social Logins</h3>
               <div class="font-noto-sans flex flex-col gap-2">
                 <a href="#">Facebook</a>
                 <a href="#">Twitter</a>
@@ -861,9 +1000,7 @@
               </div>
             </div>
             <div class="max-w-xs">
-              <h3 class="mb-3 text-xl font-semibold lg:mb-7 lg:text-2xl">
-                Location
-              </h3>
+              <h3 class="mb-3 text-2xl font-semibold lg:mb-7">Location</h3>
               <div class="font-noto-sans flex flex-col gap-3">
                 <a href="#" class="underline"
                   >UNIT NO. 147, FIRST FLOOR, JMD MEGAPOLIS, Badshahpur Sohna Rd
@@ -873,7 +1010,7 @@
               </div>
             </div>
             <div>
-              <h3 class="mb-3 text-xl font-semibold lg:mb-7 lg:text-2xl">
+              <h3 class="mb-3 text-2xl font-semibold lg:mb-7">
                 Get in touch with
               </h3>
               <div class="font-noto-sans flex flex-col gap-4">

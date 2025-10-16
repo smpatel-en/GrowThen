@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelectorAll("#menuBtn");
   const navMenu = document.getElementById("navSlider");
 
+  // Toggle navigation menu
   menuToggle.forEach((btn) => {
     btn.addEventListener("click", function () {
       navMenu.classList.toggle("active");
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Change header style on scroll
   window.addEventListener("scroll", function () {
     const header = document.querySelector("nav");
     if (window.scrollY > 0) {
@@ -23,5 +25,21 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       header.classList.remove("scrolled");
     }
+  });
+
+  // FAQs Accordion
+  const faqItems = document.querySelectorAll(".faq");
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", function () {
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+        }
+      });
+
+      item.classList.toggle("active");
+    });
   });
 });
