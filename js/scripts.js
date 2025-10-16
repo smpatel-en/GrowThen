@@ -45,12 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize Swiper
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
       nextEl: ".testimonial-next",
       prevEl: ".testimonial-prev",
       disabledClass: "disabled",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
     },
   });
 });
