@@ -131,10 +131,10 @@
       }
 
       #navbar {
-        @apply border-b-0 border-transparent bg-transparent transition-colors duration-300;
+        @apply border-b-1 border-transparent bg-transparent transition-colors duration-300;
       }
       #navbar.scrolled {
-        @apply border-gray bg-white backdrop-blur-sm;
+        @apply border-b-gray bg-white backdrop-blur-sm;
       }
 
       .faq i {
@@ -178,12 +178,12 @@
             </div>
             <!-- Navigation Options | Desktop Navigation -->
             <div class="hidden items-center gap-8 lg:flex">
-              <a href="/" class="text-secondary text-lg font-medium capitalize"
+              <a href="/" class="text-primary text-lg font-medium capitalize"
                 >Home</a
               >
               <a
                 href="/about.html"
-                class="text-primary text-lg font-medium capitalize"
+                class="text-secondary text-lg font-medium capitalize"
                 >About Us</a
               >
               <a
@@ -226,14 +226,12 @@
                 >
                   <i class="fa-solid fa-xmark"></i>
                 </button>
-                <a
-                  href="/"
-                  class="text-secondary text-xl font-medium capitalize"
+                <a href="/" class="text-primary text-xl font-medium capitalize"
                   >Home</a
                 >
                 <a
                   href="/about.html"
-                  class="text-primary text-xl font-medium capitalize"
+                  class="text-secondary text-xl font-medium capitalize"
                   >About Us</a
                 >
                 <a
@@ -355,7 +353,7 @@
       </section>
 
       <!-- Info Section | Utils -->
-      <section class="py-12 sm:py-16 md:py-18 lg:py-20">
+      <section>
         <div class="container">
           <!-- Section Wrapper -->
           <div
@@ -418,6 +416,152 @@
                   business to the next level.
                 </p>
                 <button class="btn btn-secondary">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section>
+        <div class="container">
+          <!-- Section Wrapper -->
+          <div>
+            <!-- Section Header -->
+            <div
+              class="mb-8 flex flex-col items-center gap-3 sm:mb-10 sm:gap-4 md:gap-8 lg:mb-[90px] lg:gap-10"
+            >
+              <div
+                class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+              >
+                <img
+                  src="assets/svg/icon-verified.svg"
+                  alt="Verified Icon"
+                  class="object-contain"
+                />
+              </div>
+              <div class="flex flex-col items-center">
+                <p
+                  class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
+                >
+                  Our values
+                </p>
+                <h2
+                  class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
+                >
+                  The core values behind our work
+                </h2>
+              </div>
+            </div>
+
+            <!-- Section Body -->
+            <div
+              class="grid grid-cols-1 gap-6 sm:gap-8 md:gap-12 lg:grid-cols-2 lg:gap-18 xl:grid-cols-3"
+            >
+              <!-- Card -->
+              <div
+                class="gradient-primary flex flex-col items-center rounded-xl p-4 text-center sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+              >
+                <!-- Image background -->
+                <div
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
+                >
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
+                    <img
+                      src="assets/images/ui-settings.png"
+                      alt="Performance Marketing"
+                    />
+                  </div>
+                </div>
+                <!-- Card Image Wrapper -->
+
+                <!-- Card title -->
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Efficiency
+                </h3>
+                <!-- Card Description -->
+                <p
+                  class="text-primary-dark font-noto-sans mb-4 text-sm sm:text-base md:text-lg lg:mb-8"
+                >
+                  We believe in delivering results in the most effective and
+                  efficient way possible, maximizing our resources to achieve
+                  optimal outcomes.
+                </p>
+                <div class="bg-primary mt-auto h-1 w-20 rounded-full"></div>
+              </div>
+              <!-- Card -->
+              <div
+                class="gradient-primary flex flex-col items-center rounded-xl p-4 text-center sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+              >
+                <!-- Image background -->
+                <div
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
+                >
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
+                    <img
+                      src="assets/images/ui-verified.png"
+                      alt="Performance Marketing"
+                    />
+                  </div>
+                </div>
+                <!-- Card Image Wrapper -->
+
+                <!-- Card title -->
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Accountability
+                </h3>
+                <!-- Card Description -->
+                <p
+                  class="text-primary-dark font-noto-sans mb-4 text-sm sm:text-base md:text-lg lg:mb-8"
+                >
+                  We take responsibility for our actions and hold ourselves to
+                  the highest standards of quality and performance, ensuring
+                  that our clients receive the best services.
+                </p>
+                <div class="bg-primary mt-auto h-1 w-20 rounded-full"></div>
+              </div>
+              <!-- Card -->
+              <div
+                class="gradient-primary flex flex-col items-center rounded-xl p-4 text-center sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+              >
+                <!-- Image background -->
+                <div
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
+                >
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
+                    <img
+                      src="assets/images/ui-chart.png"
+                      alt="Performance Marketing"
+                    />
+                  </div>
+                </div>
+                <!-- Card Image Wrapper -->
+
+                <!-- Card title -->
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Commitment
+                </h3>
+                <!-- Card Description -->
+                <p
+                  class="text-primary-dark font-noto-sans mb-4 text-sm sm:text-base md:text-lg lg:mb-8"
+                >
+                  We are dedicated to delivering value and driving growth for
+                  our clients, going above and beyond to exceed their
+                  expectations and help them achieve their goals.
+                </p>
+                <div class="bg-primary mt-auto h-1 w-20 rounded-full"></div>
               </div>
             </div>
           </div>
