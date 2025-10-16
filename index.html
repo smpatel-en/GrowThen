@@ -25,128 +25,11 @@
     />
 
     <!-- Tailwind CSS cdn temperary for development -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @import "tailwindcss";
-
-      :root {
-        /* Base Colors */
-        --primary: #162466;
-        --primary-dark: #181b31;
-        --secondary: #ff3b33;
-        --gray: #d6d6e3;
-        --white: #ffffff;
-
-        /* Gradient Colors */
-        --gradient-start: #e9f7ff;
-        --gradient-middle: #ffdbd4;
-        --gradient-end: #fff3ca;
-
-        /* Fonts */
-        --font-nunito: "Nunito", sans-serif;
-        --font-noto-sans: "Noto Sans", sans-serif;
-      }
-
-      /* Theme */
-      @theme {
-        --color-primary: var(--primary);
-        --color-primary-dark: var(--primary-dark);
-        --color-secondary: var(--secondary);
-        --color-gray: var(--gray);
-        --color-white: var(--white);
-        --color-gradient-start: var(--gradient-start);
-        --color-gradient-middle: var(--gradient-middle);
-        --color-gradient-end: var(--gradient-end);
-        --font-nunito: var(--font-nunito);
-        --font-noto-sans: var(--font-noto-sans);
-
-        /* breakpoints */
-        --breakpoint-xs: 30rem;
-      }
-
-      /* Base Styles */
-      @layer base {
-        * {
-          @apply m-0 box-border p-0;
-        }
-        img {
-          @apply block h-full w-full object-cover;
-        }
-        body {
-          @apply font-nunito overflow-x-hidden;
-        }
-        section,
-        footer {
-          @apply py-12 sm:py-16 md:py-18 lg:py-20;
-        }
-        a {
-          @apply w-fit;
-        }
-        .container {
-          @apply mx-auto px-4 sm:px-5 md:px-6 lg:px-5 xl:px-10;
-        }
-      }
-
-      /* Components */
-      @layer components {
-        .btn {
-          @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold transition-colors duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
-        }
-
-        .btn-primary {
-          @apply bg-primary text-white;
-        }
-        .btn-primary:hover {
-          @apply bg-primary-dark;
-        }
-
-        .btn-secondary,
-        .btn-primary.disabled {
-          @apply text-primary border-primary bg-transparent;
-        }
-        .btn-secondary:hover {
-          @apply bg-primary text-white;
-        }
-      }
-
-      /* Utilities */
-      #navSlider {
-        @apply translate-x-full;
-      }
-
-      #navSlider.active {
-        @apply translate-x-0;
-      }
-
-      #navbar {
-        @apply border-b-0 border-transparent bg-transparent transition-colors duration-300;
-      }
-      #navbar.scrolled {
-        @apply border-gray bg-white backdrop-blur-sm;
-      }
-
-      .faq i {
-        @apply transition-transform duration-300;
-      }
-      .faq.active .faq-question i {
-        @apply rotate-45;
-      }
-
-      .faq-answer {
-        @apply transition-all duration-300;
-      }
-      .faq.active .faq-answer {
-        @apply max-h-45 sm:max-h-35 md:max-h-30 lg:max-h-25;
-      }
-
-      .testimonial-prev.disabled,
-      .testimonial-next.disabled {
-        @apply pointer-events-none opacity-50;
-      }
-    </style>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <!-- <style type="text/tailwindcss"></style> -->
 
     <!-- Styles -->
-    <!-- <link rel="stylesheet" href="css/output.css" /> -->
+    <link rel="stylesheet" href="css/output.css" />
 
     <title>GrowThan | Home</title>
   </head>
@@ -250,6 +133,7 @@
       <section
         class="relative overflow-hidden pt-28 sm:pt-32 md:pt-36 lg:pt-40"
       >
+        <!-- Background Image -->
         <img
           src="assets/svg/hero-background.svg"
           alt="Hero Background"
@@ -279,7 +163,7 @@
             <div
               class="relative max-w-100 basis-1/2 sm:max-w-110 md:max-w-120 lg:max-w-130 xl:max-w-none"
             >
-              <!-- Decoration Image Wrapper -->
+              <!-- Decoration Image Wrapper | Giant Sphere -->
               <div
                 class="absolute inset-0 -top-50 -right-80 -z-1 hidden max-w-[1200px] lg:block"
               >
@@ -335,7 +219,7 @@
             >
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -368,7 +252,7 @@
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -402,7 +286,7 @@
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -435,7 +319,7 @@
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -468,7 +352,7 @@
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -501,7 +385,7 @@
               </div>
               <!-- Card -->
               <div
-                class="from-gradient-start via-gradient-middle to-gradient-end rounded-xl bg-linear-to-tl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -607,9 +491,7 @@
 
       <!-- Process Section -->
       <section class="py-12 sm:py-16 md:py-18 lg:py-20">
-        <div
-          class="from-gradient-start via-gradient-middle to-gradient-end container bg-gradient-to-tl p-6 sm:p-8 md:p-12 lg:p-20"
-        >
+        <div class="gradient-primary container p-6 sm:p-8 md:p-12 lg:p-20">
           <!-- Section Wrapper -->
           <div>
             <!-- Section Header -->
@@ -852,7 +734,7 @@
               <div class="swiper-wrapper">
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
+                  class="swiper-slide gradient-secondary rounded-lg p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
@@ -931,7 +813,7 @@
 
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
+                  class="swiper-slide gradient-secondary rounded-lg p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
@@ -1010,7 +892,7 @@
 
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
+                  class="swiper-slide gradient-secondary rounded-lg p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
@@ -1089,7 +971,7 @@
 
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
+                  class="swiper-slide gradient-secondary rounded-lg p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
@@ -1168,7 +1050,7 @@
 
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
+                  class="swiper-slide gradient-secondary rounded-lg p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
@@ -1247,7 +1129,7 @@
 
                 <!-- testimonial Item -->
                 <div
-                  class="swiper-slide rounded-lg bg-gradient-to-tl from-[#FFF8F8] to-[#F5F7FF] p-3 sm:p-4 md:p-5"
+                  class="swiper-slide gradient-secondary rounded-lg p-3 sm:p-4 md:p-5"
                 >
                   <!-- Sub Card -->
                   <div
@@ -1463,136 +1345,138 @@
           </div>
         </div>
       </section>
-    </main>
 
-    <!-- FAQ Section -->
-    <section class="py-12 sm:py-16 md:py-18 lg:py-20">
-      <div class="container">
-        <!-- Section Wrapper -->
-        <div>
-          <!-- Section Header -->
-          <div
-            class="mb-8 flex flex-col items-center gap-3 sm:mb-10 sm:gap-4 md:gap-8 lg:mb-[90px] lg:gap-10"
-          >
+      <!-- FAQ Section -->
+      <section class="py-12 sm:py-16 md:py-18 lg:py-20">
+        <div class="container">
+          <!-- Section Wrapper -->
+          <div>
+            <!-- Section Header -->
             <div
-              class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+              class="mb-8 flex flex-col items-center gap-3 sm:mb-10 sm:gap-4 md:gap-8 lg:mb-[90px] lg:gap-10"
             >
-              <img
-                src="assets/svg/icon-chat.svg"
-                alt="Chat Icon"
-                class="object-contain"
-              />
-            </div>
-            <div class="flex flex-col items-center">
-              <p
-                class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
+              <div
+                class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
               >
-                FAQ
-              </p>
-              <h2
-                class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
-              >
-                Frequently Asked Questions
-              </h2>
+                <img
+                  src="assets/svg/icon-chat.svg"
+                  alt="Chat Icon"
+                  class="object-contain"
+                />
+              </div>
+              <div class="flex flex-col items-center">
+                <p
+                  class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
+                >
+                  FAQ
+                </p>
+                <h2
+                  class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
+                >
+                  Frequently Asked Questions
+                </h2>
+              </div>
             </div>
-          </div>
 
-          <!-- Section Body | FAQ Wrapper -->
-          <div class="mx-auto flex max-w-5xl flex-col gap-3 sm:gap-4 md:gap-5">
-            <!-- FAQ Item -->
-            <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
-              <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
-              >
-                <h3>What is Affiliate Marketing?</h3>
-                <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
+            <!-- Section Body | FAQ Wrapper -->
+            <div
+              class="mx-auto flex max-w-5xl flex-col gap-3 sm:gap-4 md:gap-5"
+            >
+              <!-- FAQ Item -->
+              <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
+                <div
+                  class="faq-question text-primary font-noto-sans gradient-primary flex w-full cursor-pointer items-center justify-between p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
+                >
+                  <h3>What is Affiliate Marketing?</h3>
+                  <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
+                </div>
+                <div
+                  class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
+                >
+                  <p class="p-3 sm:p-4">
+                    Affiliate marketing is a performance-based marketing
+                    strategy where businesses reward affiliates for driving
+                    traffic or sales through their promotional efforts.
+                  </p>
+                </div>
               </div>
-              <div
-                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
-              >
-                <p class="p-3 sm:p-4">
-                  Affiliate marketing is a performance-based marketing strategy
-                  where businesses reward affiliates for driving traffic or
-                  sales through their promotional efforts.
-                </p>
+              <!-- FAQ Item -->
+              <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
+                <div
+                  class="faq-question text-primary font-noto-sans gradient-primary flex w-full cursor-pointer items-center justify-between p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
+                >
+                  <h3>What is Affiliate Marketing?</h3>
+                  <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
+                </div>
+                <div
+                  class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
+                >
+                  <p class="p-3 sm:p-4">
+                    Affiliate marketing is a performance-based marketing
+                    strategy where businesses reward affiliates for driving
+                    traffic or sales through their promotional efforts.
+                  </p>
+                </div>
               </div>
-            </div>
-            <!-- FAQ Item -->
-            <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
-              <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
-              >
-                <h3>What is Affiliate Marketing?</h3>
-                <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
+              <!-- FAQ Item -->
+              <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
+                <div
+                  class="faq-question text-primary font-noto-sans gradient-primary flex w-full cursor-pointer items-center justify-between p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
+                >
+                  <h3>What is Affiliate Marketing?</h3>
+                  <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
+                </div>
+                <div
+                  class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
+                >
+                  <p class="p-3 sm:p-4">
+                    Affiliate marketing is a performance-based marketing
+                    strategy where businesses reward affiliates for driving
+                    traffic or sales through their promotional efforts.
+                  </p>
+                </div>
               </div>
-              <div
-                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
-              >
-                <p class="p-3 sm:p-4">
-                  Affiliate marketing is a performance-based marketing strategy
-                  where businesses reward affiliates for driving traffic or
-                  sales through their promotional efforts.
-                </p>
+              <!-- FAQ Item -->
+              <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
+                <div
+                  class="faq-question text-primary font-noto-sans gradient-primary flex w-full cursor-pointer items-center justify-between p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
+                >
+                  <h3>What is Affiliate Marketing?</h3>
+                  <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
+                </div>
+                <div
+                  class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
+                >
+                  <p class="p-3 sm:p-4">
+                    Affiliate marketing is a performance-based marketing
+                    strategy where businesses reward affiliates for driving
+                    traffic or sales through their promotional efforts.
+                  </p>
+                </div>
               </div>
-            </div>
-            <!-- FAQ Item -->
-            <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
-              <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
-              >
-                <h3>What is Affiliate Marketing?</h3>
-                <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
-              </div>
-              <div
-                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
-              >
-                <p class="p-3 sm:p-4">
-                  Affiliate marketing is a performance-based marketing strategy
-                  where businesses reward affiliates for driving traffic or
-                  sales through their promotional efforts.
-                </p>
-              </div>
-            </div>
-            <!-- FAQ Item -->
-            <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
-              <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
-              >
-                <h3>What is Affiliate Marketing?</h3>
-                <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
-              </div>
-              <div
-                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
-              >
-                <p class="p-3 sm:p-4">
-                  Affiliate marketing is a performance-based marketing strategy
-                  where businesses reward affiliates for driving traffic or
-                  sales through their promotional efforts.
-                </p>
-              </div>
-            </div>
-            <!-- FAQ Item -->
-            <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
-              <div
-                class="faq-question text-primary font-noto-sans from-gradient-start via-gradient-middle to-gradient-end flex w-full cursor-pointer items-center justify-between bg-gradient-to-tl p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
-              >
-                <h3>What is Affiliate Marketing?</h3>
-                <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
-              </div>
-              <div
-                class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
-              >
-                <p class="p-3 sm:p-4">
-                  Affiliate marketing is a performance-based marketing strategy
-                  where businesses reward affiliates for driving traffic or
-                  sales through their promotional efforts.
-                </p>
+              <!-- FAQ Item -->
+              <div class="faq overflow-hidden rounded-xl sm:rounded-2xl">
+                <div
+                  class="faq-question text-primary font-noto-sans gradient-primary flex w-full cursor-pointer items-center justify-between p-3 text-left text-base font-medium sm:p-4 sm:text-lg md:text-xl lg:p-4"
+                >
+                  <h3>What is Affiliate Marketing?</h3>
+                  <i class="fa-solid fa-plus text-lg sm:text-xl"></i>
+                </div>
+                <div
+                  class="faq-answer text-primary-dark font-noto-sans bg-gray/20 max-h-0 overflow-hidden text-sm leading-[157%] sm:text-base md:text-lg"
+                >
+                  <p class="p-3 sm:p-4">
+                    Affiliate marketing is a performance-based marketing
+                    strategy where businesses reward affiliates for driving
+                    traffic or sales through their promotional efforts.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-primary py-12 text-white sm:py-16 md:py-18 lg:py-20">
@@ -1674,7 +1558,6 @@
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
   <!-- Scripts -->
   <script src="js/scripts.js"></script>
 </html>
