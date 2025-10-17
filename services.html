@@ -4,28 +4,510 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons-->
+    <script
+      src="https://kit.fontawesome.com/d1d7a2b346.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/output.css" />
 
     <title>GrowThan | Services</title>
   </head>
+
   <body>
-    <nav>
-      <div class="container">
-        <div class="nav-wrapper">
-          <div class="nav-logo-wrapper"><img src="" alt="" /></div>
+    <header class="fixed top-0 z-2 w-full">
+      <!-- Navigation bar -->
+      <nav id="navbar">
+        <div class="container">
+          <!-- Nav Wrapper -->
+          <div class="flex items-center justify-between py-4">
+            <!-- Navigation Logo -->
+            <div
+              class="max-w-[150px] sm:max-w-[180px] md:max-w-[250px] lg:max-w-[300px]"
+            >
+              <img src="assets/images/logo.png" alt="GrowThan Logo" />
+            </div>
+            <!-- Navigation Options | Desktop Navigation -->
+            <div class="hidden items-center gap-8 lg:flex">
+              <a href="/" class="text-primary text-lg font-medium capitalize"
+                >Home</a
+              >
+              <a
+                href="/about.html"
+                class="text-primary text-lg font-medium capitalize"
+                >About Us</a
+              >
+              <a
+                href="/services.html"
+                class="text-secondary text-lg font-medium capitalize"
+                >Services</a
+              >
+              <a
+                href="/contact.html"
+                class="text-primary text-lg font-medium capitalize"
+                >Contact</a
+              >
+              <!-- Nav CTA -->
+              <button class="btn btn-primary">Register</button>
+            </div>
+            <!-- Mobile Navigation -->
+            <div class="flex items-center gap-4 lg:hidden">
+              <!-- Nav CTA -->
+              <button class="btn btn-primary hidden sm:block">Register</button>
+              <!-- Mobile Menu Button -->
+              <button
+                title="Menu"
+                id="menuBtn"
+                class="btn btn-secondary grid place-items-center p-2 text-2xl"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+            <!-- Mobile Menu -Slider -->
+            <div
+              id="navSlider"
+              class="bg-gray fixed top-0 right-0 h-screen w-full max-w-[300px] transform px-8 py-5 transition-transform duration-300 ease-in-out lg:hidden"
+            >
+              <div class="flex h-full flex-col items-end gap-4">
+                <!-- Close Button -->
+                <button
+                  title="Close Menu"
+                  id="menuBtn"
+                  class="btn btn-secondary mb-10 grid place-items-center p-2 text-2xl"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+                <a href="/" class="text-primary text-xl font-medium capitalize"
+                  >Home</a
+                >
+                <a
+                  href="/about.html"
+                  class="text-primary text-xl font-medium capitalize"
+                  >About Us</a
+                >
+                <a
+                  href="/services.html"
+                  class="text-secondary text-xl font-medium capitalize"
+                  >Services</a
+                >
+                <a
+                  href="/contact.html"
+                  class="text-primary text-xl font-medium capitalize"
+                  >Contact</a
+                >
+                <!-- Nav CTA -->
+                <button class="btn btn-primary mt-auto block w-full sm:hidden">
+                  Register
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="nav-options">
-          <a href="/" class="nav-option">Home</a>
-          <a href="/about.html" class="nav-option">About Us</a>
-          <a href="/services.html" class="nav-option">Services</a>
-          <a href="/contact.html" class="nav-option">Contact</a>
-          <button class="btn btn-primary">Register</button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="h-full">
+      <!-- Page Header Section -->
+      <section
+        class="relative overflow-hidden pt-28 pb-0 sm:pt-32 md:pt-36 lg:pt-40"
+      >
+        <!-- Background Image -->
+        <img
+          src="assets/svg/services-page-banner.svg"
+          alt="Hero Background"
+          class="absolute inset-0"
+        />
+        <div class="relative container">
+          <!-- Decoration Sphere Wrapper -->
+          <div
+            class="relative mx-auto max-w-60 sm:max-w-80 md:max-w-120 lg:max-w-160 xl:max-w-180"
+          >
+            <img src="assets/svg/header-sphere.svg" alt="Decoration Sphere" />
+          </div>
+
+          <!-- Section Head -->
+          <h1
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-2 text-center text-2xl font-extrabold sm:translate-y-3 sm:text-3xl md:translate-y-4 md:text-4xl lg:translate-y-5 lg:text-5xl xl:text-7xl"
+          >
+            Services
+          </h1>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section>
+        <div class="container">
+          <!-- Section Wrapper -->
+          <div>
+            <!-- Section Header -->
+            <div
+              class="mb-8 flex flex-col items-center gap-3 sm:mb-10 sm:gap-4 md:gap-8 lg:mb-[90px] lg:gap-10"
+            >
+              <div
+                class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+              >
+                <img
+                  src="assets/svg/icon-settings.svg"
+                  alt="Settings Icon"
+                  class="object-contain"
+                />
+              </div>
+              <div class="flex flex-col items-center">
+                <p
+                  class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
+                >
+                  Services
+                </p>
+                <h2
+                  class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
+                >
+                  High-impact services to take your business to the next level
+                </h2>
+              </div>
+            </div>
+
+            <!-- Section Body | Cards Wrapper -->
+            <div
+              class="grid grid-cols-1 gap-6 sm:gap-8 md:gap-12 lg:grid-cols-2 lg:gap-18 xl:grid-cols-3"
+            >
+              <!-- Card -->
+              <div
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+              >
+                <!-- Image background -->
+                <div
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
+                >
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
+                    <img
+                      src="assets/images/performance-marketing.png"
+                      alt="Performance Marketing"
+                    />
+                  </div>
+                </div>
+                <!-- Card Image Wrapper -->
+
+                <!-- Card title -->
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Performance Marketing
+                </h3>
+                <!-- Card Description -->
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
+                  Get the best results for your marketing campaigns by
+                  leveraging data-driven insights and analytics.
+                </p>
+              </div>
+              <!-- Card -->
+              <div
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+              >
+                <!-- Image background -->
+                <div
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
+                >
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
+                    <img
+                      src="assets/images/mobile-marketing.png"
+                      alt="Mobile Marketing"
+                    />
+                  </div>
+                </div>
+                <!-- Card Image Wrapper -->
+
+                <!-- Card title -->
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Mobile Marketing
+                </h3>
+                <!-- Card Description -->
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
+                  Reach your target audience wherever they are with
+                  mobile-optimized campaigns that drive engagement and
+                  conversions.
+                </p>
+              </div>
+              <!-- Card -->
+              <div
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+              >
+                <!-- Image background -->
+                <div
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
+                >
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
+                    <img
+                      src="assets/images/email-marketing.png"
+                      alt="Email Marketing"
+                    />
+                  </div>
+                </div>
+                <!-- Card Image Wrapper -->
+
+                <!-- Card title -->
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Email Marketing
+                </h3>
+                <!-- Card Description -->
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
+                  Build stronger relationships with your customers by delivering
+                  personalized content straight to their inbox.
+                </p>
+              </div>
+              <!-- Card -->
+              <div
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+              >
+                <!-- Image background -->
+                <div
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
+                >
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
+                    <img
+                      src="assets/images/media-buying-planning.png"
+                      alt="Media Buying & Planning"
+                    />
+                  </div>
+                </div>
+                <!-- Card Image Wrapper -->
+
+                <!-- Card title -->
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Media Buying & Planning
+                </h3>
+                <!-- Card Description -->
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
+                  Maximize your ROI by identifying the right media channels and
+                  placements to reach your target audience.
+                </p>
+              </div>
+              <!-- Card -->
+              <div
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+              >
+                <!-- Image background -->
+                <div
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
+                >
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
+                    <img
+                      src="assets/images/influencer-marketing.png"
+                      alt="Influencer Marketing"
+                    />
+                  </div>
+                </div>
+                <!-- Card Image Wrapper -->
+
+                <!-- Card title -->
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Influencer Marketing
+                </h3>
+                <!-- Card Description -->
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
+                  Amplify your brand's reach and credibility by partnering with
+                  influencers who align with your brand values.
+                </p>
+              </div>
+              <!-- Card -->
+              <div
+                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+              >
+                <!-- Image background -->
+                <div
+                  class="mb-4 grid aspect-square w-16 place-items-center rounded-full bg-white sm:mb-5 sm:w-20 md:w-24 lg:mb-6 lg:w-[153px]"
+                >
+                  <div
+                    class="max-w-8 sm:max-w-10 md:max-w-12 lg:max-w-14 xl:max-w-none"
+                  >
+                    <img
+                      src="assets/images/content-marketing.png"
+                      alt="Content Marketing"
+                    />
+                  </div>
+                </div>
+                <!-- Card Image Wrapper -->
+
+                <!-- Card title -->
+                <h3
+                  class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Content Marketing
+                </h3>
+                <!-- Card Description -->
+                <p
+                  class="text-primary-dark font-noto-sans text-sm sm:text-base md:text-lg"
+                >
+                  Engage your audience with high-quality and relevant content
+                  that educates, entertains, and inspires action.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Banner -->
+      <section>
+        <div class="container">
+          <!-- Section Wrapper -->
+
+          <!-- p-6 sm:p-8 md:p-12 lg:p-20 -->
+          <div
+            class="relative overflow-hidden rounded-2xl px-6 py-8 sm:px-8 sm:py-12 md:px-12 md:py-24 lg:rounded-4xl lg:px-20 lg:py-30"
+          >
+            <!-- Background Banner -->
+            <img
+              src="assets/images/cta-bg.png"
+              alt="CTA Background"
+              class="absolute inset-0 -z-1"
+            />
+
+            <!-- Content -->
+            <div class="max-w-70 md:max-w-100 lg:max-w-150">
+              <h3
+                class="mb-4 text-2xl font-extrabold sm:text-3xl md:text-4xl lg:mb-10 lg:text-[45px]"
+              >
+                Get in touch and
+                <span class="text-secondary">start growing </span> your startup
+                today
+              </h3>
+
+              <!-- CTA Wrapper -->
+              <div class="flex gap-3">
+                <button class="btn btn-primary">Get In Touch</button>
+                <button class="btn btn-secondary">Get Started</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary py-12 text-white sm:py-16 md:py-18 lg:py-20">
+      <div class="container">
+        <!-- Footer Wrapper -->
+        <div class="flex flex-col">
+          <!-- Footer sections -->
+          <div
+            class="xs:grid-cols-2 grid grid-cols-1 gap-6 text-sm sm:gap-8 sm:text-base md:text-lg lg:grid-cols-4"
+          >
+            <div>
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Pages
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-1.5 sm:gap-2">
+                <a href="/">Home</a>
+                <a href="/about.html">About Us</a>
+                <a href="/services.html">Services</a>
+                <a href="/contact.html">Contact</a>
+              </div>
+            </div>
+            <div>
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Social Logins
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-1.5 sm:gap-2">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">Skype</a>
+              </div>
+            </div>
+            <div class="max-w-xs">
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Location
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-2 sm:gap-3">
+                <a href="#" class="underline"
+                  >UNIT NO. 147, FIRST FLOOR, JMD MEGAPOLIS, Badshahpur Sohna Rd
+                  Hwy, Sector 48, Gurugram, Haryana 122018 .</a
+                >
+                <a href="#" class="underline">Location Map</a>
+              </div>
+            </div>
+            <div>
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Get in touch with
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-2 sm:gap-3 md:gap-4">
+                <a
+                  href="tel:+918617514085"
+                  class="bg-primary-dark text-gray w-fit rounded-md px-4 py-1.5 text-sm font-bold text-nowrap sm:rounded-lg sm:px-5 sm:py-2 sm:text-base md:px-6 lg:px-7 xl:text-lg 2xl:text-2xl"
+                  >+91 8617514085</a
+                >
+                <a href="mailto:business@growthan.com" class="underline"
+                  >business@growthan.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Copyright -->
+          <div
+            class="mt-8 border-t-1 border-t-white/40 pt-2 text-center text-xs sm:mt-10 sm:text-sm md:mt-12 md:text-base lg:mt-15"
+          >
+            Copyright &copy; 2023 | GrowThan | All rights reserved.
+          </div>
         </div>
       </div>
-    </nav>
+    </footer>
   </body>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Scripts -->
   <script src="js/scripts.js"></script>
 </html>

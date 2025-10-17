@@ -24,141 +24,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Tailwind CSS cdn temperary for development -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @import "tailwindcss";
-
-      :root {
-        /* Base Colors */
-        --primary: #162466;
-        --primary-dark: #181b31;
-        --secondary: #ff3b33;
-        --gray: #d6d6e3;
-        --white: #ffffff;
-
-        /* Gradient Colors */
-        --gradient-primary-start: #e9f7ff;
-        --gradient-primary-middle: #ffdbd4;
-        --gradient-primary-end: #fff3ca;
-
-        --gradient-secondary-start: #fff8f8;
-        --gradient-secondary-end: #f5f7ff;
-
-        /* Fonts */
-        --font-nunito: "Nunito", sans-serif;
-        --font-noto-sans: "Noto Sans", sans-serif;
-      }
-
-      /* Theme */
-      @theme {
-        --color-primary: var(--primary);
-        --color-primary-dark: var(--primary-dark);
-        --color-secondary: var(--secondary);
-        --color-gray: var(--gray);
-        --color-white: var(--white);
-        --color-gradient-start: var(--gradient-primary-start);
-        --color-gradient-middle: var(--gradient-primary-middle);
-        --color-gradient-end: var(--gradient-primary-end);
-        --color-gradient-secondary-start: var(--gradient-secondary-start);
-        --color-gradient-secondary-end: var(--gradient-secondary-end);
-        --font-nunito: var(--font-nunito);
-        --font-noto-sans: var(--font-noto-sans);
-
-        /* breakpoints */
-        --breakpoint-xs: 30rem;
-      }
-
-      /* Base Styles */
-      @layer base {
-        * {
-          @apply m-0 box-border p-0;
-        }
-        img {
-          @apply block h-full w-full object-cover;
-        }
-        body {
-          @apply font-nunito overflow-x-hidden;
-        }
-        section,
-        footer {
-          @apply py-12 sm:py-16 md:py-18 lg:py-20;
-        }
-        a {
-          @apply w-fit;
-        }
-        .container {
-          @apply mx-auto px-4 sm:px-5 md:px-6 lg:px-5 xl:px-10;
-        }
-      }
-
-      /* Components */
-      @layer components {
-        .btn {
-          @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold transition-colors duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
-        }
-
-        .btn-primary {
-          @apply bg-primary text-white;
-        }
-        .btn-primary:hover {
-          @apply bg-primary-dark;
-        }
-
-        .btn-secondary,
-        .btn-primary.disabled {
-          @apply text-primary border-primary bg-transparent;
-        }
-        .btn-secondary:hover {
-          @apply bg-primary text-white;
-        }
-
-        .gradient-primary {
-          @apply from-gradient-start via-gradient-middle to-gradient-end bg-gradient-to-br;
-        }
-        .gradient-secondary {
-          @apply from-gradient-secondary-start to-gradient-secondary-end bg-gradient-to-b;
-        }
-      }
-
-      /* Utilities */
-      #navSlider {
-        @apply translate-x-full;
-      }
-
-      #navSlider.active {
-        @apply translate-x-0;
-      }
-
-      #navbar {
-        @apply border-b-1 border-transparent bg-transparent transition-colors duration-300;
-      }
-      #navbar.scrolled {
-        @apply border-b-gray bg-white backdrop-blur-sm;
-      }
-
-      .faq i {
-        @apply transition-transform duration-300;
-      }
-      .faq.active .faq-question i {
-        @apply rotate-45;
-      }
-
-      .faq-answer {
-        @apply transition-all duration-300;
-      }
-      .faq.active .faq-answer {
-        @apply max-h-45 sm:max-h-35 md:max-h-30 lg:max-h-25;
-      }
-
-      .testimonial-prev.disabled,
-      .testimonial-next.disabled {
-        @apply pointer-events-none opacity-50;
-      }
-    </style>
-
     <!-- Styles -->
-    <!-- <link rel="stylesheet" href="css/output.css" /> -->
+    <link rel="stylesheet" href="css/output.css" />
 
     <title>GrowThan | About Us</title>
   </head>
@@ -562,6 +429,162 @@
                   expectations and help them achieve their goals.
                 </p>
                 <div class="bg-primary mt-auto h-1 w-20 rounded-full"></div>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="mt-10 flex justify-center gap-2">
+              <button class="btn btn-secondary">Get in touch</button>
+              <button class="btn btn-primary ml-4 flex items-center gap-1">
+                Our Services
+                <i class="fa-solid fa-circle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section>
+        <div class="container">
+          <!-- Section Wrapper -->
+          <div>
+            <!-- Section Header -->
+            <div
+              class="mb-8 flex flex-col items-center gap-3 sm:mb-10 sm:gap-4 md:gap-8 lg:mb-[90px] lg:gap-10"
+            >
+              <div
+                class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+              >
+                <img
+                  src="assets/svg/icon-hand-shake.svg"
+                  alt="Hand Shake Icon"
+                  class="object-contain"
+                />
+              </div>
+              <div class="flex flex-col items-center">
+                <p
+                  class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
+                >
+                  Our Team
+                </p>
+                <h2
+                  class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
+                >
+                  Our team of expert marketers
+                </h2>
+              </div>
+            </div>
+
+            <!-- Section Body | Card Wrapper-->
+            <div
+              class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:gap-12 lg:gap-18 xl:grid-cols-3"
+            >
+              <!-- Card -->
+              <div
+                class="flex flex-col items-center rounded-xl border-1 border-[#DCDCDC] p-4 text-center sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px]"
+              >
+                <!-- Image Wrapper -->
+                <div class="mb-3 w-full overflow-hidden rounded-t-2xl lg:mb-7">
+                  <img
+                    src="assets/images/team-member-1.png"
+                    alt="Team Member 1"
+                  />
+                </div>
+
+                <!-- Decoration Line -->
+                <div
+                  class="bg-primary mb-3 h-1 w-20 rounded-full lg:mb-7"
+                ></div>
+
+                <!-- About Member -->
+
+                <h3
+                  class="text-primary mb-2 font-bold sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Dr. Shailesh Agrawal
+                </h3>
+                <p
+                  class="text-primary-dark font-noto-sans mb-3 text-base lg:mb-6 lg:text-lg"
+                >
+                  M.S (Ophthalmology) Gold Medalist
+                </p>
+                <!-- Social Links -->
+                <div class="flex gap-2">
+                  <img src="assets/svg/facebook.svg" alt="Facebook" />
+                  <img src="assets/svg/twitter.svg" alt="Twitter" />
+                </div>
+              </div>
+              <!-- Card -->
+              <div
+                class="flex flex-col items-center rounded-xl border-1 border-transparent p-4 text-center sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px]"
+              >
+                <!-- Image Wrapper -->
+                <div class="mb-3 w-full overflow-hidden rounded-t-2xl lg:mb-7">
+                  <img
+                    src="assets/images/team-member-2.png"
+                    alt="Team Member 2"
+                  />
+                </div>
+
+                <!-- Decoration Line -->
+                <div
+                  class="bg-primary mb-3 h-1 w-20 rounded-full lg:mb-7"
+                ></div>
+
+                <!-- About Member -->
+
+                <h3
+                  class="text-primary mb-2 font-bold sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Richard Walsh
+                </h3>
+                <p
+                  class="text-primary-dark font-noto-sans mb-3 text-base lg:mb-6 lg:text-lg"
+                >
+                  Lead Manager
+                </p>
+                <!-- Social Links -->
+                <div class="flex gap-2">
+                  <img src="assets/svg/facebook.svg" alt="Facebook" />
+                  <img src="assets/svg/twitter.svg" alt="Twitter" />
+                  <img src="assets/svg/instagram.svg" alt="Instagram" />
+                </div>
+              </div>
+              <!-- Card -->
+              <div
+                class="flex flex-col items-center rounded-xl border-1 border-[#DCDCDC] p-4 text-center sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px]"
+              >
+                <!-- Image Wrapper -->
+                <div class="mb-3 w-full overflow-hidden rounded-t-2xl lg:mb-7">
+                  <img
+                    src="assets/images/team-member-3.png"
+                    alt="Team Member 3"
+                  />
+                </div>
+
+                <!-- Decoration Line -->
+                <div
+                  class="bg-primary mb-3 h-1 w-20 rounded-full lg:mb-7"
+                ></div>
+
+                <!-- About Member -->
+
+                <h3
+                  class="text-primary mb-2 font-bold sm:text-xl md:text-2xl lg:text-[25px]"
+                >
+                  Richard Walsh
+                </h3>
+                <p
+                  class="text-primary-dark font-noto-sans mb-3 text-base lg:mb-6 lg:text-lg"
+                >
+                  Lead Manager
+                </p>
+                <!-- Social Links -->
+                <div class="flex gap-2">
+                  <img src="assets/svg/twitter.svg" alt="Twitter" />
+                  <img src="assets/svg/instagram.svg" alt="Instagram" />
+                </div>
               </div>
             </div>
           </div>

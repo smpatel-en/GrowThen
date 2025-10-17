@@ -22,7 +22,7 @@
 }
 
 /* Theme */
-@theme {
+@theme inline {
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
   --color-secondary: var(--secondary);
@@ -102,10 +102,10 @@
 }
 
 #navbar {
-  @apply border-b-0 border-transparent bg-transparent transition-colors duration-300;
+  @apply border-b-1 border-transparent bg-transparent transition-colors duration-300;
 }
 #navbar.scrolled {
-  @apply border-gray bg-white backdrop-blur-sm;
+  @apply border-b-gray bg-white backdrop-blur-sm;
 }
 
 .faq i {
