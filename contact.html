@@ -24,141 +24,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Tailwind CSS cdn temperary for development -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @import "tailwindcss";
-
-      :root {
-        /* Base Colors */
-        --primary: #162466;
-        --primary-dark: #181b31;
-        --secondary: #ff3b33;
-        --gray: #d6d6e3;
-        --white: #ffffff;
-
-        /* Gradient Colors */
-        --gradient-primary-start: #e9f7ff;
-        --gradient-primary-middle: #ffdbd4;
-        --gradient-primary-end: #fff3ca;
-
-        --gradient-secondary-start: #fff8f8;
-        --gradient-secondary-end: #f5f7ff;
-
-        /* Fonts */
-        --font-nunito: "Nunito", sans-serif;
-        --font-noto-sans: "Noto Sans", sans-serif;
-      }
-
-      /* Theme */
-      @theme {
-        --color-primary: var(--primary);
-        --color-primary-dark: var(--primary-dark);
-        --color-secondary: var(--secondary);
-        --color-gray: var(--gray);
-        --color-white: var(--white);
-        --color-gradient-start: var(--gradient-primary-start);
-        --color-gradient-middle: var(--gradient-primary-middle);
-        --color-gradient-end: var(--gradient-primary-end);
-        --color-gradient-secondary-start: var(--gradient-secondary-start);
-        --color-gradient-secondary-end: var(--gradient-secondary-end);
-        --font-nunito: var(--font-nunito);
-        --font-noto-sans: var(--font-noto-sans);
-
-        /* breakpoints */
-        --breakpoint-xs: 30rem;
-      }
-
-      /* Base Styles */
-      @layer base {
-        * {
-          @apply m-0 box-border p-0;
-        }
-        img {
-          @apply block h-full w-full object-cover;
-        }
-        body {
-          @apply font-nunito overflow-x-hidden;
-        }
-        section,
-        footer {
-          @apply py-12 sm:py-16 md:py-18 lg:py-20;
-        }
-        a {
-          @apply w-fit;
-        }
-        .container {
-          @apply mx-auto px-4 sm:px-5 md:px-6 lg:px-5 xl:px-10;
-        }
-      }
-
-      /* Components */
-      @layer components {
-        .btn {
-          @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold transition-colors duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
-        }
-
-        .btn-primary {
-          @apply bg-primary text-white;
-        }
-        .btn-primary:hover {
-          @apply bg-primary-dark;
-        }
-
-        .btn-secondary,
-        .btn-primary.disabled {
-          @apply text-primary border-primary bg-transparent;
-        }
-        .btn-secondary:hover {
-          @apply bg-primary text-white;
-        }
-
-        .gradient-primary {
-          @apply from-gradient-start via-gradient-middle to-gradient-end bg-gradient-to-br;
-        }
-        .gradient-secondary {
-          @apply from-gradient-secondary-start to-gradient-secondary-end bg-gradient-to-b;
-        }
-      }
-
-      /* Utilities */
-      #navSlider {
-        @apply translate-x-full;
-      }
-
-      #navSlider.active {
-        @apply translate-x-0;
-      }
-
-      #navbar {
-        @apply border-b-1 border-transparent bg-transparent transition-colors duration-300;
-      }
-      #navbar.scrolled {
-        @apply border-b-gray bg-white backdrop-blur-sm;
-      }
-
-      .faq i {
-        @apply transition-transform duration-300;
-      }
-      .faq.active .faq-question i {
-        @apply rotate-45;
-      }
-
-      .faq-answer {
-        @apply transition-all duration-300;
-      }
-      .faq.active .faq-answer {
-        @apply max-h-45 sm:max-h-35 md:max-h-30 lg:max-h-25;
-      }
-
-      .testimonial-prev.disabled,
-      .testimonial-next.disabled {
-        @apply pointer-events-none opacity-50;
-      }
-    </style>
-
     <!-- Styles -->
-    <!-- <link rel="stylesheet" href="css/output.css" /> -->
+    <link rel="stylesheet" href="css/output.css" />
 
     <title>GrowThan | Contact Us</title>
   </head>
@@ -188,12 +55,12 @@
               >
               <a
                 href="/services.html"
-                class="text-secondary text-lg font-medium capitalize"
+                class="text-primary text-lg font-medium capitalize"
                 >Services</a
               >
               <a
                 href="/contact.html"
-                class="text-primary text-lg font-medium capitalize"
+                class="text-secondary text-lg font-medium capitalize"
                 >Contact</a
               >
               <!-- Nav CTA -->
@@ -236,12 +103,12 @@
                 >
                 <a
                   href="/services.html"
-                  class="text-secondary text-xl font-medium capitalize"
+                  class="text-primary text-xl font-medium capitalize"
                   >Services</a
                 >
                 <a
                   href="/contact.html"
-                  class="text-primary text-xl font-medium capitalize"
+                  class="text-secondary text-xl font-medium capitalize"
                   >Contact</a
                 >
                 <!-- Nav CTA -->
@@ -256,7 +123,268 @@
     </header>
 
     <!-- Main Content -->
-    <main class="h-full"></main>
+    <main class="h-full">
+      <!-- Page Header Section -->
+      <section
+        class="relative overflow-hidden pt-28 pb-0 sm:pt-32 md:pt-36 lg:pt-40"
+      >
+        <!-- Background Image -->
+        <img
+          src="assets/svg/general-page-banner.svg"
+          alt="Hero Background"
+          class="absolute inset-0"
+        />
+        <div class="relative container">
+          <!-- Decoration Sphere Wrapper -->
+          <div
+            class="relative mx-auto max-w-60 sm:max-w-80 md:max-w-120 lg:max-w-160 xl:max-w-180"
+          >
+            <img src="assets/svg/header-sphere.svg" alt="Decoration Sphere" />
+          </div>
+
+          <!-- Section Head -->
+          <h1
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-2 text-center text-2xl font-extrabold sm:translate-y-3 sm:text-3xl md:translate-y-4 md:text-4xl lg:translate-y-5 lg:text-5xl xl:text-7xl"
+          >
+            Let's <span class="text-secondary">Talk</span>
+          </h1>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section>
+        <div class="container">
+          <!-- Section Wrapper -->
+          <div>
+            <!-- Section Header -->
+            <div
+              class="mb-8 flex flex-col items-center gap-3 sm:mb-10 sm:gap-4 md:gap-8 lg:mb-[90px] lg:gap-10"
+            >
+              <div
+                class="h-fit max-w-[50px] shrink-0 sm:max-w-[55px] md:max-w-none"
+              >
+                <img
+                  src="assets/svg/icon-hand-shake.svg"
+                  alt="Hand Shake Icon"
+                  class="object-contain"
+                />
+              </div>
+              <div class="flex flex-col items-center">
+                <p
+                  class="text-primary-dark font-noto-sans before:text-secondary mb-1 text-xs font-medium tracking-widest uppercase before:content-['//'] sm:text-sm md:text-[15px]"
+                >
+                  Contact Us
+                </p>
+                <h2
+                  class="text-primary text-center text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
+                >
+                  Get in touch with us today and take your business to the next
+                  level.
+                </h2>
+              </div>
+            </div>
+
+            <!-- Section Body -->
+            <div class="flex flex-col gap-4 sm:gap-8 md:gap-12 lg:gap-16">
+              <!-- Card Wrapper -->
+              <div
+                class="grid grid-cols-1 gap-6 sm:gap-8 md:gap-10 lg:grid-cols-2 xl:grid-cols-3"
+              >
+                <!-- Card -->
+                <div
+                  class="gradient-primary rounded-sm p-4 sm:rounded-md sm:p-4 md:p-6 lg:p-8"
+                >
+                  <!-- Sub Card -->
+                  <div
+                    class="shadow-[0px 2px 4px 0px #92929240] h-full w-full rounded-md bg-white p-4 md:p-6"
+                  >
+                    <!-- Contact Button -->
+                    <button class="btn btn-primary mb-2 rounded-full lg:mb-4">
+                      Contact
+                    </button>
+                    <!-- Contact Info -->
+                    <div
+                      class="border-t-gray flex gap-4 border-t-2 pt-2 lg:pt-4"
+                    >
+                      <!-- Icon Wrapper -->
+                      <div class="mt-1.5 h-fit w-6 shrink-0 lg:w-8">
+                        <img src="assets/svg/email.svg" alt="Email" />
+                      </div>
+
+                      <!-- Text -->
+                      <div>
+                        <h3
+                          class="text-primary mb-1 text-lg font-semibold lg:mb-2 lg:text-[25px]"
+                        >
+                          Email
+                        </h3>
+                        <p
+                          class="text-primary-dark font-noto-sans text-sm wrap-anywhere lg:text-lg"
+                        >
+                          business@growthan.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div
+                  class="gradient-primary rounded-sm p-4 sm:rounded-md sm:p-4 md:p-6 lg:p-8"
+                >
+                  <!-- Sub Card -->
+                  <div
+                    class="shadow-[0px 2px 4px 0px #92929240] h-full w-full rounded-md bg-white p-4 md:p-6"
+                  >
+                    <!-- Contact Button -->
+                    <button class="btn btn-primary mb-2 rounded-full lg:mb-4">
+                      Call
+                    </button>
+                    <!-- Contact Info -->
+                    <div
+                      class="border-t-gray flex gap-4 border-t-2 pt-2 lg:pt-4"
+                    >
+                      <!-- Icon Wrapper -->
+                      <div class="mt-1.5 h-fit w-6 shrink-0 lg:w-8">
+                        <img src="assets/svg/phone.svg" alt="Phone" />
+                      </div>
+
+                      <!-- Text -->
+                      <div>
+                        <h3
+                          class="text-primary mb-1 text-lg font-semibold lg:mb-2 lg:text-[25px]"
+                        >
+                          Phone Email
+                        </h3>
+                        <p
+                          class="text-primary-dark font-noto-sans text-sm wrap-anywhere lg:text-lg"
+                        >
+                          +918617514085
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div
+                  class="gradient-primary rounded-sm p-4 sm:rounded-md sm:p-4 md:p-6 lg:p-8"
+                >
+                  <!-- Sub Card -->
+                  <div
+                    class="shadow-[0px 2px 4px 0px #92929240] h-full w-full rounded-md bg-white p-4 md:p-6"
+                  >
+                    <!-- Contact Button -->
+                    <button class="btn btn-primary mb-2 rounded-full lg:mb-4">
+                      Office
+                    </button>
+                    <!-- Contact Info -->
+                    <div
+                      class="border-t-gray flex gap-4 border-t-2 pt-2 lg:pt-4"
+                    >
+                      <!-- Icon Wrapper -->
+                      <div class="mt-1.5 h-fit w-6 shrink-0 lg:w-8">
+                        <img src="assets/svg/email.svg" alt="Email" />
+                      </div>
+
+                      <!-- Text -->
+                      <div>
+                        <h3
+                          class="text-primary mb-1 text-lg font-semibold lg:mb-2 lg:text-[25px]"
+                        >
+                          Location
+                        </h3>
+                        <p
+                          class="text-primary-dark font-noto-sans text-sm wrap-anywhere lg:text-lg"
+                        >
+                          UNIT NO. 147, FIRST FLOOR, JMD MEGAPOLIS, Badshahpur
+                          Sohna Rd Hwy, Sector 48, Gurugram, Haryana 122018 .
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Form -->
+              <form class="gradient-secondary p-6 sm:p-8 md:p-12 lg:p-20">
+                <div
+                  class="mt-10 grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 lg:grid-cols-2"
+                >
+                  <div>
+                    <label
+                      for="name"
+                      class="text-primary-dark mb-2 block text-lg font-semibold lg:text-xl"
+                    >
+                      Your name</label
+                    >
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="John David"
+                      class="input-field"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="text-primary-dark mb-2 block text-lg font-semibold lg:text-xl"
+                    >
+                      Your name</label
+                    >
+                    <input
+                      type="email"
+                      placeholder="example@yourmail.com"
+                      class="input-field"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="text-primary-dark mb-2 block text-lg font-semibold lg:text-xl"
+                    >
+                      Your name</label
+                    >
+                    <input
+                      type="tel"
+                      placeholder="Your Number Here"
+                      class="input-field"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="text-primary-dark mb-2 block text-lg font-semibold lg:text-xl"
+                    >
+                      Your name</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="How Can We Help"
+                      class="input-field"
+                    />
+                  </div>
+                  <div class="col-span-full">
+                    <label
+                      class="text-primary-dark mb-2 block text-lg font-semibold lg:text-xl"
+                    >
+                      Your name</label
+                    >
+                    <textarea
+                      rows="5"
+                      placeholder="Hello there,I would like to talk about how to..."
+                      class="input-field"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="mt-6 text-center">
+                  <button
+                    class="btn btn-primary px-6 py-2 text-lg sm:px-8 sm:py-3 lg:px-10 lg:py-4"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-primary py-12 text-white sm:py-16 md:py-18 lg:py-20">
@@ -330,6 +458,11 @@
             class="mt-8 border-t-1 border-t-white/40 pt-2 text-center text-xs sm:mt-10 sm:text-sm md:mt-12 md:text-base lg:mt-15"
           >
             Copyright &copy; 2023 | GrowThan | All rights reserved.
+          </div>
+          <!-- Careers, Terms and Conditions -->
+          <div class="text-gray mt-1 text-center text-sm">
+            <a href="/policy.html">Terms and Conditions</a> |
+            <a href="/careers.html">Careers</a>
           </div>
         </div>
       </div>

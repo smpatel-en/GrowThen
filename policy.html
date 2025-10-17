@@ -4,28 +4,341 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons-->
+    <script
+      src="https://kit.fontawesome.com/d1d7a2b346.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/output.css" />
 
-    <title>GrowThan | Terms and Privacy Policy</title>
+    <title>GrowThan | Policy</title>
   </head>
+
   <body>
-    <nav>
-      <div class="container">
-        <div class="nav-wrapper">
-          <div class="nav-logo-wrapper"><img src="" alt="" /></div>
+    <header class="fixed top-0 z-2 w-full">
+      <!-- Navigation bar -->
+      <nav id="navbar">
+        <div class="container">
+          <!-- Nav Wrapper -->
+          <div class="flex items-center justify-between py-4">
+            <!-- Navigation Logo -->
+            <div
+              class="max-w-[150px] sm:max-w-[180px] md:max-w-[250px] lg:max-w-[300px]"
+            >
+              <img src="assets/images/logo.png" alt="GrowThan Logo" />
+            </div>
+            <!-- Navigation Options | Desktop Navigation -->
+            <div class="hidden items-center gap-8 lg:flex">
+              <a href="/" class="text-primary text-lg font-medium capitalize"
+                >Home</a
+              >
+              <a
+                href="/about.html"
+                class="text-primary text-lg font-medium capitalize"
+                >About Us</a
+              >
+              <a
+                href="/services.html"
+                class="text-primary text-lg font-medium capitalize"
+                >Services</a
+              >
+              <a
+                href="/contact.html"
+                class="text-primary text-lg font-medium capitalize"
+                >Contact</a
+              >
+              <!-- Nav CTA -->
+              <button class="btn btn-primary">Register</button>
+            </div>
+            <!-- Mobile Navigation -->
+            <div class="flex items-center gap-4 lg:hidden">
+              <!-- Nav CTA -->
+              <button class="btn btn-primary hidden sm:block">Register</button>
+              <!-- Mobile Menu Button -->
+              <button
+                title="Menu"
+                id="menuBtn"
+                class="btn btn-secondary grid place-items-center p-2 text-2xl"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+            <!-- Mobile Menu -Slider -->
+            <div
+              id="navSlider"
+              class="bg-gray fixed top-0 right-0 h-screen w-full max-w-[300px] transform px-8 py-5 transition-transform duration-300 ease-in-out lg:hidden"
+            >
+              <div class="flex h-full flex-col items-end gap-4">
+                <!-- Close Button -->
+                <button
+                  title="Close Menu"
+                  id="menuBtn"
+                  class="btn btn-secondary mb-10 grid place-items-center p-2 text-2xl"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+                <a href="/" class="text-primary text-xl font-medium capitalize"
+                  >Home</a
+                >
+                <a
+                  href="/about.html"
+                  class="text-primary text-xl font-medium capitalize"
+                  >About Us</a
+                >
+                <a
+                  href="/services.html"
+                  class="text-primary text-xl font-medium capitalize"
+                  >Services</a
+                >
+                <a
+                  href="/contact.html"
+                  class="text-primary text-xl font-medium capitalize"
+                  >Contact</a
+                >
+                <!-- Nav CTA -->
+                <button class="btn btn-primary mt-auto block w-full sm:hidden">
+                  Register
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="nav-options">
-          <a href="/" class="nav-option">Home</a>
-          <a href="/about.html" class="nav-option">About Us</a>
-          <a href="/services.html" class="nav-option">Services</a>
-          <a href="/contact.html" class="nav-option">Contact</a>
-          <button class="btn btn-primary">Register</button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="h-full">
+      <!-- Page Header Section -->
+      <section
+        class="relative overflow-hidden pt-28 pb-0 sm:pt-32 md:pt-36 lg:pt-40"
+      >
+        <!-- Background Image -->
+        <img
+          src="assets/svg/general-page-banner.svg"
+          alt="Hero Background"
+          class="absolute inset-0"
+        />
+        <div class="relative container">
+          <!-- Decoration Sphere Wrapper -->
+          <div
+            class="relative mx-auto max-w-60 sm:max-w-80 md:max-w-120 lg:max-w-160 xl:max-w-180"
+          >
+            <img src="assets/svg/header-sphere.svg" alt="Decoration Sphere" />
+          </div>
+
+          <!-- Section Head -->
+          <h1
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-2 text-center text-2xl font-extrabold sm:translate-y-3 sm:text-3xl md:translate-y-4 md:text-4xl lg:translate-y-5 lg:text-5xl xl:text-7xl"
+          >
+            Terms of <span class="text-secondary">Use</span>
+          </h1>
+        </div>
+      </section>
+
+      <!-- Section Info -->
+      <section>
+        <div class="container">
+          <!-- Section Wrapper -->
+          <div class="gradient-secondary rounded-xl p-6 sm:p-8 md:p-12 lg:p-20">
+            <h2 class="text-primary mb-7 text-5xl font-semibold">
+              Terms and Privacy Policy
+            </h2>
+            <ul class="font-noto-sans list-disc text-lg leading-[157%]">
+              <li>Terms of Use for Growthan Media Private Limited:</li>
+              <li>
+                Welcome to Growthan Media Private Limited ("we", "our", or "us")
+                website. These terms of use ("Terms") apply to the use of our
+                website located at 147, FIRST FLOOR, JMD MEGAPOLIS, Badshahpur
+                Sohna Rd Hwy, Sector 48, Gurugram, Haryana 122018, INDIA, and
+                all related websites, applications, services, and tools
+                regardless of how you access or use them.
+              </li>
+              <li>
+                By accessing or using our website, you agree to be bound by
+                these Terms. If you do not agree to these Terms, please do not
+                access or use our website.
+              </li>
+
+              <ol class="list-decimal">
+                <li>
+                  Use of Our Website: Our website is intended for your personal,
+                  non-commercial use only. You may not modify, reproduce,
+                  distribute, transmit, display, publish, or create derivative
+                  works from any content or material on our website for any
+                  commercial purpose without our express written consent. You
+                  may use our website only for lawful purposes and in accordance
+                  with these Terms.
+                </li>
+                <li>
+                  Intellectual Property: The content on our website, including
+                  without limitation, the text, graphics, logos, images, and
+                  software, is owned by or licensed to us, and is protected by
+                  Indian and international copyright, trademark, patent, trade
+                  secret, and other intellectual property or proprietary rights
+                  laws. You may not use, reproduce, distribute, transmit,
+                  display, publish, or create derivative works from any content
+                  or material on our website without our express written
+                  consent.
+                </li>
+                <li>
+                  User Content: Our website may allow you to upload, submit,
+                  store, send, or receive content. By uploading, submitting,
+                  storing, sending, or receiving any content, you grant us a
+                  non-exclusive, worldwide, royalty-free, perpetual,
+                  irrevocable, and fully sub-licensable right to use, reproduce,
+                  modify, adapt, publish, translate, create derivative works
+                  from, distribute, perform, and display such content in any
+                  form, media, or technology now known or later developed.
+                </li>
+                <li>
+                  Links to Third-Party Websites: Our website may contain links
+                  to third-party websites that are not owned or controlled by
+                  us. We are not responsible for the content or privacy policies
+                  of such third-party websites.
+                </li>
+                <li>
+                  Limitation of Liability: We will not be liable for any damages
+                  of any kind arising from the use of our website, including but
+                  not limited to direct, indirect, incidental, punitive, and
+                  consequential damages.
+                </li>
+                <li>
+                  Indemnification: You agree to indemnify and hold us harmless
+                  from any claims, damages, liabilities, costs, or expenses
+                  arising from your use of our website.
+                </li>
+                <li>
+                  Disclaimer of Warranties: Our website is provided on an "as
+                  is" and "as available" basis. We make no warranties or
+                  representations of any kind, express or implied, as to the
+                  operation of our website or the information, content,
+                  materials, or products included on our website.
+                </li>
+                <li>
+                  Governing Law: These Terms and your use of our website will be
+                  governed by and construed in accordance with the laws of
+                  India.
+                </li>
+                <li>
+                  Modification of Terms: We may modify these Terms at any time,
+                  and your continued use of our website after any such
+                  modifications will constitute your acceptance of such
+                  modifications.
+                </li>
+                <li>
+                  Contact Us: If you have any questions about these Terms or our
+                  website, please contact us at legal@growthan.com or call us at
+                  8617514085.
+                </li>
+              </ol>
+              <li>Thank you for choosing Growthan Media Private Limited!</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary py-12 text-white sm:py-16 md:py-18 lg:py-20">
+      <div class="container">
+        <!-- Footer Wrapper -->
+        <div class="flex flex-col">
+          <!-- Footer sections -->
+          <div
+            class="xs:grid-cols-2 grid grid-cols-1 gap-6 text-sm sm:gap-8 sm:text-base md:text-lg lg:grid-cols-4"
+          >
+            <div>
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Pages
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-1.5 sm:gap-2">
+                <a href="/">Home</a>
+                <a href="/about.html">About Us</a>
+                <a href="/services.html">Services</a>
+                <a href="/contact.html">Contact</a>
+              </div>
+            </div>
+            <div>
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Social Logins
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-1.5 sm:gap-2">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">Skype</a>
+              </div>
+            </div>
+            <div class="max-w-xs">
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Location
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-2 sm:gap-3">
+                <a href="#" class="underline"
+                  >UNIT NO. 147, FIRST FLOOR, JMD MEGAPOLIS, Badshahpur Sohna Rd
+                  Hwy, Sector 48, Gurugram, Haryana 122018 .</a
+                >
+                <a href="#" class="underline">Location Map</a>
+              </div>
+            </div>
+            <div>
+              <h3
+                class="mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:text-2xl lg:mb-7"
+              >
+                Get in touch with
+              </h3>
+              <div class="font-noto-sans flex flex-col gap-2 sm:gap-3 md:gap-4">
+                <a
+                  href="tel:+918617514085"
+                  class="bg-primary-dark text-gray w-fit rounded-md px-4 py-1.5 text-sm font-bold text-nowrap sm:rounded-lg sm:px-5 sm:py-2 sm:text-base md:px-6 lg:px-7 xl:text-lg 2xl:text-2xl"
+                  >+91 8617514085</a
+                >
+                <a href="mailto:business@growthan.com" class="underline"
+                  >business@growthan.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Copyright -->
+          <div
+            class="mt-8 border-t-1 border-t-white/40 pt-2 text-center text-xs sm:mt-10 sm:text-sm md:mt-12 md:text-base lg:mt-15"
+          >
+            Copyright &copy; 2023 | GrowThan | All rights reserved.
+          </div>
+          <!-- Careers, Terms and Conditions -->
+          <div class="text-gray mt-1 text-center text-sm">
+            <a href="/policy.html">Terms and Conditions</a> |
+            <a href="/careers.html">Careers</a>
+          </div>
         </div>
       </div>
-    </nav>
+    </footer>
   </body>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Scripts -->
   <script src="js/scripts.js"></script>
 </html>

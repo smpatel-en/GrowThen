@@ -22,7 +22,7 @@
 }
 
 /* Theme */
-@theme inline {
+@theme {
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
   --color-secondary: var(--secondary);
@@ -66,7 +66,7 @@
 /* Components */
 @layer components {
   .btn {
-    @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold transition-colors duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
+    @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold capitalize transition-colors duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
   }
 
   .btn-primary {
@@ -89,6 +89,10 @@
   }
   .gradient-secondary {
     @apply from-gradient-secondary-start to-gradient-secondary-end bg-gradient-to-b;
+  }
+
+  .input-field {
+    @apply border-gray focus:border-primary w-full rounded-md border-2 bg-white px-4 py-2 text-base outline-none sm:text-lg lg:px-6 lg:py-3;
   }
 }
 
