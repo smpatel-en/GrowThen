@@ -18,12 +18,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
     <!-- Styles -->
     <link rel="stylesheet" href="css/output.css" />
 
@@ -38,11 +32,12 @@
           <!-- Nav Wrapper -->
           <div class="flex items-center justify-between py-4">
             <!-- Navigation Logo -->
-            <div
+            <a
+              href="/"
               class="max-w-[150px] sm:max-w-[180px] md:max-w-[250px] lg:max-w-[300px]"
             >
               <img src="assets/images/logo.png" alt="GrowThan Logo" />
-            </div>
+            </a>
             <!-- Navigation Options | Desktop Navigation -->
             <div class="hidden items-center gap-8 lg:flex">
               <a href="/" class="nav-option text-lg font-medium capitalize"
@@ -73,7 +68,7 @@
               <!-- Mobile Menu Button -->
               <button
                 title="Menu"
-                id="menuBtn"
+                id="menuOpen"
                 class="btn btn-secondary grid place-items-center p-2 text-lg lg:text-2xl"
               >
                 <i class="fa-solid fa-bars"></i>
@@ -88,7 +83,7 @@
                 <!-- Close Button -->
                 <button
                   title="Close Menu"
-                  id="menuBtn"
+                  id="menuClose"
                   class="btn btn-secondary mb-10 grid place-items-center p-2 text-lg lg:text-2xl"
                 >
                   <i class="fa-solid fa-xmark"></i>
@@ -174,79 +169,78 @@
                 these Terms. If you do not agree to these Terms, please do not
                 access or use our website.
               </li>
-
-              <ol class="list-decimal">
-                <li>
-                  Use of Our Website: Our website is intended for your personal,
-                  non-commercial use only. You may not modify, reproduce,
-                  distribute, transmit, display, publish, or create derivative
-                  works from any content or material on our website for any
-                  commercial purpose without our express written consent. You
-                  may use our website only for lawful purposes and in accordance
-                  with these Terms.
-                </li>
-                <li>
-                  Intellectual Property: The content on our website, including
-                  without limitation, the text, graphics, logos, images, and
-                  software, is owned by or licensed to us, and is protected by
-                  Indian and international copyright, trademark, patent, trade
-                  secret, and other intellectual property or proprietary rights
-                  laws. You may not use, reproduce, distribute, transmit,
-                  display, publish, or create derivative works from any content
-                  or material on our website without our express written
-                  consent.
-                </li>
-                <li>
-                  User Content: Our website may allow you to upload, submit,
-                  store, send, or receive content. By uploading, submitting,
-                  storing, sending, or receiving any content, you grant us a
-                  non-exclusive, worldwide, royalty-free, perpetual,
-                  irrevocable, and fully sub-licensable right to use, reproduce,
-                  modify, adapt, publish, translate, create derivative works
-                  from, distribute, perform, and display such content in any
-                  form, media, or technology now known or later developed.
-                </li>
-                <li>
-                  Links to Third-Party Websites: Our website may contain links
-                  to third-party websites that are not owned or controlled by
-                  us. We are not responsible for the content or privacy policies
-                  of such third-party websites.
-                </li>
-                <li>
-                  Limitation of Liability: We will not be liable for any damages
-                  of any kind arising from the use of our website, including but
-                  not limited to direct, indirect, incidental, punitive, and
-                  consequential damages.
-                </li>
-                <li>
-                  Indemnification: You agree to indemnify and hold us harmless
-                  from any claims, damages, liabilities, costs, or expenses
-                  arising from your use of our website.
-                </li>
-                <li>
-                  Disclaimer of Warranties: Our website is provided on an "as
-                  is" and "as available" basis. We make no warranties or
-                  representations of any kind, express or implied, as to the
-                  operation of our website or the information, content,
-                  materials, or products included on our website.
-                </li>
-                <li>
-                  Governing Law: These Terms and your use of our website will be
-                  governed by and construed in accordance with the laws of
-                  India.
-                </li>
-                <li>
-                  Modification of Terms: We may modify these Terms at any time,
-                  and your continued use of our website after any such
-                  modifications will constitute your acceptance of such
-                  modifications.
-                </li>
-                <li>
-                  Contact Us: If you have any questions about these Terms or our
-                  website, please contact us at legal@growthan.com or call us at
-                  8617514085.
-                </li>
-              </ol>
+            </ul>
+            <ol class="font-noto-sans list-decimal text-lg leading-[157%]">
+              <li>
+                Use of Our Website: Our website is intended for your personal,
+                non-commercial use only. You may not modify, reproduce,
+                distribute, transmit, display, publish, or create derivative
+                works from any content or material on our website for any
+                commercial purpose without our express written consent. You may
+                use our website only for lawful purposes and in accordance with
+                these Terms.
+              </li>
+              <li>
+                Intellectual Property: The content on our website, including
+                without limitation, the text, graphics, logos, images, and
+                software, is owned by or licensed to us, and is protected by
+                Indian and international copyright, trademark, patent, trade
+                secret, and other intellectual property or proprietary rights
+                laws. You may not use, reproduce, distribute, transmit, display,
+                publish, or create derivative works from any content or material
+                on our website without our express written consent.
+              </li>
+              <li>
+                User Content: Our website may allow you to upload, submit,
+                store, send, or receive content. By uploading, submitting,
+                storing, sending, or receiving any content, you grant us a
+                non-exclusive, worldwide, royalty-free, perpetual, irrevocable,
+                and fully sub-licensable right to use, reproduce, modify, adapt,
+                publish, translate, create derivative works from, distribute,
+                perform, and display such content in any form, media, or
+                technology now known or later developed.
+              </li>
+              <li>
+                Links to Third-Party Websites: Our website may contain links to
+                third-party websites that are not owned or controlled by us. We
+                are not responsible for the content or privacy policies of such
+                third-party websites.
+              </li>
+              <li>
+                Limitation of Liability: We will not be liable for any damages
+                of any kind arising from the use of our website, including but
+                not limited to direct, indirect, incidental, punitive, and
+                consequential damages.
+              </li>
+              <li>
+                Indemnification: You agree to indemnify and hold us harmless
+                from any claims, damages, liabilities, costs, or expenses
+                arising from your use of our website.
+              </li>
+              <li>
+                Disclaimer of Warranties: Our website is provided on an "as is"
+                and "as available" basis. We make no warranties or
+                representations of any kind, express or implied, as to the
+                operation of our website or the information, content, materials,
+                or products included on our website.
+              </li>
+              <li>
+                Governing Law: These Terms and your use of our website will be
+                governed by and construed in accordance with the laws of India.
+              </li>
+              <li>
+                Modification of Terms: We may modify these Terms at any time,
+                and your continued use of our website after any such
+                modifications will constitute your acceptance of such
+                modifications.
+              </li>
+              <li>
+                Contact Us: If you have any questions about these Terms or our
+                website, please contact us at legal@growthan.com or call us at
+                8617514085.
+              </li>
+            </ol>
+            <ul class="font-noto-sans list-disc text-lg leading-[157%]">
               <li>Thank you for choosing Growthan Media Private Limited!</li>
             </ul>
           </div>
@@ -329,7 +323,7 @@
           </div>
           <!-- Careers, Terms and Conditions -->
           <div class="text-gray mt-1 text-center text-sm">
-            <a href="/policy.html">Terms and Conditions</a> |
+            <a href="/policy.html">Policy</a> |
             <a href="/careers.html">Careers</a>
           </div>
         </div>
@@ -337,8 +331,6 @@
     </footer>
   </body>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Scripts -->
   <script src="js/scripts.js"></script>
 </html>

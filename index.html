@@ -37,11 +37,12 @@
           <!-- Nav Wrapper -->
           <div class="flex items-center justify-between py-4">
             <!-- Navigation Logo -->
-            <div
+            <a
+              href="/"
               class="max-w-[150px] sm:max-w-[180px] md:max-w-[250px] lg:max-w-[300px]"
             >
               <img src="assets/images/logo.png" alt="GrowThan Logo" />
-            </div>
+            </a>
             <!-- Navigation Options | Desktop Navigation -->
             <div class="hidden items-center gap-8 lg:flex">
               <a
@@ -74,7 +75,7 @@
               <!-- Mobile Menu Button -->
               <button
                 title="Menu"
-                id="menuBtn"
+                id="menuOpen"
                 class="btn btn-secondary grid place-items-center p-2 text-lg lg:text-2xl"
               >
                 <i class="fa-solid fa-bars"></i>
@@ -89,7 +90,7 @@
                 <!-- Close Button -->
                 <button
                   title="Close Menu"
-                  id="menuBtn"
+                  id="menuClose"
                   class="btn btn-secondary mb-10 grid place-items-center p-2 text-lg lg:text-2xl"
                 >
                   <i class="fa-solid fa-xmark"></i>
@@ -1563,7 +1564,7 @@
           </div>
           <!-- Careers, Terms and Conditions -->
           <div class="text-gray mt-1 text-center text-sm">
-            <a href="/policy.html">Terms and Conditions</a> |
+            <a href="/policy.html">Policy</a> |
             <a href="/careers.html">Careers</a>
           </div>
         </div>

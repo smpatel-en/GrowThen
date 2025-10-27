@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.querySelectorAll("#menuBtn");
+  const menuOpen = document.getElementById("menuOpen");
+  const menuClose = document.getElementById("menuClose");
   const navMenu = document.getElementById("navSlider");
 
-  // Toggle navigation menu
-  menuToggle.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
-    });
+  menuOpen.addEventListener("click", function () {
+    navMenu.classList.add("active");
+  });
+
+  menuClose.addEventListener("click", function () {
+    navMenu.classList.remove("active");
   });
   document.addEventListener("click", function (event) {
-    const isMenuButton = Array.from(menuToggle).some((btn) =>
-      btn.contains(event.target),
-    );
+    const isMenuButton =
+      menuOpen.contains(event.target) || menuClose.contains(event.target);
     if (!navMenu.contains(event.target) && !isMenuButton) {
       navMenu.classList.remove("active");
     }
