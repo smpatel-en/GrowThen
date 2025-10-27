@@ -114,30 +114,53 @@
 .nav-option {
   @apply text-primary relative transition-colors duration-300;
 }
-.nav-option:hover,
 .nav-option.active {
   @apply text-secondary;
 }
 
-.nav-option.active::after {
-  @apply bg-secondary absolute bottom-0 block h-1 w-1/2 rounded-full transition-all duration-300;
+.nav-option::before {
+  @apply absolute bottom-0 block h-1 w-full rounded-full bg-transparent;
   content: "";
 }
-.nav-option.active::before {
-  @apply bg-primary absolute bottom-0 block h-1 w-full rounded-full transition-all duration-300;
+.nav-option::after {
+  @apply bg-primary absolute bottom-0 block h-1 w-0 rounded-full transition-all duration-300;
   content: "";
+}
+.nav-option:hover::after {
+  @apply w-full;
 }
 
+.nav-option.active::before {
+  @apply bg-primary absolute bottom-0 block h-1 w-full rounded-full;
+  content: "";
+}
+.nav-option.active::after {
+  @apply bg-secondary absolute bottom-0 block h-1 w-full rounded-full;
+  content: "";
+}
 .card,
 .card img {
   @apply transition-transform duration-300;
 }
 
 .card:hover {
-  @apply -translate-y-2;
+  @apply -translate-y-1;
 }
 
 .card:hover img {
+  @apply scale-108;
+}
+
+.card-team,
+.card-team .team-pfp {
+  @apply transition-transform duration-300;
+}
+
+.card-team:hover {
+  @apply -translate-y-1;
+}
+
+.card-team:hover .team-pfp {
   @apply scale-108;
 }
 

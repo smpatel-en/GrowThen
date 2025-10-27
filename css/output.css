@@ -363,6 +363,9 @@
   .h-1\/2 {
     height: calc(1/2 * 100%);
   }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
@@ -886,6 +889,16 @@
       content: var(--tw-content);
     }
   }
+  .hover\:scale-110 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .hover\:shadow-\[0_0_0_5px_var\(--gray\)\] {
     &:hover {
       @media (hover: hover) {
@@ -952,14 +965,14 @@
       display: none;
     }
   }
+  .sm\:h-7 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 7);
+    }
+  }
   .sm\:h-10 {
     @media (width >= 40rem) {
       height: calc(var(--spacing) * 10);
-    }
-  }
-  .sm\:w-7 {
-    @media (width >= 40rem) {
-      width: calc(var(--spacing) * 7);
     }
   }
   .sm\:w-10 {
@@ -1272,9 +1285,9 @@
       display: grid;
     }
   }
-  .md\:w-8 {
+  .md\:h-8 {
     @media (width >= 48rem) {
-      width: calc(var(--spacing) * 8);
+      height: calc(var(--spacing) * 8);
     }
   }
   .md\:w-14 {
@@ -2165,23 +2178,36 @@
   --tw-duration: 300ms;
   transition-duration: 300ms;
 }
-.nav-option:hover, .nav-option.active {
+.nav-option.active {
   color: var(--color-secondary);
 }
-.nav-option.active::after {
+.nav-option::before {
   position: absolute;
   bottom: calc(var(--spacing) * 0);
   display: block;
   height: calc(var(--spacing) * 1);
-  width: calc(1/2 * 100%);
+  width: 100%;
   border-radius: calc(infinity * 1px);
-  background-color: var(--color-secondary);
+  background-color: transparent;
+  content: "";
+}
+.nav-option::after {
+  position: absolute;
+  bottom: calc(var(--spacing) * 0);
+  display: block;
+  height: calc(var(--spacing) * 1);
+  width: calc(var(--spacing) * 0);
+  border-radius: calc(infinity * 1px);
+  background-color: var(--color-primary);
   transition-property: all;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
   transition-duration: var(--tw-duration, var(--default-transition-duration));
   --tw-duration: 300ms;
   transition-duration: 300ms;
   content: "";
+}
+.nav-option:hover::after {
+  width: 100%;
 }
 .nav-option.active::before {
   position: absolute;
@@ -2191,11 +2217,16 @@
   width: 100%;
   border-radius: calc(infinity * 1px);
   background-color: var(--color-primary);
-  transition-property: all;
-  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-  transition-duration: var(--tw-duration, var(--default-transition-duration));
-  --tw-duration: 300ms;
-  transition-duration: 300ms;
+  content: "";
+}
+.nav-option.active::after {
+  position: absolute;
+  bottom: calc(var(--spacing) * 0);
+  display: block;
+  height: calc(var(--spacing) * 1);
+  width: 100%;
+  border-radius: calc(infinity * 1px);
+  background-color: var(--color-secondary);
   content: "";
 }
 .card, .card img {
@@ -2206,10 +2237,27 @@
   transition-duration: 300ms;
 }
 .card:hover {
-  --tw-translate-y: calc(var(--spacing) * -2);
+  --tw-translate-y: calc(var(--spacing) * -1);
   translate: var(--tw-translate-x) var(--tw-translate-y);
 }
 .card:hover img {
+  --tw-scale-x: 108%;
+  --tw-scale-y: 108%;
+  --tw-scale-z: 108%;
+  scale: var(--tw-scale-x) var(--tw-scale-y);
+}
+.card-team, .card-team .team-pfp {
+  transition-property: transform, translate, scale, rotate;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+}
+.card-team:hover {
+  --tw-translate-y: calc(var(--spacing) * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+}
+.card-team:hover .team-pfp {
   --tw-scale-x: 108%;
   --tw-scale-y: 108%;
   --tw-scale-z: 108%;
@@ -2457,6 +2505,21 @@
   initial-value: "";
   inherits: false;
 }
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
 @property --tw-gradient-position {
   syntax: "*";
   inherits: false;
@@ -2498,21 +2561,6 @@
   syntax: "<length-percentage>";
   inherits: false;
   initial-value: 100%;
-}
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
 }
 @property --tw-backdrop-blur {
   syntax: "*";
@@ -2595,6 +2643,9 @@
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-content: "";
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
@@ -2604,9 +2655,6 @@
       --tw-gradient-from-position: 0%;
       --tw-gradient-via-position: 50%;
       --tw-gradient-to-position: 100%;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;
