@@ -1,15 +1,7 @@
 {
-  "name": "growthen",
+  "name": "growthan",
   "version": "1.0.0",
   "description": "Figma to Tailwind CSS multipage website",
-  "homepage": "https://smpatel-en.github.io/GrowThen#readme",
-  "bugs": {
-    "url": "https://github.com/smpatel-en/GrowThen/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/smpatel-en/GrowThen.git"
-  },
   "license": "ISC",
   "author": "Sujal Patel",
   "type": "commonjs",
