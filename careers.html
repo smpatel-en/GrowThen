@@ -453,17 +453,19 @@
         <div class="container">
           <!-- Section Wrapper -->
           <div
-            class="gradient-primary flex gap-10 rounded-md p-6 sm:p-8 md:p-12 lg:rounded-xl lg:p-20"
+            class="gradient-primary flex flex-col gap-10 rounded-md p-6 sm:p-8 md:p-12 lg:flex-row lg:rounded-xl lg:p-20"
           >
             <!-- Text Content -->
-            <div class="flex-1">
+            <div class="flex-1/2">
               <!-- Section Header -->
               <h2
-                class="text-primary text-xl font-semibold text-pretty sm:text-2xl md:text-3xl lg:text-[40px]"
+                class="text-primary mb-4 text-xl font-semibold text-pretty sm:mb-5 sm:text-2xl md:text-3xl lg:mb-[30px] lg:text-[40px]"
               >
                 Why join us
               </h2>
-              <p>
+              <p
+                class="border-t-gray text-primary-dark font-noto-sans mb-5 border-t-2 pt-5 text-sm leading-[157%] sm:mb-6 sm:pt-6 sm:text-base md:mb-8 md:pt-[30px] lg:text-lg"
+              >
                 Are you ready to apply your knowledge and background to exciting
                 new challenges? From learning to leadership, this is your chance
                 to take your career to the next level. Search and apply for a
@@ -471,29 +473,67 @@
                 complete the day-to-day tasks, but you will notice their
                 enthusiasm at its peak to achieve one common goal.
               </p>
-              <ol class="list-disc">
-                <li>Dolor duis lorem enim eu nulla semper</li>
-                <li>Lorem a eget blandit ac neque pulvinar</li>
-                <li>Pellentesque non integer ac id bibendum</li>
-              </ol>
+              <ul class="flex flex-col gap-2 sm:gap-3 md:gap-4">
+                <li class="flex items-start gap-2">
+                  <div class="mt-1">
+                    <img
+                      src="assets/svg/bullet-tick.svg"
+                      alt="Tick"
+                      class="object-contain"
+                    />
+                  </div>
+                  <span
+                    class="font-noto-sans text-primary-dark text-base sm:text-lg lg:text-xl"
+                    >Dolor duis lorem enim eu nulla semper</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="mt-1">
+                    <img
+                      src="assets/svg/bullet-tick.svg"
+                      alt="Tick"
+                      class="object-contain"
+                    />
+                  </div>
+                  <span
+                    class="font-noto-sans text-primary-dark text-base sm:text-lg lg:text-xl"
+                    >Lorem a eget blandit ac neque pulvinar</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="mt-1">
+                    <img
+                      src="assets/svg/bullet-tick.svg"
+                      alt="Tick"
+                      class="object-contain"
+                    />
+                  </div>
+                  <span
+                    class="font-noto-sans text-primary-dark text-base sm:text-lg lg:text-xl"
+                    >Pellentesque non integer ac id bibendum</span
+                  >
+                </li>
+              </ul>
             </div>
 
             <!-- Timeline -->
-            <div class="flex flex-col gap-1">
+            <div class="flex flex-1/2 flex-col gap-1">
               <!-- Time Point 1 -->
               <div
-                class="relative grid grid-cols-[auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
+                class="relative grid grid-cols-[auto_1fr] items-center justify-center gap-2 sm:gap-3 md:gap-6 lg:gap-10"
               >
                 <!-- Icon Circle -->
-                <div class="relative w-full">
+                <div class="relative h-full w-full py-2 sm:py-2.5 lg:py-5">
                   <div
-                    class="z-1 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
+                    class="relative z-1 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:mb-5 sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:mb-6 lg:w-[86px] lg:border-[9px]"
                   >
-                    1
+                    <div class="max-w-6 sm:max-w-8 lg:max-w-10">
+                      <img src="assets/images/goals.png" alt="Goals Icon" />
+                    </div>
                   </div>
                   <!-- Line -->
                   <div
-                    class="border-primary-dark absolute bottom-0 left-1/2 h-1/2 -translate-x-1/2 translate-y-11 border-l-2 border-dashed"
+                    class="border-primary-dark absolute top-1/2 bottom-0 left-1/2 z-0 h-1/2 -translate-x-1/2 border-l-2 border-dashed"
                   ></div>
                 </div>
 
@@ -515,18 +555,23 @@
 
               <!-- Time Point 2 -->
               <div
-                class="relative grid grid-cols-[auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
+                class="relative grid grid-cols-[auto_1fr] items-center justify-center gap-2 sm:gap-3 md:gap-6 lg:gap-10"
               >
                 <!-- Icon Circle -->
-                <div class="relative w-full">
+                <div class="relative h-full w-full py-2 sm:py-2.5 lg:py-5">
                   <div
-                    class="z-1 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
+                    class="relative z-1 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:mb-5 sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:mb-6 lg:w-[86px] lg:border-[9px]"
                   >
-                    2
+                    <div class="max-w-6 sm:max-w-8 lg:max-w-10">
+                      <img
+                        src="assets/images/mobile-marketing.png"
+                        alt="Mobile Marketing Icon"
+                      />
+                    </div>
                   </div>
                   <!-- Line -->
                   <div
-                    class="border-primary-dark absolute bottom-0 left-1/2 h-1/2 -translate-x-1/2 translate-y-11 border-l-2 border-dashed"
+                    class="border-primary-dark absolute top-0 left-1/2 z-0 h-full -translate-x-1/2 border-l-2 border-dashed"
                   ></div>
                 </div>
 
@@ -548,18 +593,20 @@
 
               <!-- Time Point 3 -->
               <div
-                class="relative grid grid-cols-[auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
+                class="relative grid grid-cols-[auto_1fr] items-center justify-center gap-2 sm:gap-3 md:gap-6 lg:gap-10"
               >
                 <!-- Icon Circle -->
-                <div class="relative w-full">
+                <div class="relative h-full w-full py-2 sm:py-2.5 lg:py-5">
                   <div
-                    class="z-1 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
+                    class="relative z-1 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:mb-5 sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:mb-6 lg:w-[86px] lg:border-[9px]"
                   >
-                    4
+                    <div class="max-w-6 sm:max-w-8 lg:max-w-10">
+                      <img src="assets/images/stats.png" alt="Stats Icon" />
+                    </div>
                   </div>
                   <!-- Line -->
                   <div
-                    class="border-primary-dark absolute bottom-0 left-1/2 h-1/2 -translate-x-1/2 translate-y-11 border-l-2 border-dashed last:border-0"
+                    class="border-primary-dark absolute top-0 left-1/2 z-0 h-1/2 -translate-x-1/2 border-l-2 border-dashed"
                   ></div>
                 </div>
                 <!-- Process Content -->
@@ -578,9 +625,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Timeline -->
-          <div></div>
         </div>
       </section>
     </main>
