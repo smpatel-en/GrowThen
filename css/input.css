@@ -10,7 +10,6 @@
 
   /* Color Mixes */
   --primary-30: color-mix(in srgb, var(--primary) 30%, transparent);
-  --secondary-30: color-mix(in srgb, var(--secondary) 30%, transparent);
   --gray-30: color-mix(in srgb, var(--gray) 30%, transparent);
   --white-30: color-mix(in srgb, var(--white) 30%, transparent);
 
@@ -34,10 +33,6 @@
   --color-secondary: var(--secondary);
   --color-gray: var(--gray);
   --color-white: var(--white);
-  --color-primary-30: var(--primary-30);
-  --color-secondary-30: var(--secondary-30);
-  --color-gray-30: var(--gray-30);
-  --color-white-30: var(--white-30);
   --color-gradient-start: var(--gradient-primary-start);
   --color-gradient-middle: var(--gradient-primary-middle);
   --color-gradient-end: var(--gradient-primary-end);
@@ -106,7 +101,7 @@
   }
 
   .input-field {
-    @apply border-gray focus:border-primary w-full rounded-md border-2 bg-white px-4 py-2 text-base outline-none sm:text-lg lg:px-6 lg:py-3;
+    @apply border-gray focus:border-primary w-full rounded-md border-2 bg-white px-4 py-2 text-base transition-colors duration-300 outline-none sm:text-lg lg:px-6 lg:py-3;
   }
 
   .tag {
@@ -133,12 +128,17 @@
   content: "";
 }
 
+.card,
 .card img {
   @apply transition-transform duration-300;
 }
 
+.card:hover {
+  @apply -translate-y-2;
+}
+
 .card:hover img {
-  @apply scale-105;
+  @apply scale-108;
 }
 
 /* Utilities */
