@@ -24,147 +24,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Tailwind CSS cdn temperary for development -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @import "tailwindcss";
-
-      :root {
-        /* Base Colors */
-        --primary: #162466;
-        --primary-dark: #181b31;
-        --secondary: #ff3b33;
-        --gray: #d6d6e3;
-        --white: #ffffff;
-
-        /* Gradient Colors */
-        --gradient-primary-start: #e9f7ff;
-        --gradient-primary-middle: #ffdbd4;
-        --gradient-primary-end: #fff3ca;
-
-        --gradient-secondary-start: #fff8f8;
-        --gradient-secondary-end: #f5f7ff;
-
-        /* Fonts */
-        --font-nunito: "Nunito", sans-serif;
-        --font-noto-sans: "Noto Sans", sans-serif;
-      }
-
-      /* Theme */
-      @theme {
-        --color-primary: var(--primary);
-        --color-primary-dark: var(--primary-dark);
-        --color-secondary: var(--secondary);
-        --color-gray: var(--gray);
-        --color-white: var(--white);
-        --color-gradient-start: var(--gradient-primary-start);
-        --color-gradient-middle: var(--gradient-primary-middle);
-        --color-gradient-end: var(--gradient-primary-end);
-        --color-gradient-secondary-start: var(--gradient-secondary-start);
-        --color-gradient-secondary-end: var(--gradient-secondary-end);
-        --font-nunito: var(--font-nunito);
-        --font-noto-sans: var(--font-noto-sans);
-
-        /* breakpoints */
-        --breakpoint-xs: 30rem;
-      }
-
-      /* Base Styles */
-      @layer base {
-        * {
-          @apply m-0 box-border p-0;
-        }
-        img {
-          @apply block h-full w-full object-cover;
-        }
-        body {
-          @apply font-nunito overflow-x-hidden;
-        }
-        section,
-        footer {
-          @apply py-12 sm:py-16 md:py-18 lg:py-20;
-        }
-        a {
-          @apply w-fit;
-        }
-        .container {
-          @apply mx-auto px-4 sm:px-5 md:px-6 lg:px-5 xl:px-10;
-        }
-      }
-
-      /* Components */
-      @layer components {
-        .btn {
-          @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold capitalize transition-colors duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
-        }
-
-        .btn-primary {
-          @apply bg-primary text-white;
-        }
-        .btn-primary:hover {
-          @apply bg-primary-dark;
-        }
-
-        .btn-secondary,
-        .btn-primary.disabled {
-          @apply text-primary border-primary bg-transparent;
-        }
-        .btn-secondary:hover {
-          @apply bg-primary text-white;
-        }
-
-        .gradient-primary {
-          @apply from-gradient-start via-gradient-middle to-gradient-end bg-gradient-to-br;
-        }
-        .gradient-secondary {
-          @apply from-gradient-secondary-start to-gradient-secondary-end bg-gradient-to-b;
-        }
-
-        .input-field {
-          @apply border-gray focus:border-primary w-full rounded-md border-2 bg-white px-4 py-2 text-base outline-none sm:text-lg lg:px-6 lg:py-3;
-        }
-
-        .tag {
-          @apply border-primary text-primary w-fit rounded-full border-2 px-3 py-1.5 text-sm font-medium sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 lg:px-6 lg:py-3 lg:text-lg xl:px-7 xl:py-3 xl:text-xl;
-        }
-      }
-
-      /* Utilities */
-      #navSlider {
-        @apply translate-x-full;
-      }
-
-      #navSlider.active {
-        @apply translate-x-0;
-      }
-
-      #navbar {
-        @apply border-b-1 border-transparent bg-transparent transition-colors duration-300;
-      }
-      #navbar.scrolled {
-        @apply border-b-gray bg-white backdrop-blur-sm;
-      }
-
-      .faq i {
-        @apply transition-transform duration-300;
-      }
-      .faq.active .faq-question i {
-        @apply rotate-45;
-      }
-
-      .faq-answer {
-        @apply transition-all duration-300;
-      }
-      .faq.active .faq-answer {
-        @apply max-h-45 sm:max-h-35 md:max-h-30 lg:max-h-25;
-      }
-
-      .testimonial-prev.disabled,
-      .testimonial-next.disabled {
-        @apply pointer-events-none opacity-50;
-      }
-    </style>
-
     <!-- Styles -->
     <link rel="stylesheet" href="css/output.css" />
 
@@ -186,22 +45,22 @@
             </div>
             <!-- Navigation Options | Desktop Navigation -->
             <div class="hidden items-center gap-8 lg:flex">
-              <a href="/" class="text-primary text-lg font-medium capitalize"
+              <a href="/" class="nav-option text-lg font-medium capitalize"
                 >Home</a
               >
               <a
                 href="/about.html"
-                class="text-primary text-lg font-medium capitalize"
+                class="nav-option text-lg font-medium capitalize"
                 >About Us</a
               >
               <a
                 href="/services.html"
-                class="text-primary text-lg font-medium capitalize"
+                class="nav-option text-lg font-medium capitalize"
                 >Services</a
               >
               <a
                 href="/contact.html"
-                class="text-primary text-lg font-medium capitalize"
+                class="nav-option text-lg font-medium capitalize"
                 >Contact</a
               >
               <!-- Nav CTA -->
@@ -340,7 +199,7 @@
             <div class="flex flex-col gap-6 md:gap-8 lg:gap-10">
               <!-- card -->
               <div
-                class="gradient-secondary flex flex-col gap-2 p-4 sm:p-8 md:gap-6 md:p-12 lg:flex-row lg:gap-8 lg:p-16"
+                class="gradient-secondary card flex flex-col gap-2 p-4 sm:p-8 md:gap-6 md:p-12 lg:flex-row lg:gap-8 lg:p-16"
               >
                 <!-- Card Content -->
                 <div>
@@ -375,7 +234,7 @@
               </div>
               <!-- card -->
               <div
-                class="gradient-secondary flex flex-col gap-2 p-4 sm:p-8 md:gap-6 md:p-12 lg:flex-row lg:gap-8 lg:p-16"
+                class="gradient-secondary card flex flex-col gap-2 p-4 sm:p-8 md:gap-6 md:p-12 lg:flex-row lg:gap-8 lg:p-16"
               >
                 <!-- Card Content -->
                 <div>
@@ -410,7 +269,7 @@
               </div>
               <!-- card -->
               <div
-                class="gradient-secondary flex flex-col gap-2 p-4 sm:p-8 md:gap-6 md:p-12 lg:flex-row lg:gap-8 lg:p-16"
+                class="gradient-secondary card flex flex-col gap-2 p-4 sm:p-8 md:gap-6 md:p-12 lg:flex-row lg:gap-8 lg:p-16"
               >
                 <!-- Card Content -->
                 <div>
@@ -687,7 +546,7 @@
               <div class="font-noto-sans flex flex-col gap-2 sm:gap-3 md:gap-4">
                 <a
                   href="tel:+918617514085"
-                  class="bg-primary-dark text-gray w-fit rounded-md px-4 py-1.5 text-sm font-bold text-nowrap sm:rounded-lg sm:px-5 sm:py-2 sm:text-base md:px-6 lg:px-7 xl:text-lg 2xl:text-2xl"
+                  class="bg-primary-dark text-gray w-fit rounded-md px-4 py-1.5 text-sm font-bold text-nowrap shadow-[0_0_0_0px_var(--primary-30)] transition-shadow duration-300 hover:shadow-[0_0_0_5px_var(--white-30)] sm:rounded-lg sm:px-5 sm:py-2 sm:text-base md:px-6 lg:px-7 xl:text-lg 2xl:text-2xl"
                   >+91 8617514085</a
                 >
                 <a href="mailto:business@growthan.com" class="underline"

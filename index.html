@@ -44,22 +44,24 @@
             </div>
             <!-- Navigation Options | Desktop Navigation -->
             <div class="hidden items-center gap-8 lg:flex">
-              <a href="/" class="text-secondary text-lg font-medium capitalize"
+              <a
+                href="/"
+                class="nav-option active text-lg font-medium capitalize"
                 >Home</a
               >
               <a
                 href="/about.html"
-                class="text-primary text-lg font-medium capitalize"
+                class="nav-option text-lg font-medium capitalize"
                 >About Us</a
               >
               <a
                 href="/services.html"
-                class="text-primary text-lg font-medium capitalize"
+                class="nav-option text-lg font-medium capitalize"
                 >Services</a
               >
               <a
                 href="/contact.html"
-                class="text-primary text-lg font-medium capitalize"
+                class="nav-option text-lg font-medium capitalize"
                 >Contact</a
               >
               <!-- Nav CTA -->
@@ -215,7 +217,7 @@
             >
               <!-- Card -->
               <div
-                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary card rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -248,7 +250,7 @@
               </div>
               <!-- Card -->
               <div
-                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary card rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -282,7 +284,7 @@
               </div>
               <!-- Card -->
               <div
-                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary card rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -315,7 +317,7 @@
               </div>
               <!-- Card -->
               <div
-                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary card rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -348,7 +350,7 @@
               </div>
               <!-- Card -->
               <div
-                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary card rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -381,7 +383,7 @@
               </div>
               <!-- Card -->
               <div
-                class="gradient-primary rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
+                class="gradient-primary card rounded-xl p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:rounded-[30px] lg:p-[45px]"
               >
                 <!-- Image background -->
                 <div
@@ -520,31 +522,31 @@
             <div class="flex flex-col items-center gap-1">
               <!-- Time Point 1 -->
               <div
-                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
+                class="relative flex w-full flex-col items-center gap-3 py-3 sm:py-4 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-6 lg:gap-10 lg:py-5"
               >
                 <!-- Line -->
                 <div
-                  class="border-primary-dark absolute top-1/2 left-1/2 h-1/2 -translate-x-1/2 border-l-2 border-dashed"
+                  class="border-primary-dark absolute left-1/2 hidden h-1/2 -translate-x-1/2 border-l-2 border-dashed md:top-1/2 md:block"
                 ></div>
 
                 <!-- Image Wrapper  -->
                 <div
-                  class="w-fit max-w-20 justify-self-end sm:max-w-24 md:max-w-28 lg:max-w-none"
+                  class="hidden w-fit max-w-24 sm:max-w-28 md:block md:max-w-28 md:justify-self-end lg:max-w-none"
                 >
                   <img src="assets/images/process-1.png" alt="Process 1" />
                 </div>
 
                 <!-- Number Circle -->
                 <div
-                  class="z-0 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
+                  class="z-0 grid aspect-square w-16 shrink-0 place-items-center rounded-full border-6 border-[#FFD1C8] bg-white text-2xl font-semibold sm:w-20 sm:border-8 sm:text-3xl md:w-20 lg:w-[86px] lg:border-[9px]"
                 >
                   1
                 </div>
 
                 <!-- Process Content -->
-                <div>
+                <div class="text-center md:text-left">
                   <h3
-                    class="text-primary mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg md:mb-3 md:text-xl lg:text-[25px]"
+                    class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:mb-3 md:text-xl lg:text-[25px]"
                   >
                     Market Research
                   </h3>
@@ -559,17 +561,31 @@
 
               <!-- Time Point 2 -->
               <div
-                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
+                class="relative flex w-full flex-col items-center gap-3 py-3 sm:py-4 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-6 lg:gap-10 lg:py-5"
               >
                 <!-- Line -->
                 <div
-                  class="border-primary-dark absolute top-0 left-1/2 h-full -translate-x-1/2 border-l-2 border-dashed"
+                  class="border-primary-dark absolute top-0 left-1/2 hidden h-full -translate-x-1/2 border-l-2 border-dashed md:block"
                 ></div>
 
+                <!-- Image - Mobile order -->
+                <div
+                  class="hidden w-fit max-w-24 sm:max-w-28 md:order-3 md:block md:max-w-28 md:justify-self-start lg:max-w-none"
+                >
+                  <img src="assets/images/process-2.png" alt="Process 2" />
+                </div>
+
+                <!-- Number Circle -->
+                <div
+                  class="z-0 grid aspect-square w-16 shrink-0 place-items-center rounded-full border-6 border-[#FFD1C8] bg-white text-2xl font-semibold sm:w-20 sm:border-8 sm:text-3xl md:order-2 md:w-20 lg:w-[86px] lg:border-[9px]"
+                >
+                  2
+                </div>
+
                 <!-- Process Content -->
-                <div class="text-right">
+                <div class="text-center md:order-1 md:text-right">
                   <h3
-                    class="text-primary mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg md:mb-3 md:text-xl lg:text-[25px]"
+                    class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:mb-3 md:text-xl lg:text-[25px]"
                   >
                     Analysis
                   </h3>
@@ -580,48 +596,35 @@
                     trends.
                   </p>
                 </div>
-
-                <!-- Number Circle -->
-                <div
-                  class="z-0 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
-                >
-                  2
-                </div>
-
-                <!-- Image Wrapper  -->
-                <div
-                  class="w-fit max-w-20 justify-self-start sm:max-w-24 md:max-w-28 lg:max-w-none"
-                >
-                  <img src="assets/images/process-2.png" alt="Process 2" />
-                </div>
               </div>
 
               <!-- Time Point 3 -->
               <div
-                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
+                class="relative flex w-full flex-col items-center gap-3 py-3 sm:py-4 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-6 lg:gap-10 lg:py-5"
               >
                 <!-- Line -->
                 <div
-                  class="border-primary-dark absolute top-0 left-1/2 h-full -translate-x-1/2 border-l-2 border-dashed"
+                  class="border-primary-dark absolute top-0 left-1/2 hidden h-full -translate-x-1/2 border-l-2 border-dashed md:block"
                 ></div>
+
                 <!-- Image Wrapper  -->
                 <div
-                  class="w-fit max-w-20 justify-self-end sm:max-w-24 md:max-w-28 lg:max-w-none"
+                  class="hidden w-fit max-w-24 sm:max-w-28 md:block md:max-w-28 md:justify-self-end lg:max-w-none"
                 >
                   <img src="assets/images/process-3.png" alt="Process 3" />
                 </div>
 
                 <!-- Number Circle -->
                 <div
-                  class="z-0 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
+                  class="z-0 grid aspect-square w-16 shrink-0 place-items-center rounded-full border-6 border-[#FFD1C8] bg-white text-2xl font-semibold sm:w-20 sm:border-8 sm:text-3xl md:w-20 lg:w-[86px] lg:border-[9px]"
                 >
                   3
                 </div>
 
                 <!-- Process Content -->
-                <div>
+                <div class="text-center md:text-left">
                   <h3
-                    class="text-primary mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg md:mb-3 md:text-xl lg:text-[25px]"
+                    class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:mb-3 md:text-xl lg:text-[25px]"
                   >
                     Targeting
                   </h3>
@@ -636,16 +639,31 @@
 
               <!-- Time Point 4 -->
               <div
-                class="relative grid grid-cols-[1fr_auto_1fr] items-center justify-center gap-2 py-2 sm:gap-3 sm:py-2.5 md:gap-6 lg:gap-10 lg:py-5"
+                class="relative flex w-full flex-col items-center gap-3 py-3 sm:py-4 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-6 lg:gap-10 lg:py-5"
               >
                 <!-- Line -->
                 <div
-                  class="border-primary-dark absolute top-0 left-1/2 h-1/2 -translate-x-1/2 border-l-2 border-dashed"
+                  class="border-primary-dark absolute top-0 left-1/2 hidden h-1/2 -translate-x-1/2 border-l-2 border-dashed md:block"
                 ></div>
+
+                <!-- Image - Mobile order -->
+                <div
+                  class="hidden w-fit max-w-24 sm:max-w-28 md:order-3 md:block md:max-w-28 md:justify-self-start lg:max-w-none"
+                >
+                  <img src="assets/images/process-4.png" alt="Process 4" />
+                </div>
+
+                <!-- Number Circle -->
+                <div
+                  class="z-0 grid aspect-square w-16 shrink-0 place-items-center rounded-full border-6 border-[#FFD1C8] bg-white text-2xl font-semibold sm:w-20 sm:border-8 sm:text-3xl md:order-2 md:w-20 lg:w-[86px] lg:border-[9px]"
+                >
+                  4
+                </div>
+
                 <!-- Process Content -->
-                <div class="text-right">
+                <div class="text-center md:order-1 md:text-right">
                   <h3
-                    class="text-primary mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg md:mb-3 md:text-xl lg:text-[25px]"
+                    class="text-primary mb-2 text-lg font-semibold sm:mb-3 sm:text-xl md:mb-3 md:text-xl lg:text-[25px]"
                   >
                     Update Result
                   </h3>
@@ -654,20 +672,6 @@
                   >
                     We provide regular updates and reports to keep you informed.
                   </p>
-                </div>
-
-                <!-- Number Circle -->
-                <div
-                  class="z-0 grid aspect-square w-14 shrink-0 place-items-center rounded-full border-4 border-[#FFD1C8] bg-white text-xl font-semibold sm:w-16 sm:border-6 sm:text-2xl md:w-20 md:border-8 md:text-3xl lg:w-[86px] lg:border-[9px]"
-                >
-                  4
-                </div>
-
-                <!-- Image Wrapper  -->
-                <div
-                  class="w-fit max-w-20 justify-self-start sm:max-w-24 md:max-w-28 lg:max-w-none"
-                >
-                  <img src="assets/images/process-4.png" alt="Process 4" />
                 </div>
               </div>
             </div>
@@ -1532,7 +1536,7 @@
               <div class="font-noto-sans flex flex-col gap-2 sm:gap-3 md:gap-4">
                 <a
                   href="tel:+918617514085"
-                  class="bg-primary-dark text-gray w-fit rounded-md px-4 py-1.5 text-sm font-bold text-nowrap sm:rounded-lg sm:px-5 sm:py-2 sm:text-base md:px-6 lg:px-7 xl:text-lg 2xl:text-2xl"
+                  class="bg-primary-dark text-gray w-fit rounded-md px-4 py-1.5 text-sm font-bold text-nowrap shadow-[0_0_0_0px_var(--primary-30)] transition-shadow duration-300 hover:shadow-[0_0_0_5px_var(--white-30)] sm:rounded-lg sm:px-5 sm:py-2 sm:text-base md:px-6 lg:px-7 xl:text-lg 2xl:text-2xl"
                   >+91 8617514085</a
                 >
                 <a href="mailto:business@growthan.com" class="underline"

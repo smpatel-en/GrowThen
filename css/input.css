@@ -8,6 +8,12 @@
   --gray: #d6d6e3;
   --white: #ffffff;
 
+  /* Color Mixes */
+  --primary-30: color-mix(in srgb, var(--primary) 30%, transparent);
+  --secondary-30: color-mix(in srgb, var(--secondary) 30%, transparent);
+  --gray-30: color-mix(in srgb, var(--gray) 30%, transparent);
+  --white-30: color-mix(in srgb, var(--white) 30%, transparent);
+
   /* Gradient Colors */
   --gradient-primary-start: #e9f7ff;
   --gradient-primary-middle: #ffdbd4;
@@ -28,6 +34,10 @@
   --color-secondary: var(--secondary);
   --color-gray: var(--gray);
   --color-white: var(--white);
+  --color-primary-30: var(--primary-30);
+  --color-secondary-30: var(--secondary-30);
+  --color-gray-30: var(--gray-30);
+  --color-white-30: var(--white-30);
   --color-gradient-start: var(--gradient-primary-start);
   --color-gradient-middle: var(--gradient-primary-middle);
   --color-gradient-end: var(--gradient-primary-end);
@@ -58,6 +68,9 @@
   a {
     @apply w-fit;
   }
+  footer a:hover {
+    @apply underline;
+  }
   .container {
     @apply mx-auto px-4 sm:px-5 md:px-6 lg:px-5 xl:px-10;
   }
@@ -66,22 +79,23 @@
 /* Components */
 @layer components {
   .btn {
-    @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold capitalize transition-colors duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
+    @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold capitalize shadow-[0_0_0_0px_var(--primary-30)] transition-all duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
   }
 
   .btn-primary {
     @apply bg-primary text-white;
   }
   .btn-primary:hover {
-    @apply bg-primary-dark;
+    @apply bg-primary-dark shadow-[0_0_0_5px_var(--primary-30)];
   }
 
   .btn-secondary,
+  /* For Disabled State We decrease the opacity and do pointer-events-none from JS */
   .btn-primary.disabled {
     @apply text-primary border-primary bg-transparent;
   }
   .btn-secondary:hover {
-    @apply bg-primary text-white;
+    @apply bg-primary-dark text-white shadow-[0_0_0_5px_var(--primary-30)];
   }
 
   .gradient-primary {
@@ -98,6 +112,33 @@
   .tag {
     @apply border-primary text-primary w-fit rounded-full border-2 px-3 py-1.5 text-sm font-medium sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 lg:px-6 lg:py-3 lg:text-lg xl:px-7 xl:py-3 xl:text-xl;
   }
+}
+
+/* Interactions */
+
+.nav-option {
+  @apply text-primary relative transition-colors duration-300;
+}
+.nav-option:hover,
+.nav-option.active {
+  @apply text-secondary;
+}
+
+.nav-option.active::after {
+  @apply bg-secondary absolute bottom-0 block h-1 w-1/2 rounded-full transition-all duration-300;
+  content: "";
+}
+.nav-option.active::before {
+  @apply bg-primary absolute bottom-0 block h-1 w-full rounded-full transition-all duration-300;
+  content: "";
+}
+
+.card img {
+  @apply transition-transform duration-300;
+}
+
+.card:hover img {
+  @apply scale-105;
 }
 
 /* Utilities */
