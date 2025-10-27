@@ -476,6 +476,9 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .resize {
+    resize: both;
+  }
   .list-decimal {
     list-style-type: decimal;
   }

@@ -5,15 +5,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   menuOpen.addEventListener("click", function () {
     navMenu.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 
   menuClose.addEventListener("click", function () {
     navMenu.classList.remove("active");
+    document.body.style.overflow = "auto";
   });
   document.addEventListener("click", function (event) {
     const isMenuButton =
       menuOpen.contains(event.target) || menuClose.contains(event.target);
     if (!navMenu.contains(event.target) && !isMenuButton) {
+      navMenu.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+  });
+
+  // Handle Body Overflow On Resize
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 1024) {
+      document.body.style.overflow = "auto";
       navMenu.classList.remove("active");
     }
   });
