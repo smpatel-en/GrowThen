@@ -30,14 +30,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Change header style on scroll
-  window.addEventListener("scroll", function () {
+
+  function updateHeader() {
     const header = document.querySelector("nav");
     if (window.scrollY > 0) {
       header.classList.add("scrolled");
     } else {
       header.classList.remove("scrolled");
     }
+  }
+
+  window.addEventListener("scroll", function () {
+    updateHeader();
   });
+
+  // Initial check
+  updateHeader();
 
   // FAQs Accordion
   const faqItems = document.querySelectorAll(".faq");
