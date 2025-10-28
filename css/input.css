@@ -105,7 +105,11 @@
   }
 
   .tag {
-    @apply border-primary text-primary w-fit rounded-full border-2 px-3 py-1.5 text-sm font-medium sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 lg:px-6 lg:py-3 lg:text-lg xl:px-7 xl:py-3 xl:text-xl;
+    @apply border-primary text-primary w-fit rounded-full border-2 px-3 py-1.5 text-sm font-medium shadow-[0_0_0_0px_var(--primary-30)] transition-shadow duration-300 sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 lg:px-6 lg:py-3 lg:text-lg xl:px-7 xl:py-3 xl:text-xl;
+  }
+
+  .tag:hover {
+    @apply shadow-[0_0_0_5px_var(--primary)];
   }
 }
 
