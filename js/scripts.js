@@ -66,22 +66,49 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize Swiper only on home page
   if (
     window.location.pathname === "/" ||
-    window.location.pathname === "/index.html"
+    window.location.pathname === "/index.html" ||
+    window.location.pathname.endsWith("/")
   ) {
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".testimonial-next",
-        prevEl: ".testimonial-prev",
-        disabledClass: "disabled",
-      },
-      breakpoints: {
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 20,
+    // Check if Swiper is loaded
+    if (typeof Swiper !== "undefined") {
+      // Testimonials Swiper
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".testimonial-next",
+          prevEl: ".testimonial-prev",
+          disabledClass: "disabled",
         },
-      },
-    });
+        breakpoints: {
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+        },
+      });
+
+      // Client Logo Swiper
+      var clientSwiper = new Swiper(".clientSwiper", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 0,
+        },
+        speed: 2000,
+        freeMode: true,
+        breakpoints: {
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+      });
+    }
   }
 });

@@ -202,3 +202,8 @@
 .testimonial-next.disabled {
   @apply pointer-events-none opacity-50;
 }
+
+.client-swiper-wrapper {
+  transition-timing-function: linear !important;
+  @apply pointer-events-none;
+}
