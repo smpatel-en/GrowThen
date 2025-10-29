@@ -63,20 +63,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Initialize Swiper
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: ".testimonial-next",
-      prevEl: ".testimonial-prev",
-      disabledClass: "disabled",
-    },
-    breakpoints: {
-      1024: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+  // Initialize Swiper only on home page
+  if (
+    window.location.pathname === "/" ||
+    window.location.pathname === "/index.html"
+  ) {
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".testimonial-next",
+        prevEl: ".testimonial-prev",
+        disabledClass: "disabled",
       },
-    },
-  });
+      breakpoints: {
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
 });
