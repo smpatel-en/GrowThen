@@ -10,14 +10,14 @@
 
   /* Color Mixes */
   --primary-30: color-mix(in srgb, var(--primary) 30%, transparent);
-  --gray-30: color-mix(in srgb, var(--gray) 30%, transparent);
   --white-30: color-mix(in srgb, var(--white) 30%, transparent);
 
   /* Shadows */
-  --shadow-idol: 0 0 0 0 transparent;
+  --shadow-ideal: 0 0 0 0 transparent;
   --shadow-primary: 0 0 0 5px var(--primary-30);
-  --shadow-gray: 0 0 0 5px var(--gray-30);
   --shadow-white: 0 0 0 5px var(--white-30);
+  --shadow-gray: 0 0 0 5px var(--gray);
+  --shadow-card: 0 2px 4px 0px #92929240;
 
   /* Gradients */
   --gradient-primary: linear-gradient(
@@ -47,10 +47,11 @@
   --color-secondary: var(--secondary);
   --color-gray: var(--gray);
   --color-white: var(--white);
-  --shadow-idol: var(--shadow-idol);
+  --shadow-ideal: var(--shadow-ideal);
   --shadow-primary: var(--shadow-primary);
   --shadow-gray: var(--shadow-gray);
   --shadow-white: var(--shadow-white);
+  --shadow-card: var(--shadow-card);
   --font-nunito: var(--font-nunito);
   --font-noto-sans: var(--font-noto-sans);
 
@@ -80,7 +81,8 @@
     @apply underline;
   }
   .container {
-    @apply mx-auto px-6 lg:px-8;
+    @apply mx-auto box-content px-6 lg:px-8;
+
     max-width: 1200px !important;
   }
 }
@@ -88,7 +90,7 @@
 /* Components */
 @layer components {
   .btn {
-    @apply shadow-idol cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold capitalize transition-all duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
+    @apply shadow-ideal cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold capitalize transition-all duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
   }
 
   .btn-primary {
@@ -101,7 +103,7 @@
   .btn-secondary,
   /* For Disabled State We decrease the opacity and do pointer-events-none from JS */
   .btn-primary.disabled {
-    @apply text-primary border-primary shadow-idol bg-transparent;
+    @apply text-primary border-primary shadow-ideal bg-transparent;
   }
   .btn-secondary:hover {
     @apply bg-primary-dark shadow-primary text-white;
@@ -122,11 +124,11 @@
   }
 
   .tag {
-    @apply border-primary text-primary w-fit rounded-full border-2 px-3 py-1.5 text-sm font-medium shadow-[0_0_0_0px_var(--primary-30)] transition-shadow duration-300 sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 lg:px-6 lg:py-3 lg:text-lg xl:px-7 xl:py-3 xl:text-xl;
+    @apply border-primary text-primary shadow-ideal w-fit rounded-full border-2 px-3 py-1.5 text-sm font-medium transition-shadow duration-300 sm:px-4 sm:py-2 sm:text-base md:px-5 md:py-2.5 lg:px-6 lg:py-3 lg:text-lg xl:px-7 xl:py-3 xl:text-xl;
   }
 
   .tag:hover {
-    @apply shadow-[0_0_0_5px_var(--primary)];
+    @apply shadow-primary;
   }
 }
 
