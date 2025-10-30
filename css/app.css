@@ -67,7 +67,7 @@
     @apply underline;
   }
   .container {
-    @apply mx-auto px-4 lg:px-6;
+    @apply mx-auto px-6 lg:px-8;
     max-width: 1200px !important;
   }
 }
@@ -178,11 +178,15 @@
   @apply translate-x-0;
 }
 
-#navbar {
+#navOverlay.active {
+  @apply block;
+}
+
+header {
   @apply border-b-1 border-transparent bg-transparent transition-colors duration-300;
 }
-#navbar.scrolled {
-  @apply border-b-gray bg-white backdrop-blur-sm;
+header.scrolled {
+  @apply border-b-gray bg-white;
 }
 
 .faq i {

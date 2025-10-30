@@ -2,14 +2,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuOpen = document.getElementById("menuOpen");
   const menuClose = document.getElementById("menuClose");
   const navMenu = document.getElementById("navSlider");
+  const navOverlay = document.getElementById("navOverlay");
 
   menuOpen.addEventListener("click", function () {
     navMenu.classList.add("active");
+    navOverlay.classList.add("active");
     document.body.style.overflow = "hidden";
   });
 
   menuClose.addEventListener("click", function () {
     navMenu.classList.remove("active");
+    navOverlay.classList.remove("active");
     document.body.style.overflow = "auto";
   });
   document.addEventListener("click", function (event) {
@@ -18,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!navMenu.contains(event.target) && !isMenuButton) {
       navMenu.classList.remove("active");
       document.body.style.overflow = "auto";
+      navOverlay.classList.remove("active");
     }
   });
 
@@ -26,13 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth >= 1024) {
       document.body.style.overflow = "auto";
       navMenu.classList.remove("active");
+      navOverlay.classList.remove("active");
     }
   });
 
   // Change header style on scroll
 
   function updateHeader() {
-    const header = document.querySelector("nav");
+    const header = document.querySelector("header");
     if (window.scrollY > 0) {
       header.classList.add("scrolled");
     } else {
