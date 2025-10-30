@@ -101,16 +101,16 @@ document.addEventListener("DOMContentLoaded", function () {
         autoplay: {
           delay: 0,
         },
-        speed: 2000,
+        speed: 3000,
         freeMode: true,
         breakpoints: {
           480: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 30,
           },
           640: {
             slidesPerView: 4,
-            spaceBetween: 50,
+            spaceBetween: 40,
           },
         },
       });

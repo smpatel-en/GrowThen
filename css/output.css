@@ -267,6 +267,9 @@
   .z-1 {
     z-index: 1;
   }
+  .z-2 {
+    z-index: 2;
+  }
   .z-5 {
     z-index: 5;
   }
@@ -302,6 +305,9 @@
     @media (width >= 96rem) {
       max-width: 96rem;
     }
+  }
+  .m-6 {
+    margin: calc(var(--spacing) * 6);
   }
   .mx-auto {
     margin-inline: auto;
@@ -387,6 +393,12 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+  .h-15 {
+    height: calc(var(--spacing) * 15);
+  }
   .h-\[1208px\] {
     height: 1208px;
   }
@@ -405,20 +417,26 @@
   .max-h-8 {
     max-height: calc(var(--spacing) * 8);
   }
+  .min-h-auto {
+    min-height: auto;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
-  .w-8 {
-    width: calc(var(--spacing) * 8);
-  }
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
   .w-14 {
     width: calc(var(--spacing) * 14);
+  }
+  .w-15 {
+    width: calc(var(--spacing) * 15);
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
@@ -465,6 +483,9 @@
   .max-w-\[50px\] {
     max-width: 50px;
   }
+  .max-w-\[80\%\] {
+    max-width: 80%;
+  }
   .max-w-\[300px\] {
     max-width: 300px;
   }
@@ -473,6 +494,9 @@
   }
   .max-w-xs {
     max-width: var(--container-xs);
+  }
+  .min-w-\[80\%\] {
+    min-width: 80%;
   }
   .flex-1 {
     flex: 1;
@@ -881,10 +905,6 @@
     --tw-shadow: 0 0 0 0px var(--tw-shadow-color, var(--gray));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .shadow-\[0_0_0_0px_var\(--white-30\)\] {
-    --tw-shadow: 0 0 0 0px var(--tw-shadow-color, var(--white-30));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
   .shadow-\[0px_2px_4px_0px_\#92929240\] {
     --tw-shadow: 0px 2px 4px 0px var(--tw-shadow-color, #92929240);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -987,14 +1007,6 @@
       }
     }
   }
-  .hover\:shadow-\[0_0_0_5px_var\(--white-30\)\] {
-    &:hover {
-      @media (hover: hover) {
-        --tw-shadow: 0 0 0 5px var(--tw-shadow-color, var(--white-30));
-        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-      }
-    }
-  }
   .hover\:shadow-white {
     &:hover {
       @media (hover: hover) {
@@ -1063,19 +1075,19 @@
       height: calc(var(--spacing) * 7);
     }
   }
-  .sm\:h-10 {
+  .sm\:h-14 {
     @media (width >= 40rem) {
-      height: calc(var(--spacing) * 10);
-    }
-  }
-  .sm\:w-10 {
-    @media (width >= 40rem) {
-      width: calc(var(--spacing) * 10);
+      height: calc(var(--spacing) * 14);
     }
   }
   .sm\:w-12 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 12);
+    }
+  }
+  .sm\:w-14 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 14);
     }
   }
   .sm\:w-16 {
@@ -1413,9 +1425,9 @@
       max-width: calc(var(--spacing) * 120);
     }
   }
-  .md\:max-w-none {
+  .md\:max-w-\[60px\] {
     @media (width >= 48rem) {
-      max-width: none;
+      max-width: 60px;
     }
   }
   .md\:translate-y-4 {
@@ -1682,6 +1694,11 @@
       max-height: calc(var(--spacing) * 12);
     }
   }
+  .lg\:min-h-screen {
+    @media (width >= 64rem) {
+      min-height: 100vh;
+    }
+  }
   .lg\:w-8 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 8);
@@ -1730,6 +1747,11 @@
   .lg\:max-w-160 {
     @media (width >= 64rem) {
       max-width: calc(var(--spacing) * 160);
+    }
+  }
+  .lg\:max-w-\[65px\] {
+    @media (width >= 64rem) {
+      max-width: 65px;
     }
   }
   .lg\:max-w-none {
@@ -2039,6 +2061,13 @@
     #fff3ca 100%
   );
   --gradient-secondary: linear-gradient(135deg, #fff8f8 0%, #f5f7ff 100%);
+  --gradient-vanishing-slider: linear-gradient(
+    to right,
+    var(--white) 0%,
+    transparent 5%,
+    transparent 95%,
+    var(--white) 100%
+  );
   --font-nunito: "Nunito", sans-serif;
   --font-noto-sans: "Noto Sans", sans-serif;
 }
@@ -2180,6 +2209,9 @@
   }
   .gradient-secondary {
     background: var(--gradient-secondary);
+  }
+  .gradient-vanishing-slider {
+    background: var(--gradient-vanishing-slider);
   }
   .input-field {
     width: 100%;

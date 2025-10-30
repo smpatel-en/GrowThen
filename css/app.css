@@ -27,6 +27,13 @@
     #fff3ca 100%
   );
   --gradient-secondary: linear-gradient(135deg, #fff8f8 0%, #f5f7ff 100%);
+  --gradient-vanishing-slider: linear-gradient(
+    to right,
+    var(--white) 0%,
+    transparent 5%,
+    transparent 95%,
+    var(--white) 100%
+  );
 
   /* Fonts */
   --font-nunito: "Nunito", sans-serif;
@@ -105,6 +112,9 @@
   }
   .gradient-secondary {
     background: var(--gradient-secondary);
+  }
+  .gradient-vanishing-slider {
+    background: var(--gradient-vanishing-slider);
   }
 
   .input-field {
