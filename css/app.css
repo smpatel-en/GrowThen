@@ -71,7 +71,7 @@
   }
   section,
   footer {
-    @apply py-12 sm:py-16 md:py-18 lg:py-20;
+    @apply py-10 sm:py-14 md:py-18 lg:py-22;
   }
   a {
     @apply w-fit text-[inherit];
@@ -101,7 +101,7 @@
   .btn-secondary,
   /* For Disabled State We decrease the opacity and do pointer-events-none from JS */
   .btn-primary.disabled {
-    @apply text-primary border-primary bg-transparent;
+    @apply text-primary border-primary shadow-idol bg-transparent;
   }
   .btn-secondary:hover {
     @apply bg-primary-dark shadow-primary text-white;
