@@ -8,7 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-yellow-300: oklch(90.5% 0.182 98.111);
-    --color-black: #000;
     --color-white: var(--white);
     --spacing: 0.25rem;
     --container-xs: 20rem;
@@ -732,6 +731,10 @@
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -812,10 +815,6 @@
   }
   .shadow-\[0_0_0_0px_var\(--gray\)\] {
     --tw-shadow: 0 0 0 0px var(--tw-shadow-color, var(--gray));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-\[0_0_0_0px_var\(--primary-30\)\] {
-    --tw-shadow: 0 0 0 0px var(--tw-shadow-color, var(--primary-30));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-\[0_0_0_0px_var\(--white-30\)\] {
@@ -1989,11 +1988,19 @@
     overflow-x: hidden;
     background-color: var(--color-white);
     font-family: var(--font-nunito);
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
     color: var(--color-primary-dark);
+    @media (width >= 40rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+    @media (width >= 64rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
   }
   section, footer {
     padding-block: calc(var(--spacing) * 12);
@@ -2009,8 +2016,7 @@
   }
   a {
     width: fit-content;
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
+    color: inherit;
   }
   footer a:hover {
     text-decoration-line: underline;
@@ -2018,18 +2024,10 @@
   .container {
     margin-inline: auto;
     padding-inline: calc(var(--spacing) * 4);
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 5);
-    }
-    @media (width >= 48rem) {
+    @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 6);
     }
-    @media (width >= 64rem) {
-      padding-inline: calc(var(--spacing) * 5);
-    }
-    @media (width >= 80rem) {
-      padding-inline: calc(var(--spacing) * 10);
-    }
+    max-width: 1200px !important;
   }
 }
 @layer components {
