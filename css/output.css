@@ -56,11 +56,10 @@
     --color-primary-dark: var(--primary-dark);
     --color-secondary: var(--secondary);
     --color-gray: var(--gray);
-    --color-gradient-start: var(--gradient-primary-start);
-    --color-gradient-middle: var(--gradient-primary-middle);
-    --color-gradient-end: var(--gradient-primary-end);
-    --color-gradient-secondary-start: var(--gradient-secondary-start);
-    --color-gradient-secondary-end: var(--gradient-secondary-end);
+    --shadow-idol: var(--shadow-idol);
+    --shadow-primary: var(--shadow-primary);
+    --shadow-gray: var(--shadow-gray);
+    --shadow-white: var(--shadow-white);
     --font-nunito: var(--font-nunito);
     --font-noto-sans: var(--font-noto-sans);
   }
@@ -268,9 +267,6 @@
   .z-1 {
     z-index: 1;
   }
-  .z-2 {
-    z-index: 2;
-  }
   .z-5 {
     z-index: 5;
   }
@@ -400,9 +396,6 @@
   .h-full {
     height: 100%;
   }
-  .h-max {
-    height: max-content;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -412,8 +405,8 @@
   .max-h-8 {
     max-height: calc(var(--spacing) * 8);
   }
-  .max-h-10 {
-    max-height: calc(var(--spacing) * 10);
+  .min-h-screen {
+    min-height: 100vh;
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
@@ -471,9 +464,6 @@
   }
   .max-w-\[50px\] {
     max-width: 50px;
-  }
-  .max-w-\[150px\] {
-    max-width: 150px;
   }
   .max-w-\[300px\] {
     max-width: 300px;
@@ -899,6 +889,10 @@
     --tw-shadow: 0px 2px 4px 0px var(--tw-shadow-color, #92929240);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .shadow-idol {
+    --tw-shadow: var(--shadow-idol);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -997,6 +991,14 @@
     &:hover {
       @media (hover: hover) {
         --tw-shadow: 0 0 0 5px var(--tw-shadow-color, var(--white-30));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
+  .hover\:shadow-white {
+    &:hover {
+      @media (hover: hover) {
+        --tw-shadow: var(--shadow-white);
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
     }
@@ -1114,11 +1116,6 @@
   .sm\:max-w-\[55px\] {
     @media (width >= 40rem) {
       max-width: 55px;
-    }
-  }
-  .sm\:max-w-\[180px\] {
-    @media (width >= 40rem) {
-      max-width: 180px;
     }
   }
   .sm\:translate-y-3 {
@@ -1416,11 +1413,6 @@
       max-width: calc(var(--spacing) * 120);
     }
   }
-  .md\:max-w-\[250px\] {
-    @media (width >= 48rem) {
-      max-width: 250px;
-    }
-  }
   .md\:max-w-none {
     @media (width >= 48rem) {
       max-width: none;
@@ -1690,16 +1682,6 @@
       max-height: calc(var(--spacing) * 12);
     }
   }
-  .lg\:max-h-14 {
-    @media (width >= 64rem) {
-      max-height: calc(var(--spacing) * 14);
-    }
-  }
-  .lg\:max-h-15 {
-    @media (width >= 64rem) {
-      max-height: calc(var(--spacing) * 15);
-    }
-  }
   .lg\:w-8 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 8);
@@ -1748,11 +1730,6 @@
   .lg\:max-w-160 {
     @media (width >= 64rem) {
       max-width: calc(var(--spacing) * 160);
-    }
-  }
-  .lg\:max-w-\[300px\] {
-    @media (width >= 64rem) {
-      max-width: 300px;
     }
   }
   .lg\:max-w-none {
@@ -2051,11 +2028,17 @@
   @supports (color: color-mix(in lab, red, red)) {
     --white-30: color-mix(in srgb, var(--white) 30%, transparent);
   }
-  --gradient-primary-start: #e9f7ff;
-  --gradient-primary-middle: #ffdbd4;
-  --gradient-primary-end: #fff3ca;
-  --gradient-secondary-start: #fff8f8;
-  --gradient-secondary-end: #f5f7ff;
+  --shadow-idol: 0 0 0 0 transparent;
+  --shadow-primary: 0 0 0 5px var(--primary-30);
+  --shadow-gray: 0 0 0 5px var(--gray-30);
+  --shadow-white: 0 0 0 5px var(--white-30);
+  --gradient-primary: linear-gradient(
+    135deg,
+    #e9f7ff 0%,
+    #ffdbd4 50%,
+    #fff3ca 100%
+  );
+  --gradient-secondary: linear-gradient(135deg, #fff8f8 0%, #f5f7ff 100%);
   --font-nunito: "Nunito", sans-serif;
   --font-noto-sans: "Noto Sans", sans-serif;
 }
@@ -2132,7 +2115,7 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     text-transform: capitalize;
-    --tw-shadow: 0 0 0 0px var(--tw-shadow-color, var(--primary-30));
+    --tw-shadow: var(--shadow-idol);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -2178,7 +2161,7 @@
   }
   .btn-primary:hover {
     background-color: var(--color-primary-dark);
-    --tw-shadow: 0 0 0 5px var(--tw-shadow-color, var(--primary-30));
+    --tw-shadow: var(--shadow-primary);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .btn-secondary,  .btn-primary.disabled {
@@ -2189,25 +2172,14 @@
   .btn-secondary:hover {
     background-color: var(--color-primary-dark);
     color: var(--color-white);
-    --tw-shadow: 0 0 0 5px var(--tw-shadow-color, var(--primary-30));
+    --tw-shadow: var(--shadow-primary);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .gradient-primary {
-    --tw-gradient-position: to bottom right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-    --tw-gradient-from: var(--color-gradient-start);
-    --tw-gradient-via: var(--color-gradient-middle);
-    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-via-stops);
-    --tw-gradient-to: var(--color-gradient-end);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    background: var(--gradient-primary);
   }
   .gradient-secondary {
-    --tw-gradient-position: to bottom in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-    --tw-gradient-from: var(--color-gradient-secondary-start);
-    --tw-gradient-to: var(--color-gradient-secondary-end);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    background: var(--gradient-secondary);
   }
   .input-field {
     width: 100%;
@@ -2699,48 +2671,6 @@ header.scrolled {
   inherits: false;
   initial-value: 1;
 }
-@property --tw-gradient-position {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-from {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-via {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-to {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-stops {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-via-stops {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-from-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 0%;
-}
-@property --tw-gradient-via-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 50%;
-}
-@property --tw-gradient-to-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -2799,15 +2729,6 @@ header.scrolled {
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
-      --tw-gradient-position: initial;
-      --tw-gradient-from: #0000;
-      --tw-gradient-via: #0000;
-      --tw-gradient-to: #0000;
-      --tw-gradient-stops: initial;
-      --tw-gradient-via-stops: initial;
-      --tw-gradient-from-position: 0%;
-      --tw-gradient-via-position: 50%;
-      --tw-gradient-to-position: 100%;
     }
   }
 }

@@ -13,13 +13,20 @@
   --gray-30: color-mix(in srgb, var(--gray) 30%, transparent);
   --white-30: color-mix(in srgb, var(--white) 30%, transparent);
 
-  /* Gradient Colors */
-  --gradient-primary-start: #e9f7ff;
-  --gradient-primary-middle: #ffdbd4;
-  --gradient-primary-end: #fff3ca;
+  /* Shadows */
+  --shadow-idol: 0 0 0 0 transparent;
+  --shadow-primary: 0 0 0 5px var(--primary-30);
+  --shadow-gray: 0 0 0 5px var(--gray-30);
+  --shadow-white: 0 0 0 5px var(--white-30);
 
-  --gradient-secondary-start: #fff8f8;
-  --gradient-secondary-end: #f5f7ff;
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #e9f7ff 0%,
+    #ffdbd4 50%,
+    #fff3ca 100%
+  );
+  --gradient-secondary: linear-gradient(135deg, #fff8f8 0%, #f5f7ff 100%);
 
   /* Fonts */
   --font-nunito: "Nunito", sans-serif;
@@ -33,11 +40,10 @@
   --color-secondary: var(--secondary);
   --color-gray: var(--gray);
   --color-white: var(--white);
-  --color-gradient-start: var(--gradient-primary-start);
-  --color-gradient-middle: var(--gradient-primary-middle);
-  --color-gradient-end: var(--gradient-primary-end);
-  --color-gradient-secondary-start: var(--gradient-secondary-start);
-  --color-gradient-secondary-end: var(--gradient-secondary-end);
+  --shadow-idol: var(--shadow-idol);
+  --shadow-primary: var(--shadow-primary);
+  --shadow-gray: var(--shadow-gray);
+  --shadow-white: var(--shadow-white);
   --font-nunito: var(--font-nunito);
   --font-noto-sans: var(--font-noto-sans);
 
@@ -75,14 +81,14 @@
 /* Components */
 @layer components {
   .btn {
-    @apply cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold capitalize shadow-[0_0_0_0px_var(--primary-30)] transition-all duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
+    @apply shadow-idol cursor-pointer rounded-sm border-2 border-transparent bg-transparent px-3 py-1.5 text-sm font-semibold capitalize transition-all duration-300 sm:px-[10px] sm:py-[5px] sm:text-base md:rounded-md lg:px-[15px] lg:py-[10px] lg:text-lg xl:rounded-[7px] xl:px-[20px] xl:py-[10px];
   }
 
   .btn-primary {
     @apply bg-primary text-white;
   }
   .btn-primary:hover {
-    @apply bg-primary-dark shadow-[0_0_0_5px_var(--primary-30)];
+    @apply bg-primary-dark shadow-primary;
   }
 
   .btn-secondary,
@@ -91,14 +97,14 @@
     @apply text-primary border-primary bg-transparent;
   }
   .btn-secondary:hover {
-    @apply bg-primary-dark text-white shadow-[0_0_0_5px_var(--primary-30)];
+    @apply bg-primary-dark shadow-primary text-white;
   }
 
   .gradient-primary {
-    @apply from-gradient-start via-gradient-middle to-gradient-end bg-gradient-to-br;
+    background: var(--gradient-primary);
   }
   .gradient-secondary {
-    @apply from-gradient-secondary-start to-gradient-secondary-end bg-gradient-to-b;
+    background: var(--gradient-secondary);
   }
 
   .input-field {
