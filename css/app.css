@@ -54,14 +54,14 @@
     @apply block h-full w-full object-cover;
   }
   body {
-    @apply font-nunito overflow-x-hidden;
+    @apply font-nunito text-primary-dark overflow-x-hidden bg-white text-lg font-normal;
   }
   section,
   footer {
     @apply py-12 sm:py-16 md:py-18 lg:py-20;
   }
   a {
-    @apply w-fit;
+    @apply w-fit text-lg;
   }
   footer a:hover {
     @apply underline;
