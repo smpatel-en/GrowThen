@@ -1,41 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menuOpen = document.getElementById("menuOpen");
-  const menuClose = document.getElementById("menuClose");
+  const menuOpenBtn = document.getElementById("menuOpenBtn");
+  const menuCloseBtn = document.getElementById("menuCloseBtn");
   const navMenu = document.getElementById("navSlider");
   const navOverlay = document.getElementById("navOverlay");
 
-  menuOpen.addEventListener("click", function () {
+  function menuOpen() {
     navMenu.classList.add("active");
     navOverlay.classList.add("active");
     document.body.style.overflow = "hidden";
-  });
-
-  menuClose.addEventListener("click", function () {
+  }
+  function menuClose() {
     navMenu.classList.remove("active");
     navOverlay.classList.remove("active");
     document.body.style.overflow = "auto";
+  }
+
+  menuOpenBtn.addEventListener("click", function () {
+    menuOpen();
+  });
+
+  menuCloseBtn.addEventListener("click", function () {
+    menuClose();
   });
   document.addEventListener("click", function (event) {
     const isMenuButton =
-      menuOpen.contains(event.target) || menuClose.contains(event.target);
+      menuOpenBtn.contains(event.target) || menuCloseBtn.contains(event.target);
     if (!navMenu.contains(event.target) && !isMenuButton) {
-      navMenu.classList.remove("active");
-      document.body.style.overflow = "auto";
-      navOverlay.classList.remove("active");
+      menuClose();
     }
   });
 
   // Handle Body Overflow On Resize
   window.addEventListener("resize", function () {
     if (window.innerWidth >= 1024) {
-      document.body.style.overflow = "auto";
-      navMenu.classList.remove("active");
-      navOverlay.classList.remove("active");
+      menuClose();
     }
   });
 
   // Change header style on scroll
-
   function updateHeader() {
     const header = document.querySelector("header");
     if (window.scrollY > 0) {
